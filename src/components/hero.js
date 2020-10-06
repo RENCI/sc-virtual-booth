@@ -19,6 +19,7 @@ const Wrapper = styled.div(({ theme }) => `
   height: 300px;
   position: relative;
   z-index: 0;
+  overflow: hidden;
 `)
 
 const Background = styled.div(({ image, yShift }) => css`
