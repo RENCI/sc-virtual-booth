@@ -2,19 +2,19 @@ import React from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import { useScrollPosition } from '../hooks'
 
-const slideIn = keyframes`
+const zoomIn = keyframes`
     0% {
         opacity: 0.0;
-        transform: translate3d(0, -1rem, 0);
+        transform: perspective(500px) translateZ(0px);
     }
     100% {
         opacity: 1.0;
-        transform: translate3d(0, 0, 0);
+        transform: perspective(500px) translateZ(20px);
     }
 `
 
 const Wrapper = styled.div(({ theme }) => `
-  background-color: ${ theme.color.primary.main };
+  background-color: ${ theme.color.grey };
   color: ${ theme.color.white };
   height: 300px;
   position: relative;
@@ -22,7 +22,7 @@ const Wrapper = styled.div(({ theme }) => `
 `)
 
 const Background = styled.div(({ image, yShift }) => css`
-  animation: ${ slideIn } 500ms ease-out forwards;
+  animation: ${ zoomIn } 500ms ease-out forwards;
   background-image: url(${ image });
   background-size: cover;
   background-position: center calc(50% + ${ yShift }px);
@@ -47,11 +47,11 @@ const Contents = styled.div(({ theme }) => `
   z-index: 10;
 `)
 
-export const Hero = ({ children }) => {
+export const Hero = ({ backgroundImage, children }) => {
   const { scrollPosition } = useScrollPosition()
   return (
     <Wrapper>
-      <Background image="https://picsum.photos/1200/300" yShift={ scrollPosition / 2 } />
+      <Background image={ backgroundImage } yShift={ scrollPosition / 2 } />
       <Contents>
         { children }
       </Contents>

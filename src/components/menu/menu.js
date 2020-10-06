@@ -11,7 +11,7 @@ const Wrapper = styled.nav`
 `
 
 const MenuItem = styled(Link)(({ theme }) => `
-  color: #eee;
+  color: ${ theme.color.black };
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -19,16 +19,19 @@ const MenuItem = styled(Link)(({ theme }) => `
   height: 100%;
   padding: ${ theme.spacing.md };
   text-transform: uppercase;
-  transition: background-color 250ms;
+  transition: background-color 250ms, color 250ms;
   &:hover {
-    background-color: ${ theme.color.grey.dark };
+    background-color: ${ theme.color.grey.light };
+  }
+  &.active {
+    color: ${ theme.color.primary.main };
   }
 `)
 
 export const Menu = ({ items }) => {
   return (
     <Wrapper>
-      { items.map(item => <MenuItem to={ item.path } key={ item.text } >{ item.text }</MenuItem>) }
+      { items.map(item => <MenuItem to={ item.path } key={ item.text } activeClassName="active">{ item.text }</MenuItem>) }
     </Wrapper>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { SEO } from '../components/seo'
 import { Container } from '../components/layout'
 
-const NotFoundPage = () => (
+export default () => (
   <Container>
     <SEO title="404: Not found" />
 
@@ -10,5 +10,3 @@ const NotFoundPage = () => (
 
   </Container>
 )
-
-export default NotFoundPage

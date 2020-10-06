@@ -2,7 +2,7 @@ import React from 'react'
 import { SEO } from '../components/seo'
 import { Container } from '../components/layout'
 
-const ContactPage = () => {
+export default () => {
   return (
     <Container>
       <SEO title="Contact" />
@@ -10,5 +10,3 @@ const ContactPage = () => {
     </Container>
   )
 }
-
-export default ContactPage
