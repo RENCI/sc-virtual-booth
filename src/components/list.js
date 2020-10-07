@@ -3,14 +3,16 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 export const Wrapper = styled.ul(({ theme, bullets }) => `
-  padding: 0;
-  margin: ${ theme.spacing.md };
   list-style-type: ${ bullets };
+  ${
+    bullets === 'none'
+      ? `margin: 0;`
+      : `margin: ${ theme.spacing.medium };`
+  }
+  
 `)
 
 const ListItem = styled.li(({ theme }) => `
-  padding: 0;
-  margin: 0;
 `)
 
 export const List = ({ items, bullets = 'none' }) => {
