@@ -1,28 +1,46 @@
 import React from 'react'
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { Menu, MobileMenu } from '../menu'
+import styled from 'styled-components'
 import { useWindowWidth } from '@react-hook/window-size'
-import './style.css'
+import { useBrand, useScrollPosition } from '../../hooks'
+import { Link } from '../link'
+import { Menu, MobileMenu } from '../menu'
 import menuItems from '../../menu'
-import { useBrand } from '../../hooks'
 import backgroundLines from '../../images/background-lines.png'
-import { Paragraph } from '../../components/typography'
+import { Paragraph } from '../typography'
+import './style.css'
+
+//
 
 const MOBILE_THRESHHOLD = 792
 
-const Wrapper = styled.div(({ theme }) => `
+//
+
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-image: linear-gradient(to bottom, white 0%, white 33%, ${ theme.color.extended.mist } 100%);
-`)
+`
 
-const Brand = styled.div`
+//
+
+const Brand = styled(Link)(({ compact }) => `
   font-weight: bold;
   text-transform: uppercase;
-  padding: 2rem;
-`
+  transition: padding 250ms;
+  padding: ${ compact ? '0.25rem 2rem' : '2rem' };
+`)
+
+Brand.propTypes = {
+  compact: PropTypes.oneOf([0, 1]).isRequired,
+}
+
+Brand.defaultProps = {
+  compact: 0,
+}
+
+//
 
 const Header = styled.header(({ theme }) => `
   background-color: ${ theme.color.white };
@@ -37,6 +55,8 @@ const Header = styled.header(({ theme }) => `
   z-index: 1;
 `)
 
+//
+
 const Main = styled.main`
   flex: 1;
   width: 100%;
@@ -47,6 +67,8 @@ const Main = styled.main`
   background-position: 100% 100%;
 `
 
+//
+
 const Footer = styled.footer(({ theme }) => `
   padding: 2rem 2rem;
   background-color: ${ theme.color.white };
@@ -55,14 +77,17 @@ const Footer = styled.footer(({ theme }) => `
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
 `)
 
+//
+
 export const DefaultLayout = ({ children }) => {
   const windowWidth = useWindowWidth()
+  const scrollPosition = useScrollPosition()
   const { light: logo } = useBrand()
-  
+
   return (
     <Wrapper>
       <Header>
-        <Brand>
+        <Brand to="/" compact={ scrollPosition > 150 ? 1 : 0 }>
           <Img fixed={ logo } style={{ width: '82.5px', height: '54px', margin: 0 }} />
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
@@ -77,7 +102,7 @@ export const DefaultLayout = ({ children }) => {
           RENCI partners with researchers, government, and industry to engage and solve the problems
           that affect North Carolina, our nation, and the world.
         </Paragraph>
-        &copy; { new Date().getFullYear() } 
+        &copy; RENCI { new Date().getFullYear() }
       </Footer>
     </Wrapper>
   )

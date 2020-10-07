@@ -23,5 +23,5 @@ export const useScrollPosition = () => {
         }
     })
     
-    return { scrollPosition }
+    return scrollPosition
 }

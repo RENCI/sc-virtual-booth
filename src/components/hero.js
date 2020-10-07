@@ -52,7 +52,7 @@ const Contents = styled.div(({ theme }) => `
 `)
 
 export const Hero = ({ backgroundImage, children }) => {
-  const { scrollPosition } = useScrollPosition()
+  const scrollPosition = useScrollPosition()
   return (
     <Wrapper>
       <Background image={ backgroundImage } yShift={ scrollPosition / 2 } />
