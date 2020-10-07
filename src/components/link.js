@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 export const Link = styled(GatsbyLink)``
 
-export const ExternalLink = styled(GatsbyLink).attrs(props => ({
+export const ExternalLink = styled.a.attrs(props => ({
   href: props.to,
+  target: '_blank',
   rel: 'noopener noreferrer',
 }))``
