@@ -1,4 +1,6 @@
 import React, { Fragment } from "react"
+import Img from 'gatsby-image'
+import { useTheme } from 'styled-components'
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container } from '../components/layout'
@@ -6,11 +8,21 @@ import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 
-export default () => {
+export default ({ data }) => {
+  const theme = useTheme()
+  const sc20Logo = data.file.childImageSharp.fluid
+
   return (
     <Fragment>
       <SEO title="Home" />
-      <Hero backgroundImage="https://picsum.photos/1200/300" />
+      <Hero backgroundColor={ theme.color.black }>
+        <Img
+          fluid={ sc20Logo }
+          alt="SC20 Virtual Booth Logo"
+          style={{ width: '178px', height: '190px', margin: '0 0 1rem 0' }}
+        />
+        <Heading style={{ color: theme.color.primary.main, fontWeight: 'normal', letterSpacing: '2px' }}>Virtual Booth</Heading>
+      </Hero>
       <Container>
         <Title>Home</Title>
 
@@ -55,3 +67,20 @@ export default () => {
     </Fragment>
   )
 }
+
+export const query = graphql`
+  {
+    file(relativePath: {regex: "/sc20-logo.png/"}) {
+      childImageSharp {
+        fluid(maxWidth: 400) {
+          base64
+          tracedSVG
+          srcWebp
+          srcSetWebp
+          originalImg
+          originalName
+        }
+      }
+    }
+  }
+`
