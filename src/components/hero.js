@@ -19,13 +19,14 @@ const Wrapper = styled.div(({ theme }) => `
   border-color: ${ theme.color.primary.dark };
   border-width: ${ theme.spacing.extraSmall } 0;
   color: ${ theme.color.white };
-  height: 300px;
+  height: 400px;
   position: relative;
   z-index: 0;
   overflow: hidden;
 `)
 
-const Background = styled.div(({ image, yShift }) => css`
+const Background = styled.div(({ color, image, yShift }) => css`
+  background-color: ${ color };
   animation: ${ zoomIn } 500ms ease-out forwards;
   background-image: url(${ image });
   background-size: cover;
@@ -51,11 +52,11 @@ const Contents = styled.div(({ theme }) => `
   z-index: 10;
 `)
 
-export const Hero = ({ backgroundImage, children }) => {
+export const Hero = ({ backgroundImage, backgroundColor, children }) => {
   const scrollPosition = useScrollPosition()
   return (
     <Wrapper>
-      <Background image={ backgroundImage } yShift={ scrollPosition / 2 } />
+      <Background color={ backgroundColor } image={ backgroundImage } yShift={ scrollPosition / 2 } />
       <Contents>
         { children }
       </Contents>
