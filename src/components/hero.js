@@ -14,7 +14,10 @@ const zoomIn = keyframes`
 `
 
 const Wrapper = styled.div(({ theme }) => `
-  background-color: ${ theme.color.grey };
+  background-color: ${ theme.color.grey.light };
+  border-style: solid;
+  border-color: ${ theme.color.primary.dark };
+  border-width: ${ theme.spacing.extraSmall } 0;
   color: ${ theme.color.white };
   height: 300px;
   position: relative;
