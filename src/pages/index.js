@@ -7,17 +7,17 @@ import { Container } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { Container as Grid, Row, Col } from 'react-grid-system'
+import sc20Logo from '../images/sc20-logo.png'
 
-export default ({ data }) => {
+export default () => {
   const theme = useTheme()
-  const sc20Logo = data.file.childImageSharp.fluid
 
   return (
     <Fragment>
       <SEO title="Home" />
       <Hero backgroundColor={ theme.color.black }>
-        <Img
-          fluid={ sc20Logo }
+        <img
+          src={ sc20Logo }
           alt="SC20 Virtual Booth Logo"
           style={{ width: '178px', height: '190px', margin: '0 0 1rem 0' }}
         />
@@ -67,20 +67,3 @@ export default ({ data }) => {
     </Fragment>
   )
 }
-
-export const query = graphql`
-  {
-    file(relativePath: {regex: "/sc20-logo.png/"}) {
-      childImageSharp {
-        fluid(maxWidth: 400) {
-          base64
-          tracedSVG
-          srcWebp
-          srcSetWebp
-          originalImg
-          originalName
-        }
-      }
-    }
-  }
-`
