@@ -49,7 +49,7 @@ const Contents = styled.div(({ theme }) => `
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 1;
 `)
 
 export const Hero = ({ backgroundImage, backgroundColor, children }) => {
