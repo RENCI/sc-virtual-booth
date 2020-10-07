@@ -17,6 +17,6 @@ export const Container = styled.div`
   width: 100%;
   max-width: ${ CONTAINER_WIDTH }px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 2rem;
   animation: ${ unfade } 500ms ease-out forwards;
 `
