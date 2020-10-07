@@ -20,3 +20,16 @@ export const wrapPageElement = ({ element, props }) => {
     </DefaultLayout>
   )
 }
+
+/**
+ *
+ * Add polyfill for intersection observer, upon which gatsby-image relies
+ * ... Safari, I'm lookin' at you.
+ *
+ */
+
+export const onClientEntry = async () => {
+  if (typeof IntersectionObserver === "undefined") {
+    await import("intersection-observer")
+  }
+}
