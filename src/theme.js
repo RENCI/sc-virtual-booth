@@ -6,6 +6,7 @@ export const theme = {
             dark: '#028aa6',
         },
         extended: {
+            mist: '#d9ecf6',
             moss: '#5e9b8b',
             ocean: '#58a3d2',
             sherbet: '#ffa872',

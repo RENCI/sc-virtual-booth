@@ -11,11 +11,12 @@ import { Paragraph } from '../../components/typography'
 
 const MOBILE_THRESHHOLD = 792
 
-const Wrapper = styled.div`
+const Wrapper = styled.div(({ theme }) => `
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-`
+  background-image: linear-gradient(to bottom, white 0%, white 33%, ${ theme.color.extended.mist } 100%);
+`)
 
 const Brand = styled.div`
   font-weight: bold;
