@@ -14,6 +14,7 @@ import './style.css'
 //
 
 const MOBILE_THRESHHOLD = 792
+const COMPACT_HEADER_SCROLL_THRESHOLD = 200
 
 //
 
@@ -87,7 +88,7 @@ export const DefaultLayout = ({ children }) => {
   return (
     <Wrapper>
       <Header>
-        <Brand to="/" compact={ scrollPosition > 150 ? 1 : 0 }>
+        <Brand to="/" compact={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? 1 : 0 }>
           <Img fixed={ logo } style={{ width: '82.5px', height: '54px', margin: 0 }} />
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
