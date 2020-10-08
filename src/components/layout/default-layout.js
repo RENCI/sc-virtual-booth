@@ -18,11 +18,12 @@ const COMPACT_HEADER_SCROLL_THRESHOLD = 200
 
 //
 
-const Wrapper = styled.div`
+const Wrapper = styled.div(({ theme }) => `
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-`
+  background-image: linear-gradient(to bottom, white 0%, white 33%, ${ theme.color.extended.mist } 100%);
+`)
 
 //
 
