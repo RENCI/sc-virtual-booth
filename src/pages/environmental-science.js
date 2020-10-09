@@ -10,7 +10,9 @@ export default () => {
   return (
     <Fragment>
       <SEO title="Environmental Science" />
+
       <Hero backgroundImage="https://picsum.photos/1200/302" />
+      
       <Container>
         <Title>Environmental Science</Title>
 

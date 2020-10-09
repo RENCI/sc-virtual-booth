@@ -1,5 +1,4 @@
 import React, { Fragment } from "react"
-import Img from 'gatsby-image'
 import { useTheme } from 'styled-components'
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
@@ -15,6 +14,7 @@ export default () => {
   return (
     <Fragment>
       <SEO title="Home" />
+
       <Hero backgroundColor={ theme.color.black }>
         <img
           src={ sc20Logo }
@@ -23,6 +23,7 @@ export default () => {
         />
         <Heading style={{ color: theme.color.primary.main, fontWeight: 'normal', letterSpacing: '2px' }}>Virtual Booth</Heading>
       </Hero>
+      
       <Container>
         <Title>Home</Title>
 

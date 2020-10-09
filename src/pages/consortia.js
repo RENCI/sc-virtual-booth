@@ -5,10 +5,11 @@ import { Container, Section } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { List } from '../components/list'
 
-const ConsortiaPage = () => 
-{  return (
+const ConsortiaPage = () => {
+  return (
     <Fragment>
       <SEO title="Consortia" />
+
       <Hero backgroundImage="https://picsum.photos/1200/304" />
 
       <Container>

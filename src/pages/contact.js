@@ -6,7 +6,9 @@ export default () => {
   return (
     <Container>
       <SEO title="Contact" />
+
       <h1>Contact</h1>
+      
     </Container>
   )
 }

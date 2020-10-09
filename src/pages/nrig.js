@@ -8,6 +8,7 @@ export default () => {
   return (
     <Fragment>
       <SEO title="NRIG" />
+      
       <Hero backgroundImage="https://picsum.photos/1200/306" />
 
       <Container>
