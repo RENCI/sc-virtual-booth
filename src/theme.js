@@ -3,7 +3,9 @@ export const theme = {
         primary: {
             light: '#32daf6',
             main: '#02aac6',
-            dark: '#028aa6',
+            dark: '#026a96',
+            darker: '#023a56',
+            darkest: '#022a36',
         },
         extended: {
             mist: '#d9ecf6',

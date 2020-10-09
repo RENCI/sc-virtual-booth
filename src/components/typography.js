@@ -1,11 +1,21 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-export const Title = styled.h2`
+export const Title = styled.h1(({ align }) => `
   text-transform: uppercase;
-`
+  text-align: ${ align };
+  font-size: clamp(1.5rem, 5vw, 3rem)
+`)
 
-export const Heading = styled.h3`
+Title.propTypes = {
+  align: PropTypes.oneOf(['left', 'center', 'right']),
+}
+
+Title.defaultProps = {
+  align: 'left',
+}
+
+export const Heading = styled.h2`
   text-transform: uppercase;
 `
 

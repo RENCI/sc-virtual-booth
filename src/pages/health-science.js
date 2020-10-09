@@ -5,17 +5,22 @@ import { Hero } from '../components/hero'
 import { Container } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
+import heroBackground from '../images/hero-health-science.jpg'
 
 export default () => {
   return (
     <Fragment>
       <SEO title="Health Science" />
 
-      <Hero backgroundImage="https://picsum.photos/1200/301" />
+      <Hero backgroundImage={ heroBackground }>
+        <Title><span className="highlight">Health Science</span></Title>
+        <p className="highlight">
+            brief overview. brief overview. brief overview. brief overview. brief overview.
+            brief overview. brief overview. brief overview. brief overview. brief overview.
+        </p>
+      </Hero>
       
       <Container>
-        <Title>Health Science</Title>
-
         <Button cta>Our Work</Button>
 
         <br /><br />

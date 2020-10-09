@@ -19,14 +19,12 @@ export default () => {
         <img
           src={ sc20Logo }
           alt="SC20 Virtual Booth Logo"
-          style={{ width: '178px', height: '190px', margin: '0 0 1rem 0' }}
+          style={{ width: '178px', height: '190px', margin: 'auto' }}
         />
-        <Heading style={{ color: theme.color.primary.main, fontWeight: 'normal', letterSpacing: '2px' }}>Virtual Booth</Heading>
+        <Heading style={{ color: theme.color.primary.main, fontWeight: 'normal', letterSpacing: '2px', margin: 'auto' }}>Virtual Booth</Heading>
       </Hero>
       
       <Container>
-        <Title>Home</Title>
-
         <Button cta>Our Work</Button>
 
         <br /><br />

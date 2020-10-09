@@ -4,17 +4,23 @@ import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { List } from '../components/list'
+import heroBackground from '../images/hero-consortia.jpg'
 
 const ConsortiaPage = () => {
   return (
     <Fragment>
       <SEO title="Consortia" />
 
-      <Hero backgroundImage="https://picsum.photos/1200/304" />
+      <Hero backgroundImage={ heroBackground }>
+        <Title><span className="highlight">Consortia</span></Title>
+        <p className="highlight">
+            brief overview. brief overview. brief overview. brief overview.
+            brief overview. brief overview. brief overview. brief overview.
+            brief overview. brief overview. brief overview.
+        </p>
+      </Hero>
 
       <Container>
-        <Title>Consortia</Title>
-
         <Section>
           <Heading>South Big Data Hub</Heading>
 

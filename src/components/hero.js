@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import { useScrollPosition } from '../hooks'
 
-const zoomIn = keyframes`
+const bgZoome = keyframes`
     0% {
         opacity: 0.0;
         transform: perspective(500px) translateZ(0px);
@@ -10,6 +10,17 @@ const zoomIn = keyframes`
     100% {
         opacity: 1.0;
         transform: perspective(500px) translateZ(20px);
+    }
+`
+
+const contentZoom = keyframes`
+    0% {
+        opacity: 0.0;
+        transform: perspective(500px) translateZ(-20px);
+    }
+    100% {
+        opacity: 1.0;
+        transform: perspective(500px) translateZ(0px);
     }
 `
 
@@ -27,7 +38,7 @@ const Wrapper = styled.div(({ theme }) => `
 
 const Background = styled.div(({ color, image, yShift }) => css`
   background-color: ${ color };
-  animation: ${ zoomIn } 500ms ease-out forwards;
+  animation: ${ bgZoome } 500ms ease-out forwards;
   background-image: url(${ image });
   background-size: cover;
   background-position: center calc(50% + ${ yShift }px);
@@ -39,7 +50,7 @@ const Background = styled.div(({ color, image, yShift }) => css`
   z-index: -1;
 `)
 
-const Contents = styled.div(({ theme }) => `
+const Contents = styled.div(({ theme }) => css`
   position: absolute;
   left: 0;
   top: 0;
@@ -47,9 +58,21 @@ const Contents = styled.div(({ theme }) => `
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   z-index: 1;
+  padding: 2rem;
+  animation: ${ contentZoom } 750ms ease-out forwards;
+  & .highlight {
+    background-color: ${ theme.color.primary.darkest }bb;
+    padding: ${ theme.spacing.small } ${ theme.spacing.medium };
+    line-height: 1.5;
+    box-decoration-break: clone;
+    max-width: 100%;
+    @media (min-width: 992px) {
+      width: 75%;
+      max-width: 800px;
+    }
 `)
 
 export const Hero = ({ backgroundImage, backgroundColor, children }) => {

@@ -5,6 +5,7 @@ import { Hero } from '../components/hero'
 import { Title, Heading } from '../components/typography'
 import { List } from '../components/list'
 import { ExternalLink } from '../components/link'
+import heroBackground from '../images/hero-irods.jpg'
 
 const documents = [
   { text: 'iRODS Data Management Model', path: 'https://irods.org/images/data_management_model.jpg' },
@@ -36,11 +37,15 @@ export default () => {
     <Fragment>
       <SEO title="iRODS" />
       
-      <Hero backgroundImage="https://picsum.photos/1200/303" />
-
+      <Hero backgroundImage={ heroBackground }>
+        <Title><span className="highlight">iRODS</span></Title>
+        <p className="highlight">
+            brief overview. brief overview. brief overview. brief overview.
+            brief overview. brief overview. brief overview.
+        </p>
+      </Hero>
+      
       <Container>
-        <Title>iRODS</Title>
-
         <Section>
           <Heading>Documents</Heading>
           <List items={ documents.map(item => <ExternalLink to={ item.path } key={ item.path }>{ item.text }</ExternalLink>) } />
