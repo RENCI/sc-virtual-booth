@@ -15,9 +15,9 @@ export const theme = {
         },
         black: '#181818',
         grey: {
-            light: '#ddd',
-            main: '#999',
-            dark: '#333',
+            light: '#d6d9dc',
+            main: '#96999c',
+            dark: '#36393c',
         },
         white: '#f1f2f3',
         success: '#8ecbab',
