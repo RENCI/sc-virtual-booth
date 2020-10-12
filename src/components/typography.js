@@ -15,9 +15,15 @@ Title.defaultProps = {
   align: 'left',
 }
 
-export const Heading = styled.h2`
+export const Heading = styled.h2(({ theme }) => `
   text-transform: uppercase;
-`
+  color: ${ theme.color.primary.dark };
+`)
+
+export const Subheading = styled.h3(({ theme }) => `
+  font-style: italic;
+  color: ${ theme.color.grey.dark };
+`)
 
 export const Paragraph = styled.p(({ align, width, maxWidth }) => `
   text-align: ${ align };
