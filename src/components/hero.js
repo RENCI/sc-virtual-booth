@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import { useScrollPosition } from '../hooks'
 
-const bgZoome = keyframes`
+const bgZoom = keyframes`
     0% {
         opacity: 0.0;
         transform: perspective(500px) translateZ(0px);
@@ -38,7 +38,7 @@ const Wrapper = styled.div(({ theme }) => `
 
 const Background = styled.div(({ color, image, yShift }) => css`
   background-color: ${ color };
-  animation: ${ bgZoome } 500ms ease-out forwards;
+  animation: ${ bgZoom } 500ms ease-out forwards;
   background-image: url(${ image });
   background-size: cover;
   background-position: center calc(50% + ${ yShift }px);
