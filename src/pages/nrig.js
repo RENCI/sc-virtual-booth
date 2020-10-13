@@ -1,12 +1,15 @@
 import React, { Fragment } from "react"
+import { useTheme } from 'styled-components'
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
+import { Icon } from '../components/icons'
 import heroBackground from '../images/hero-nrig.jpg'
 
 export default () => {
+  const theme = useTheme()
   return (
     <Fragment>
       <SEO title="NRIG" />
@@ -24,6 +27,11 @@ export default () => {
       <Container>
         <Button cta>Request a Meeting</Button>
         
+        <Button style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '1rem' }}>
+            <Icon icon="zoomLogo" size={ 36 } fill={ theme.color.primary.main }/>
+            <span>Join Talk</span>
+        </Button>
+
         <Section>
           <Heading>FABRIC</Heading>
           <Subheading>FABRIC is the future</Subheading>
