@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
 import { SEO } from '../components/seo'
 import { Container, Section } from '../components/layout'
 import { Hero } from '../components/hero'
