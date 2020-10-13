@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react'
+import styled from 'styled-components'
 import { SEO } from '../components/seo'
 import { Container, Section } from '../components/layout'
 import { Hero } from '../components/hero'
-import { Title, Heading } from '../components/typography'
+import { Title, Heading, Subheading } from '../components/typography'
 import { List } from '../components/list'
 import { ExternalLink } from '../components/link'
 import heroBackground from '../images/hero-irods.jpg'
+import { VideoPlayer } from '../components/video-player'
 
 const documents = [
   { text: 'iRODS Data Management Model', path: 'https://irods.org/images/data_management_model.jpg' },
@@ -27,9 +29,12 @@ const links = [
 ]
 
 const videos = [
-  { text: 'Overview', path: '' },
-  { text: 'iRODS in Production from UGM2019', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZObEclkgMab9ROIeb19fL56' },
-  { text: 'iRODS in Production from UGM2020', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZPxeQLdPBYTq8Ze9yEDK0Tz' },
+  { text: 'Overview', path: 'https://www.youtube.com/watch?v=_5eVd3NJ5BU' },
+]
+
+const playlists = [
+  { text: 'UGM 2019', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZObEclkgMab9ROIeb19fL56' },
+  { text: 'UGM 2020', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZPxeQLdPBYTq8Ze9yEDK0Tz' },
 ]
 
 export default () => {
@@ -58,7 +63,13 @@ export default () => {
 
         <Section>
           <Heading>Videos</Heading>
-          <List items={ videos.map(item => <ExternalLink to={ item.path } key={ item.path }>{ item.text }</ExternalLink>) } />
+
+          <Subheading>iRODS Overview</Subheading>
+          <List items={ videos.map(item => <VideoPlayer url={ item.path } key={ item.path } />) } />
+
+          <Subheading>UGM Playlists</Subheading>
+          <List items={ playlists.map(item => <ExternalLink to={ item.path } key={ item.path }>{ item.text }</ExternalLink>) } />
+
         </Section>
 
       </Container>
