@@ -59,7 +59,7 @@ const Header = styled.header(({ theme }) => `
 
 //
 
-const Main = styled.main`
+const Main = styled.main(({ theme }) => `
   flex: 1;
   width: 100%;
   z-index: 0;
@@ -67,7 +67,17 @@ const Main = styled.main`
   background-size: 1200px;
   background-repeat: no-repeat;
   background-position: 100% 100%;
-`
+  & a {
+    color: ${ theme.color.primary.dark };
+    text-decoration: underline;
+    text-decoration-color: ${ theme.color.primary.dark }66;
+    transition: text-decoration-color 250ms;
+    text-underline-offset: 2px;
+  }
+  & a:hover {
+    text-decoration-color: ${ theme.color.primary.dark };
+  }
+`)
 
 //
 
