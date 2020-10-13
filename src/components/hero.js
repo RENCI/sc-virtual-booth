@@ -64,15 +64,21 @@ const Contents = styled.div(({ theme }) => css`
   padding: 2rem;
   animation: ${ contentZoom } 750ms ease-out forwards;
   & .highlight {
+    transition: background-color 250ms;
     background-color: ${ theme.color.primary.darkest }bb;
     padding: ${ theme.spacing.small } ${ theme.spacing.medium };
     line-height: 1.5;
     box-decoration-break: clone;
     max-width: 100%;
+    border-radius: ${ theme.border.radius };
     @media (min-width: 992px) {
       width: 75%;
       max-width: 800px;
     }
+  }
+  &:hover .highlight {
+    background-color: ${ theme.color.primary.darkest }dd;
+  }
 `)
 
 export const Hero = ({ backgroundImage, backgroundColor, children }) => {

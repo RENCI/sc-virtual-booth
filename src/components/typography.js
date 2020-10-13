@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-export const Title = styled.h1(({ align }) => `
+export const Title = styled.h1(({ theme, align }) => `
+  margin: ${ theme.spacing.large } 0;
   text-transform: uppercase;
   text-align: ${ align };
   font-size: clamp(1.5rem, 5vw, 3rem)
@@ -16,11 +17,13 @@ Title.defaultProps = {
 }
 
 export const Heading = styled.h2(({ theme }) => `
+  margin: ${ theme.spacing.large } 0;
   text-transform: uppercase;
   color: ${ theme.color.primary.dark };
 `)
 
 export const Subheading = styled.h3(({ theme }) => `
+  margin: ${ theme.spacing.large } 0;
   font-style: italic;
   color: ${ theme.color.grey.dark };
 `)
