@@ -4,6 +4,7 @@ import { SEO } from '../components/seo'
 import { Container, Section } from '../components/layout'
 import { Hero } from '../components/hero'
 import { Title, Heading, Subheading } from '../components/typography'
+import { Button } from '../components/button'
 import { List } from '../components/list'
 import { ExternalLink } from '../components/link'
 import heroBackground from '../images/hero-irods.jpg'
@@ -54,6 +55,8 @@ export default () => {
       </Hero>
       
       <Container>
+        <Button cta>Request a Meeting</Button>
+
         <Section>
           <Heading>Documents</Heading>
 

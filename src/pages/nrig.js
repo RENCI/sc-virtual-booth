@@ -3,6 +3,7 @@ import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../components/typography'
+import { Button } from '../components/button'
 import heroBackground from '../images/hero-nrig.jpg'
 
 export default () => {
@@ -21,6 +22,8 @@ export default () => {
       </Hero>
 
       <Container>
+        <Button cta>Request a Meeting</Button>
+        
         <Section>
           <Heading>FABRIC</Heading>
           <Subheading>FABRIC is the future</Subheading>

@@ -25,7 +25,7 @@ export default () => {
       </Hero>
       
       <Container>
-        <Button cta>Our Work</Button>
+        <Button cta>Request a Meeting</Button>
 
         <br /><br />
 

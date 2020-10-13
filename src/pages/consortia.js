@@ -3,6 +3,7 @@ import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
+import { Button } from '../components/button'
 import { List } from '../components/list'
 import heroBackground from '../images/hero-consortia.jpg'
 
@@ -31,8 +32,9 @@ const ConsortiaPage = () => {
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
           </Paragraph>
+
+          <Button cta>Request a Meeting</Button>
         </Section>
 
         <Section>
@@ -55,6 +57,8 @@ const ConsortiaPage = () => {
               'Supporting open and democratized data',
             ] }
           />
+          
+          <Button cta>Request a Meeting</Button>
         </Section>
 
         <Section>
@@ -66,8 +70,9 @@ const ConsortiaPage = () => {
             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-
           </Paragraph>
+          
+          <Button cta>Request a Meeting</Button>
         </Section>
 
       </Container>
