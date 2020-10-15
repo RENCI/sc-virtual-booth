@@ -15,9 +15,9 @@ export const Wrapper = styled.ul(({ theme, bullets }) => `
 const ListItem = styled.li(({ theme }) => `
 `)
 
-export const List = ({ items, bullets = 'none' }) => {
+export const List = ({ items, bullets = 'none', ...props }) => {
   return (
-    <Wrapper bullets={ bullets }>
+    <Wrapper bullets={ bullets } { ...props }>
       { items.map(item => <ListItem key={ item.key }>{ item }</ListItem>) }
     </Wrapper>
   )
