@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 import { useWindowWidth } from '@react-hook/window-size'
 import { useLogos, useScrollPosition } from '../../hooks'
-import { Link } from '../link'
+import { Link, ExternalLink } from '../link'
+import { Icon } from '../icon'
 import { Menu, MobileMenu } from '../menu'
 import menuItems from '../../menu'
 import backgroundLines from '../../images/background-lines.png'
@@ -81,12 +82,29 @@ const Main = styled.main(({ theme }) => `
 
 //
 
+const Floater = styled.span(({ theme }) => `
+  position: fixed;
+  bottom: ${ theme.spacing.small };
+  right: ${ theme.spacing.small };
+`)
+
+//
+
 const Footer = styled.footer(({ theme }) => `
   padding: 2rem 2rem;
   background-color: ${ theme.color.white };
   color: ${ theme.color.black };
   text-align: center;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
+  ${ Floater } {
+    filter: opacity(0.2);
+    transition: filter 250ms;
+  }
+  &:hover {
+    ${ Floater } {
+      filter: opacity(1.0);
+    }
+  }
 `)
 
 //
@@ -95,6 +113,7 @@ export const DefaultLayout = ({ children }) => {
   const windowWidth = useWindowWidth()
   const scrollPosition = useScrollPosition()
   const { renciLogo } = useLogos()
+  const theme = useTheme()
 
   return (
     <Wrapper>
@@ -114,7 +133,15 @@ export const DefaultLayout = ({ children }) => {
           RENCI partners with researchers, government, and industry to engage and solve the problems
           that affect North Carolina, our nation, and the world.
         </Paragraph>
+
         &copy; RENCI { new Date().getFullYear() }
+
+        <Floater>
+          <ExternalLink to="https://github.com/renci/renci-supercomputing">
+            <Icon icon="github" size={ 24 } fill={ theme.color.primary.dark } />
+          </ExternalLink>
+        </Floater>
+
       </Footer>
     </Wrapper>
   )
