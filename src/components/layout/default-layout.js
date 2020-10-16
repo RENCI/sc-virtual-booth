@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { useWindowWidth } from '@react-hook/window-size'
-import { useBrand, useScrollPosition } from '../../hooks'
+import { useLogos, useScrollPosition } from '../../hooks'
 import { Link } from '../link'
 import { Menu, MobileMenu } from '../menu'
 import menuItems from '../../menu'
@@ -94,13 +94,13 @@ const Footer = styled.footer(({ theme }) => `
 export const DefaultLayout = ({ children }) => {
   const windowWidth = useWindowWidth()
   const scrollPosition = useScrollPosition()
-  const { light: logo } = useBrand()
+  const { renciLogo } = useLogos()
 
   return (
     <Wrapper>
       <Header>
         <Brand to="/" compact={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? 1 : 0 }>
-          <Img fixed={ logo } style={{ width: '82.5px', height: '54px', margin: 0 }} />
+          <Img fixed={ renciLogo.light } style={{ width: '82.5px', height: '54px', margin: 0 }} />
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
       </Header>

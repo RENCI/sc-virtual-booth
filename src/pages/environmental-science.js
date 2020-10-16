@@ -1,4 +1,5 @@
 import React, { Fragment } from "react"
+import Img from 'gatsby-image'
 import { SEO } from '../components/seo'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Hero } from '../components/hero'
@@ -6,8 +7,11 @@ import { Container } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import heroBackground from '../images/hero-environmental-science.jpg'
+import { useLogos } from '../hooks'
 
 export default () => {
+  const { atlanticWaveSdx } = useLogos()
+
   return (
     <Fragment>
       <SEO title="Environmental Science" />
@@ -59,6 +63,8 @@ export default () => {
             </Col>
           </Row>
         </Grid>
+
+      <Img fixed={ atlanticWaveSdx } />
 
       </Container>
     </Fragment>

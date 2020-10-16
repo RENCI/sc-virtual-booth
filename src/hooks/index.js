@@ -1,2 +1,2 @@
-export * from './use-brand'
+export * from './use-logos'
 export * from './use-scroll-position'
