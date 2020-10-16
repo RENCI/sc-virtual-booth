@@ -30,7 +30,7 @@ export const Wrapper = styled.button(({ theme, cta }) => `
     display: block;
     margin: ${ theme.spacing.large } auto;
     padding: ${ theme.spacing.medium } ${ theme.spacing.large };
-    font-size: 200%;
+    font-size: 150%;
   }
 `)
 
