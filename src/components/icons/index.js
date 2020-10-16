@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 const icons = {
   hamburger: <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>,
+  renciDash: <path d="m0-0.3762 20.14 24.376h3.8604v-4.1967z" />,
   zoomLogo: <Fragment>
           <clipPath id="a"><path id="path2" d="m-200-175h1e3v562h-1e3z"/></clipPath>
           <clipPath id="b"><circle id="circle5" cx="107" cy="106" r="102"/></clipPath>
@@ -24,9 +25,14 @@ const icons = {
         </Fragment>
 }
 
-export const Icon = ({ icon, size, fill, ...rest }) => {
+export const Icon = ({ icon, size, fill, margin, ...rest }) => {
   return (
-    <svg { ...rest } version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={ `${ size }px` } height={ `${ size }px` } viewBox="0 0 24 24" fill={ fill }>
+    <svg { ...rest } version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={ `${ size }px` } height={ `${ size }px` } viewBox="0 0 24 24" fill={ fill }
+      style={{
+        margin: margin,
+        transition: 'fill 250ms',
+      }}
+    >
       { icons[icon] }
     </svg>
   )
@@ -36,9 +42,11 @@ Icon.propTypes = {
   icon: PropTypes.oneOf(Object.keys(icons)),
   size: PropTypes.number.isRequired,
   fill: PropTypes.string.isRequired,
+  margin: PropTypes.string.isRequired,
 }
 
 Icon.defaultProps = {
   size: 24,
   fill: '#333',
+  margin: '0',
 }

@@ -1,13 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react"
 import { useTheme } from 'styled-components'
-import { Router, useLocation } from "@reach/router"
+import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { Icon } from '../components/icons'
-import { Link } from '../components/link'
 import { List } from '../components/list'
 import heroBackground from '../images/hero-nrig.jpg'
 import { Container as Grid, Row, Col } from 'react-grid-system'
@@ -179,13 +178,15 @@ const nrigProjectsMenuItems = [
 
 export default () => {
   const [project, setProject] = useState('fabric')
+  const theme = useTheme()
   const location = useLocation()
 
   useEffect(() => {
-    if (typeof locaiton === 'string' && location !== '') setProject(location.replace('/nrig/', ''))
-  }, [location])
+    if (location.hash) {
+      setProject(location.hash.replace('#', ''))
+    }
+  }, [location.hash])
 
-  console.log(location)
   return (
     <Fragment>
       <SEO title="NRIG" />
@@ -205,7 +206,19 @@ export default () => {
           <Row>
             <Col xs={ 12 } md={ 2 } style={{ position: 'relative' }}>
               <List
-                items={ nrigProjectsMenuItems.map(item => <a key={ item.id } href="#" onClick={ () => setProject( item.id )}>{ item.text }</a>) }
+                items={ nrigProjectsMenuItems.map(item => (
+                  <a
+                    key={ item.id }
+                    href={ `${ location.pathname }#${ item.id }` }
+                    onClick={ () => setProject(item.id) }
+                  >
+                    <Icon icon="renciDash"
+                      size={ 12 } margin="0 0.5rem 0 0"
+                      fill={ project === item.id ? theme.color.primary.main : theme.color.grey.light }
+                    />
+                    { item.text }
+                  </a>
+                )) }
                 style={{ position: 'sticky', marginTop: '3rem', top: '6rem', }}
               />
             </Col>
