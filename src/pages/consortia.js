@@ -26,19 +26,34 @@ const ConsortiaPage = () => {
           <Heading>South Big Data Hub</Heading>
 
           <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            The South Big Data Innovation Hub is part of a network of four regional Big Data Hubs,
+            launched by the National Science Foundation and funded in part by host universities and other partners.
+            Managed jointly by RENCI and the Georgia Institute of Technology,
+            the South Hub serves 16 states and the District of Columbia with more than 1000 member universities,
+            corporations, foundations and cities committing their support.
+            The South Hub works to accelerate  partnerships among people in business, academia,
+            and government who apply data science and analytics to help solve regional and national challenges.
+            The priority areas and areas of interest for the South Hub are:
           </Paragraph>
+
+          <List bullets="disc"
+            items={[
+              'Health Disparities',
+              'Smart Cities',
+              'Advanced Materials and Manufacturing',
+              'Data Sharing & Cyberinfrastructure',
+              'Social Cyber Security',
+              'Environmental & Hazard Response',
+              'Team Science',
+              'Education & Workforce Development',
+            ]}
+          />
 
           <Button cta>Request a Meeting</Button>
         </Section>
 
         <Section>
-          <Heading>National Consortium for Data Sciene</Heading>
+          <Heading>National Consortium for Data Science</Heading>
 
           <Paragraph>
             The National Consortium for Data Science (NCDS) is a collaboration of leaders in academia, industry,
