@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import styled, { useTheme } from 'styled-components'
 import { useWindowWidth } from '@react-hook/window-size'
 import { useLogos, useScrollPosition } from '../../hooks'
-import { Link, ExternalLink } from '../link'
+import { Link } from '../link'
 import { Icon } from '../icon'
 import { Menu, MobileMenu } from '../menu'
 import menuItems from '../../menu'
@@ -137,9 +137,9 @@ export const DefaultLayout = ({ children }) => {
         &copy; RENCI { new Date().getFullYear() }
 
         <Floater>
-          <ExternalLink to="https://github.com/renci/sc-virtual-booth">
+          <Link to="https://github.com/renci/sc-virtual-booth">
             <Icon icon="github" size={ 24 } fill={ theme.color.primary.dark } />
-          </ExternalLink>
+          </Link>
         </Floater>
 
       </Footer>

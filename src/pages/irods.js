@@ -5,7 +5,7 @@ import { Hero } from '../components/hero'
 import { Title, Heading, Subheading } from '../components/typography'
 import { Button } from '../components/button'
 import { List } from '../components/list'
-import { ExternalLink } from '../components/link'
+import { Link } from '../components/link'
 import heroBackground from '../images/hero-irods.jpg'
 import { VideoPlayer } from '../components/video-player'
 
@@ -62,25 +62,25 @@ export default () => {
           <Subheading>General</Subheading>
 
           <List items={ documents.general.map(item => (
-            <ExternalLink to={ item.path } key={ item.path } style={{ display: 'flex', justifyContent:'flex-start', alignItems: 'center', gap: '2rem' }}>
+            <Link to={ item.path } key={ item.path } style={{ display: 'flex', justifyContent:'flex-start', alignItems: 'center', gap: '2rem' }}>
               <img src={ item.path } width="75px" alt="" /> { item.text }
-            </ExternalLink>
+            </Link>
           )) } />
           
           <Subheading>Patterns</Subheading>
 
           <List items={ documents.patterns.map(item => (
-            <ExternalLink to={ item.path } key={ item.path } style={{ display: 'flex', justifyContent:'flex-start', alignItems: 'center', gap: '2rem' }}>
+            <Link to={ item.path } key={ item.path } style={{ display: 'flex', justifyContent:'flex-start', alignItems: 'center', gap: '2rem' }}>
               <img src={ item.path } width="75px" alt="" /> { item.text }
-            </ExternalLink>
+            </Link>
           )) } />
 
           <Subheading>Capabilities</Subheading>
 
           <List items={ documents.capabilities.map(item => (
-            <ExternalLink to={ item.path } key={ item.path } style={{ display: 'flex', justifyContent:'flex-start', alignItems: 'center', gap: '2rem' }}>
+            <Link to={ item.path } key={ item.path } style={{ display: 'flex', justifyContent:'flex-start', alignItems: 'center', gap: '2rem' }}>
               <img src={ item.path } width="75px" alt="" /> { item.text }
-            </ExternalLink>
+            </Link>
           )) } />
 
         </Section>
@@ -92,7 +92,7 @@ export default () => {
           <List items={ videos.map(item => <VideoPlayer url={ item.path } key={ item.path } />) } />
 
           <Subheading>UGM Playlists</Subheading>
-          <List items={ playlists.map(item => <ExternalLink to={ item.path } key={ item.path }>{ item.text }</ExternalLink>) } />
+          <List items={ playlists.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
 
         </Section>
 

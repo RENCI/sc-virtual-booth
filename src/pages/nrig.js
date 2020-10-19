@@ -8,6 +8,7 @@ import { Container, Section } from '../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { Icon } from '../components/icon'
+import { Link } from '../components/link'
 import { List } from '../components/list'
 import heroBackground from '../images/hero-nrig.jpg'
 import { Container as Grid, Row, Col } from 'react-grid-system'
@@ -23,7 +24,10 @@ const AtlanticWaveSdx = () => {
         <Heading>AtlanticWave SDX</Heading>
         <Img fixed={ atlanticWaveSdx } />
         <Paragraph>
-          FIU, RENCI, USC-ISI and GA-Tech developed the AtlanticWave-SDX:
+          <Link to="https://www.fiu.edu/">FIU</Link>
+          , <Link to="https://www.renci.org/">RENCI</Link>
+          , <Link to="https://www.isi.edu/">USC-ISI</Link>
+          , and <Link to="https://www.gatech.edu/">Georgia Tech</Link> developed the AtlanticWave-SDX:
           a distributed Software-Defined Exchange, supporting research, and experimental deployments, on international scales.
           This demonstration will present the AtlanticWave-SDX and its features.
           We then create a network topology across four geographically dispersed exchange points,
