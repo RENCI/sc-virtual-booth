@@ -34,6 +34,80 @@ const AtlanticWaveSdx = () => {
   )
 }
 
+const ChameleonCloud = () => {
+  return (
+    <Section>
+      <Heading>Chameleon Cloud</Heading>
+
+      <Subheading>Overview</Subheading>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Paragraph>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Paragraph>
+
+      <Subheading>Some Details</Subheading>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+      </Paragraph>
+    </Section>
+  )
+}
+
+const ExoGeni = () => {
+  return (
+    <Section>
+      <Heading>ExoGENI</Heading>
+
+      <Subheading>Overview</Subheading>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Paragraph>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Paragraph>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Paragraph>
+
+      <Subheading>Some Details</Subheading>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+      </Paragraph>
+    </Section>
+  )
+}
+
 const Fabric = () => {
   const theme = useTheme()
   return (
@@ -118,90 +192,16 @@ const Impact = () => {
   )
 }
 
-const ChameleonCloud = () => {
-  return (
-    <Section>
-      <Heading>Chameleon Cloud</Heading>
-
-      <Subheading>Overview</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
-
-      <Subheading>Some Details</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-      </Paragraph>
-    </Section>
-  )
-}
-
-const Exogeni = () => {
-  return (
-    <Section>
-      <Heading>ExoGENI</Heading>
-
-      <Subheading>Overview</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
-
-      <Subheading>Some Details</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-      </Paragraph>
-    </Section>
-  )
-}
-
-const nrigProjectsMenuItems = [
-  { text: 'FABRIC', id: 'fabric' },
-  { text: 'Chameleon Cloud', id: 'chameleon-cloud' },
-  { text: 'ImPACT', id: 'impact' },
-  { text: 'ExoGENI', id: 'exogeni' },
-  { text: 'AtlanticWave SDX', id: 'atlantic-wave-sdx' }
+const projectsMenuItems = [
+  { text: 'AtlanticWave SDX', id: 'atlantic-wave-sdx', component: <AtlanticWaveSdx /> },
+  { text: 'Chameleon Cloud', id: 'chameleon-cloud', component: <ChameleonCloud /> },
+  { text: 'ExoGENI', id: 'exogeni', component: <ExoGeni /> },
+  { text: 'FABRIC', id: 'fabric', component: <Fabric /> },
+  { text: 'ImPACT', id: 'impact', component: <Impact /> },
 ]
 
 export default () => {
-  const [project, setProject] = useState('fabric')
+  const [project, setProject] = useState('atlantic-wave-sdx')
   const theme = useTheme()
   const location = useLocation()
 
@@ -230,7 +230,7 @@ export default () => {
           <Row>
             <Col xs={ 12 } md={ 3 } style={{ position: 'relative' }}>
               <List
-                items={ nrigProjectsMenuItems.map(item => (
+                items={ projectsMenuItems.map(item => (
                   <a
                     key={ item.id }
                     href={ `${ location.pathname }#${ item.id }` }
@@ -247,11 +247,7 @@ export default () => {
               />
             </Col>
             <Col xs={ 12 } md={ 9 }>
-              { project === 'atlantic-wave-sdx' && <AtlanticWaveSdx /> }
-              { project === 'chameleon-cloud' && <ChameleonCloud /> }
-              { project === 'exogeni' && <Exogeni /> }
-              { project === 'fabric' && <Fabric /> }
-              { project === 'impact' && <Impact /> }
+              { projectsMenuItems.map(item => project === item.id && item.component ) }
             </Col>
           </Row>
         </Grid>

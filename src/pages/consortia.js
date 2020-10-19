@@ -92,13 +92,13 @@ const BioDataCatalyst = () => {
 }
 
 const consortiaMenuItems = [
-  { text: 'South Big Data Hub', id: 'sbdh' },
-  { text: 'NCDS', id: 'ncds' },
-  { text: 'BioData Catalyst', id: 'bdc' },
+  { text: 'BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
+  { text: 'NCDS', id: 'ncds', component: <NationalConsortiumfForDataScience /> },
+  { text: 'South Big Data Hub', id: 'sbdh', component: <SouthBigDataHub /> },
 ]
 
 const ConsortiaPage = () => {
-  const [consortium, setConsortium] = useState('sbdh')
+  const [consortium, setConsortium] = useState('bdc')
   const theme = useTheme()
   const location = useLocation()
 
@@ -143,9 +143,7 @@ const ConsortiaPage = () => {
               />
             </Col>
             <Col xs={ 12 } md={ 9 }>
-              { consortium === 'sbdh' && <SouthBigDataHub /> }
-              { consortium === 'ncds' && <NationalConsortiumfForDataScience /> }
-              { consortium === 'bdc' && <BioDataCatalyst /> }
+              { consortiaMenuItems.map(item => consortium === item.id && item.component ) }
             </Col>
           </Row>
         </Grid>
