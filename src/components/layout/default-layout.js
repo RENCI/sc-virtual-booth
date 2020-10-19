@@ -137,7 +137,7 @@ export const DefaultLayout = ({ children }) => {
         &copy; RENCI { new Date().getFullYear() }
 
         <Floater>
-          <ExternalLink to="https://github.com/renci/renci-supercomputing">
+          <ExternalLink to="https://github.com/renci/sc-virtual-booth">
             <Icon icon="github" size={ 24 } fill={ theme.color.primary.dark } />
           </ExternalLink>
         </Floater>
