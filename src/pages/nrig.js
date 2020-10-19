@@ -204,7 +204,7 @@ export default () => {
       <Container>
         <Grid fluid>
           <Row>
-            <Col xs={ 12 } md={ 2 } style={{ position: 'relative' }}>
+            <Col xs={ 12 } md={ 3 } style={{ position: 'relative' }}>
               <List
                 items={ nrigProjectsMenuItems.map(item => (
                   <a
@@ -222,7 +222,7 @@ export default () => {
                 style={{ position: 'sticky', marginTop: '3rem', top: '6rem', }}
               />
             </Col>
-            <Col xs={ 12 } md={ 10 }>
+            <Col xs={ 12 } md={ 9 }>
               { project === 'fabric' && <Fabric /> }
               { project === 'chameleon-cloud' && <ChameleonCloud /> }
               { project === 'impact' && <Impact /> }
