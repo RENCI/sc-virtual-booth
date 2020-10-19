@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react"
+import Img from 'gatsby-image'
 import { useTheme } from 'styled-components'
 import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
@@ -10,6 +11,28 @@ import { Icon } from '../components/icon'
 import { List } from '../components/list'
 import heroBackground from '../images/hero-nrig.jpg'
 import { Container as Grid, Row, Col } from 'react-grid-system'
+import { useLogos } from '../hooks'
+
+
+const AtlanticWaveSdx = () => {
+  const { atlanticWaveSdx } = useLogos()
+
+  return (
+    <Fragment>
+      <Section>
+        <Heading>AtlanticWave SDX</Heading>
+        <Img fixed={ atlanticWaveSdx } />
+        <Paragraph>
+          FIU, RENCI, USC-ISI and GA-Tech developed the AtlanticWave-SDX:
+          a distributed Software-Defined Exchange, supporting research, and experimental deployments, on international scales.
+          This demonstration will present the AtlanticWave-SDX and its features.
+          We then create a network topology across four geographically dispersed exchange points,
+          showing how the Pegasus application benefits from the AtlanticWave-SDX.
+        </Paragraph>
+      </Section>
+    </Fragment>
+  )
+}
 
 const Fabric = () => {
   const theme = useTheme()
@@ -174,6 +197,7 @@ const nrigProjectsMenuItems = [
   { text: 'Chameleon Cloud', id: 'chameleon-cloud' },
   { text: 'ImPACT', id: 'impact' },
   { text: 'ExoGENI', id: 'exogeni' },
+  { text: 'AtlanticWave SDX', id: 'atlantic-wave-sdx' }
 ]
 
 export default () => {
@@ -223,10 +247,11 @@ export default () => {
               />
             </Col>
             <Col xs={ 12 } md={ 9 }>
-              { project === 'fabric' && <Fabric /> }
+              { project === 'atlantic-wave-sdx' && <AtlanticWaveSdx /> }
               { project === 'chameleon-cloud' && <ChameleonCloud /> }
-              { project === 'impact' && <Impact /> }
               { project === 'exogeni' && <Exogeni /> }
+              { project === 'fabric' && <Fabric /> }
+              { project === 'impact' && <Impact /> }
             </Col>
           </Row>
         </Grid>
