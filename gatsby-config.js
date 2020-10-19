@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `RENCI Gatsby Starter`,
-    siteUrl: 'https://example.com/',
-    description: `RENCI Gatsby Starter`,
+    title: `RENCI SC20 Virtual Booth`,
+    siteUrl: 'http://sc.renci.org/',
+    description: `RENCI's virtual booth for Supercomputing 20 Conference`,
     keywords: ['renci', 'unc'],
     author: `@mbwatson`,
   },
