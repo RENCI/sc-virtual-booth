@@ -19,22 +19,27 @@ const AtlanticWaveSdx = () => {
   const { atlanticWaveSdx } = useLogos()
 
   return (
-    <Fragment>
-      <Section>
-        <Heading>AtlanticWave SDX</Heading>
-        <Img fixed={ atlanticWaveSdx } />
-        <Paragraph>
-          <Link to="https://www.fiu.edu/">FIU</Link>
-          , <Link to="https://www.renci.org/">RENCI</Link>
-          , <Link to="https://www.isi.edu/">USC-ISI</Link>
-          , and <Link to="https://www.gatech.edu/">Georgia Tech</Link> developed the AtlanticWave-SDX:
-          a distributed Software-Defined Exchange, supporting research, and experimental deployments, on international scales.
-          This demonstration will present the AtlanticWave-SDX and its features.
-          We then create a network topology across four geographically dispersed exchange points,
-          showing how the Pegasus application benefits from the AtlanticWave-SDX.
-        </Paragraph>
-      </Section>
-    </Fragment>
+    <Section>
+      <Heading>AtlanticWave SDX</Heading>
+      
+      <Paragraph>
+        <Link to="https://www.fiu.edu/">FIU</Link>
+        , <Link to="https://www.renci.org/">RENCI</Link>
+        , <Link to="https://www.isi.edu/">USC-ISI</Link>
+        , and <Link to="https://www.gatech.edu/">Georgia Tech</Link> developed the AtlanticWave-SDX:
+        a distributed Software-Defined Exchange, supporting research, and experimental deployments, on international scales.
+        This demonstration will present the AtlanticWave-SDX and its features.
+        We then create a network topology across four geographically dispersed exchange points,
+        showing how the Pegasus application benefits from the AtlanticWave-SDX.
+      </Paragraph>
+      
+      <Paragraph align="center">
+        <Link to="https://nsf.gov/awardsearch/showAward?AWD_ID=2029278&HistoricalAwards=false">
+          <Img fixed={ atlanticWaveSdx } />
+        </Link>
+      </Paragraph>
+      
+    </Section>
   )
 }
 
