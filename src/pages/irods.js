@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import Img from 'gatsby-image'
 import { SEO } from '../components/seo'
 import { Container, Section } from '../components/layout'
 import { Hero } from '../components/hero'
@@ -8,6 +9,7 @@ import { List } from '../components/list'
 import { Link } from '../components/link'
 import heroBackground from '../images/hero-irods.jpg'
 import { VideoPlayer } from '../components/video-player'
+import { useLogos } from '../hooks'
 
 const documents = {
   general: [
@@ -41,12 +43,18 @@ const playlists = [
 ]
 
 export default () => {
+  const { irods } = useLogos()
+
+  console.log(irods)
+
   return (
     <Fragment>
       <SEO title="iRODS" />
       
       <Hero backgroundImage={ heroBackground }>
-        <Title><span className="highlight">iRODS</span></Title>
+        <span className="highlight" style={{ width: 'unset', margin: '1rem 0' }}>
+          <Img fixed={ irods } style={{ margin: '1rem 0' }}/>
+        </span>
         <p className="highlight">
             brief overview. brief overview. brief overview. brief overview.
             brief overview. brief overview. brief overview.

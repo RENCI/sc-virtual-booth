@@ -15,6 +15,13 @@ const logosQuery = graphql`{
       }
     }
   }
+  irodsLogo: file(relativePath: {eq: "irods-logo.png"}) {
+    childImageSharp {
+      fixed(width: 180) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
   atlanticWaveSdxLogo: file(relativePath: {eq: "atlantic-wave-sdx-logo.png"}) {
     childImageSharp {
       fixed {
@@ -28,6 +35,7 @@ export const useLogos = () => {
     const {
       renciLogoLight,
       renciLogoDark,
+      irodsLogo,
       atlanticWaveSdxLogo,
     } = useStaticQuery(logosQuery)
 
@@ -35,7 +43,8 @@ export const useLogos = () => {
       light: renciLogoLight.childImageSharp.fixed,
       dark: renciLogoDark.childImageSharp.fixed,
     }
+    const irods = irodsLogo.childImageSharp.fixed
     const atlanticWaveSdx = atlanticWaveSdxLogo.childImageSharp.fixed
-    return { renciLogo, atlanticWaveSdx }
+    return { renciLogo, irods, atlanticWaveSdx }
 }
 
