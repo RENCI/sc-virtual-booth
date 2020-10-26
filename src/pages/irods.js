@@ -55,10 +55,6 @@ export default () => {
         <span className="highlight" style={{ width: 'unset', margin: '1rem 0' }}>
           <Img fixed={ irods } style={{ margin: '1rem 0' }}/>
         </span>
-        <p className="highlight">
-            brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview.
-        </p>
       </Hero>
       
       <Container>

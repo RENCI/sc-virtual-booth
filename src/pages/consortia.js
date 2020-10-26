@@ -6,10 +6,88 @@ import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
+import { Link } from '../components/link'
 import { List } from '../components/list'
 import { Icon } from '../components/icon'
 import heroBackground from '../images/hero-consortia.jpg'
 import { Container as Grid, Row, Col } from 'react-grid-system'
+
+const BioDataCatalyst = () => {
+  return (
+    <Section>
+      <Heading>BioData Catalyst</Heading>
+
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      </Paragraph>
+      
+      <Button cta>Request a Meeting</Button>
+    </Section>
+  )
+}
+
+const Irods = () => {
+  return (
+    <Section>
+      <Heading>iRODS</Heading>
+
+      <Paragraph>
+        The iRODS Consortium brings together businesses, research organizations, universities, and government agencies to ensure the sustainability of iRODS by:
+      </Paragraph>
+
+      <List bullets="disc"
+        items={[
+        'Guiding further development of the software;',
+        'Growing the user and developer communities; and',
+        'Facilitating iRODS support, education, and collaboration opportunities.',
+      ]} />
+
+      <Paragraph>
+        The Consortium maintains and supports a commercial-grade distribution of <Link to="https://github.com/irods/irods">iRODS</Link>
+      </Paragraph>
+
+      <Paragraph>
+        The iRODS Consortium fields a team of software developers, application engineers, and support staff housed at RENCI at the University of North Carolina at Chapel Hill. Each year, the Consortium hosts the iRODS User Group Meeting, a symposium that draws 100+ participants to Chapel Hill to share iRODS technologies and case studies.
+      </Paragraph>
+
+      <Link to="https://irods.org/about/">Consortium Members</Link>
+
+      <Button cta>Request a Meeting</Button>
+    </Section>
+  )
+}
+
+const NationalConsortiumfForDataScience = () => {
+  return (
+    <Section>
+      <Heading>National Consortium for Data Science</Heading>
+
+      <Paragraph>
+        The National Consortium for Data Science (NCDS) is a collaboration of leaders in academia, industry,
+        and government formed to address the data challenges and opportunities of the 21st century.
+        The NCDS helps members take advantage of data in ways that result in new jobs and transformative discoveries.
+      </Paragraph>
+
+      <Paragraph>
+        We connect diverse communities of data science experts to support a 21st century data-driven economy by:
+      </Paragraph>
+
+      <List bullets="disc"
+        items={ [
+          'Building data science career pathways and creating a data-literate workforce',
+          'Bridging the gap between data scientists in the public and private sectors',
+          'Supporting open and democratized data',
+        ] }
+      />
+      
+      <Button cta>Request a Meeting</Button>
+    </Section>
+  )
+}
 
 const SouthBigDataHub = () => {
   return (
@@ -45,54 +123,9 @@ const SouthBigDataHub = () => {
   )
 }
 
-const NationalConsortiumfForDataScience = () => {
-  return (
-    <Section>
-      <Heading>National Consortium for Data Science</Heading>
-
-      <Paragraph>
-        The National Consortium for Data Science (NCDS) is a collaboration of leaders in academia, industry,
-        and government formed to address the data challenges and opportunities of the 21st century.
-        The NCDS helps members take advantage of data in ways that result in new jobs and transformative discoveries.
-      </Paragraph>
-
-      <Paragraph>
-        We connect diverse communities of data science experts to support a 21st century data-driven economy by:
-      </Paragraph>
-
-      <List bullets="disc"
-        items={ [
-          'Building data science career pathways and creating a data-literate workforce',
-          'Bridging the gap between data scientists in the public and private sectors',
-          'Supporting open and democratized data',
-        ] }
-      />
-      
-      <Button cta>Request a Meeting</Button>
-    </Section>
-  )
-}
-
-const BioDataCatalyst = () => {
-  return (
-    <Section>
-      <Heading>BioData Catalyst</Heading>
-
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-      </Paragraph>
-      
-      <Button cta>Request a Meeting</Button>
-    </Section>
-  )
-}
-
 const consortiaMenuItems = [
   { text: 'BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
+  { text: 'iRODS', id: 'irods', component: <Irods /> },
   { text: 'NCDS', id: 'ncds', component: <NationalConsortiumfForDataScience /> },
   { text: 'South Big Data Hub', id: 'sbdh', component: <SouthBigDataHub /> },
 ]
