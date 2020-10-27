@@ -1,21 +1,37 @@
 import React, { Fragment } from 'react'
+import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { SEO } from '../components/seo'
 import { Container, Section } from '../components/layout'
 import { Hero } from '../components/hero'
-import { Title, Heading, Subheading } from '../components/typography'
+import { Heading, Subheading } from '../components/typography'
 import { Button } from '../components/button'
 import { List } from '../components/list'
+import { ListGrid } from '../components/list-grid'
 import { Link } from '../components/link'
 import heroBackground from '../images/hero-irods.jpg'
 import { VideoPlayer } from '../components/video-player'
 import { useLogos } from '../hooks'
 
+const StackedLink = styled(Link)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & embed {
+     margin-bottom: 1rem;
+     pointer-events: none;
+  }
+  & > span {
+    display: block;
+    text-align: center;
+  }
+`
+
 const documents = {
   general: [
+    { text: 'Members Benefit Table', path: 'https://irods.org/uploads/members_benefit_sheet.pdf' },
     { text: 'iRODS Data Management Model', path: 'https://irods.org/images/data_management_model.jpg' },
-    { text: 'Core: Integration Layer', path: 'https://irods.org/images/core_integration_layer.jpg' },
-    { text: 'Data Lifecycle', path: 'https://irods.org/images/data_lifecycle_diagram.jpg' },
   ],
   patterns: [
     { text: 'Data to Compute', path: 'https://irods.org/images/pattern_data_to_compute.jpg' },
@@ -33,19 +49,22 @@ const documents = {
   ],
 }
 
-const videos = [
-  { text: 'Overview', path: 'https://www.youtube.com/watch?v=_5eVd3NJ5BU' },
-]
+const videos = { 
+  overview: { text: 'Overview', path: 'https://www.youtube.com/watch?v=_5eVd3NJ5BU' },
+  other: [
+    { text: 'iRODS in Production', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZObEclkgMab9ROIeb19fL56' },
+    { text: 'User Group Meeting 2020', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZPxeQLdPBYTq8Ze9yEDK0Tz' },
+  ]
+}
 
-const playlists = [
-  { text: 'UGM 2019', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZObEclkgMab9ROIeb19fL56' },
-  { text: 'UGM 2020', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZPxeQLdPBYTq8Ze9yEDK0Tz' },
+const additionalInfo = [
+  { text: 'irods.org', path: 'https://irods.org/' },
+  { text: 'https://github.com/irods', path: 'https://github.com/irods' },
+  { text: 'iRODS Consortium Members', path: 'https://irods.org/about' },
 ]
 
 export default () => {
   const { irods } = useLogos()
-
-  console.log(irods)
 
   return (
     <Fragment>
@@ -53,50 +72,63 @@ export default () => {
       
       <Hero backgroundImage={ heroBackground }>
         <span className="highlight" style={{ width: 'unset', margin: '1rem 0' }}>
-          <Img fixed={ irods } style={{ margin: '1rem 0' }}/>
+          <Img fixed={ irods } style={{ margin: '1rem' }}/>
         </span>
       </Hero>
       
       <Container>
         <Button cta>Request a Meeting</Button>
 
+        <br /><br />
+
+        <VideoPlayer url={ videos.overview.path } key={ videos.overview.path } />
+
         <Section>
           <Heading>Documents</Heading>
 
           <Subheading>General</Subheading>
 
-          <List items={ documents.general.map(item => (
-            <Link to={ item.path } key={ item.path } style={{ display: 'flex', justifyContent:'flex-start', alignItems: 'center', gap: '2rem' }}>
-              <img src={ item.path } width="75px" alt="" /> { item.text }
-            </Link>
+          <ListGrid items={ documents.general.map(item => (
+            <StackedLink to={ item.path } key={ item.path }>
+              {
+                item.path.endsWith('.pdf') ? (
+                  <Link to={ item.path }>
+                    <embed src={ item.path } type="application/pdf" width="100%" height="240px" />
+                  </Link>
+                ) : <img src={ item.path } width="100%" alt="" />
+              }
+              <span>{ item.text }</span>
+            </StackedLink>
           )) } />
           
           <Subheading>Patterns</Subheading>
 
-          <List items={ documents.patterns.map(item => (
-            <Link to={ item.path } key={ item.path } style={{ display: 'flex', justifyContent:'flex-start', alignItems: 'center', gap: '2rem' }}>
-              <img src={ item.path } width="75px" alt="" /> { item.text }
-            </Link>
+          <ListGrid items={ documents.patterns.map(item => (
+            <StackedLink to={ item.path } key={ item.path }>
+              <img src={ item.path } width="100%" alt="" />
+              <span>{ item.text }</span>
+            </StackedLink>
           )) } />
 
           <Subheading>Capabilities</Subheading>
 
-          <List items={ documents.capabilities.map(item => (
-            <Link to={ item.path } key={ item.path } style={{ display: 'flex', justifyContent:'flex-start', alignItems: 'center', gap: '2rem' }}>
-              <img src={ item.path } width="75px" alt="" /> { item.text }
-            </Link>
+          <ListGrid items={ documents.capabilities.map(item => (
+            <StackedLink to={ item.path } key={ item.path }>
+              <img src={ item.path } width="100%" alt="" />
+              <span>{ item.text }</span>
+            </StackedLink>
           )) } />
 
         </Section>
 
         <Section>
-          <Heading>Videos</Heading>
+          <Heading>Other Videos</Heading>
+          <List items={ videos.other.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
+        </Section>
 
-          <Subheading>iRODS Overview</Subheading>
-          <List items={ videos.map(item => <VideoPlayer url={ item.path } key={ item.path } />) } />
-
-          <Subheading>UGM Playlists</Subheading>
-          <List items={ playlists.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
+        <Section>
+          <Heading>Additional Info</Heading>
+          <List items={ additionalInfo.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
 
         </Section>
 
