@@ -4,12 +4,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.ul(({ theme, bullets }) => `
   list-style-type: ${ bullets };
-  ${
-    bullets === 'none'
-      ? `margin: 0;`
-      : `margin: ${ theme.spacing.medium };`
-  }
-  
+  margin: ${ bullets === 'none' ? 0 : theme.spacing.medium };
 `)
 
 const ListItem = styled.li(({ theme }) => `
