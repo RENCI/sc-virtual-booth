@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 import styled, { keyframes } from 'styled-components'
+import { Link } from './link'
+import { navigate } from '@reach/router'
 
 const RIPPLE_DURATION = 500 // in milliseconds
 
@@ -60,7 +63,7 @@ const Ripple = styled.span`
   animation: ${ RIPPLE_DURATION }ms ease 1 forwards ${ rippleEffect };
 `
 
-export const Button = ({ children, cta, ...props }) => {
+export const Button = ({ cta, link, to, children, ...props }) => {
   const [coords, setCoords] = useState({ x: -1, y: -1 })
   const [isRippling, setIsRippling] = useState(false)
 
@@ -68,10 +71,30 @@ export const Button = ({ children, cta, ...props }) => {
     const { left, top, width, height } = event.target.getBoundingClientRect()
     const { clientX, clientY } = event
     if (clientX === 0 && clientY === 0) {
-      setCoords({ x: width / 2 - 15, y: height / 2  - 15})
+      setCoords({ x: width / 2 - 15, y: height / 2  - 15}) // unsure why `-15` offset is needed here
     } else {
       setCoords({ x: clientX - left - 15, y: clientY - top - 15 }) // unsure why `-15` offset is needed here
     }
+
+    // here, we check if the linked path is internal or external to this site,
+    // and we'll define this openLink function accordingly
+    let openLink
+    if (link && to) {
+      // check URL pattern
+      const externalUrlPattern = new RegExp(/^https?:\/\//)
+      const match = externalUrlPattern.exec(to)
+      if (match) {
+        // if the link is external, open link in new tab/window
+        openLink = () => window.open(to, '_blank')
+      } else {
+        // if the link is internal, use Reach Router to navigate
+        openLink = () => navigate(to)
+      }
+      // delay navigation to see a bit of the rippling effect on the button
+      setTimeout(openLink, 250)
+    }
+    // remove that timeout
+    return clearTimeout(openLink)
   }
 
   useEffect(() => {
@@ -93,5 +116,18 @@ export const Button = ({ children, cta, ...props }) => {
       { children }
     </Wrapper>
   )
+}
 
+Button.propTypes = {
+  cta: PropTypes.bool.isRequired,
+  link: PropTypes.bool.isRequired,
+  to: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired,
+}
+
+Button.defaultProps = {
+  cta: false,
+  link: false,
+  to: '',
+  children: PropTypes.node.isRequired,
 }
