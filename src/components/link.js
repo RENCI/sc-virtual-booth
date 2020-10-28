@@ -12,5 +12,5 @@ export const Link = ({ to, children, ...props }) => {
   const externalUrlPattern = new RegExp(/^https?:\/\//)
   const match = externalUrlPattern.exec(to)
   const LinkComponent = match ? ExternalLink : GatsbyLink
-  return <LinkComponent to={ to } { ...props }>{ children}</LinkComponent>
+  return <LinkComponent to={ to } { ...props }>{ children }</LinkComponent>
 }
