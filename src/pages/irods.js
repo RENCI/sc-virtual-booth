@@ -77,7 +77,7 @@ export default () => {
       </Hero>
       
       <Container>
-        <Button cta>Request a Meeting</Button>
+        <Button cta link to="https://forms.gle/cHxswNxrqoZMwJtJA">Request a Meeting</Button>
 
         <br /><br />
 
