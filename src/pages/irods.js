@@ -9,7 +9,7 @@ import { Button } from '../components/button'
 import { List } from '../components/list'
 import { ListGrid } from '../components/list-grid'
 import { Link } from '../components/link'
-import heroBackground from '../images/hero-irods.jpg'
+import heroBackground from '../images/hero-irods.png'
 import { VideoPlayer } from '../components/video-player'
 import { useLogos } from '../hooks'
 
