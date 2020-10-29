@@ -6,8 +6,6 @@ import { Link } from 'gatsby'
 const Wrapper = styled.nav`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
 `
 
 const MenuItem = styled(Link)(({ theme }) => `

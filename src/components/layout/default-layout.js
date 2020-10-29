@@ -32,7 +32,8 @@ const Brand = styled(Link)(({ compact }) => `
   font-weight: bold;
   text-transform: uppercase;
   transition: padding 250ms;
-  padding: ${ compact ? '0.25rem 2rem' : '2rem' };
+  padding: 0;
+  margin: auto 1rem;
 `)
 
 Brand.propTypes = {
@@ -45,25 +46,30 @@ Brand.defaultProps = {
 
 //
 
-const Header = styled.header(({ theme }) => `
+const Header = styled.header(({ theme, height }) => `
   background-color: ${ theme.color.white };
   color: ${ theme.color.black };
   display: flex;
   flex-direction: row;
-  justify-content: space-between;100%
+  justify-content: space-between;
   align-items: stretch;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
   position: sticky;
   top: 0;
   z-index: 1;
+  max-height: ${ height };
+  min-height: ${ height };
+  transition: min-height 250ms;
 `)
 
 //
 
-const Main = styled.main(({ theme }) => `
+const Main = styled.main(({ theme, yShift }) => `
   flex: 1;
   width: 100%;
   z-index: 0;
+  transform: translateY(${ yShift });
+  transition: transform 250ms;
   background-image: url(${ backgroundLines });
   background-size: 1200px;
   background-repeat: no-repeat;
@@ -117,13 +123,13 @@ export const DefaultLayout = ({ children }) => {
 
   return (
     <Wrapper>
-      <Header>
-        <Brand to="/" compact={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? 1 : 0 }>
+      <Header height={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? '4rem' : '6rem' }>
+        <Brand to="/">
           <Img fixed={ renciLogo.light } style={{ width: '82.5px', height: '54px', margin: 0 }} />
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
       </Header>
-      <Main>
+      <Main yShift={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? '1.75rem' : '0' }>
         { children }
       </Main>
       <Footer>
