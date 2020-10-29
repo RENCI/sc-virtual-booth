@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
+import { useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { SEO } from '../components/seo'
 import { Container, Section } from '../components/layout'
@@ -9,7 +10,6 @@ import { Button } from '../components/button'
 import { List } from '../components/list'
 import { ListGrid } from '../components/list-grid'
 import { Link } from '../components/link'
-import heroBackground from '../images/hero-irods.png'
 import { VideoPlayer } from '../components/video-player'
 import { useLogos } from '../hooks'
 
@@ -65,17 +65,15 @@ const additionalInfo = [
 
 export default () => {
   const { irods } = useLogos()
+  const data = useStaticQuery(circleOfLifeQuery)
+  const circleOfLifeImage = data.file.childImageSharp.fluid
 
   return (
     <Fragment>
       <SEO title="iRODS" />
-      
-      <Hero backgroundImage={ heroBackground }>
-        <span className="highlight" style={{ width: 'unset', margin: '1rem 0' }}>
-          <Img fixed={ irods } style={{ margin: '1rem' }}/>
-        </span>
-      </Hero>
-      
+
+      <Img fluid={ circleOfLifeImage } style={{ height: `25vw` }} imgStyle={{ objectFit: 'contain' }} />
+            
       <Container>
         <Button cta link to="https://forms.gle/cHxswNxrqoZMwJtJA">Request a Meeting</Button>
 
@@ -137,3 +135,18 @@ export default () => {
     </Fragment>
   )
 }
+
+const circleOfLifeQuery = graphql`{
+  file(relativePath: {eq: "hero-irods.jpg"}) {
+    childImageSharp {
+      fluid(maxWidth: 800) {
+        base64
+        tracedSVG
+        srcWebp
+        srcSetWebp
+        originalImg
+        originalName
+      }
+    }
+  }
+}`
