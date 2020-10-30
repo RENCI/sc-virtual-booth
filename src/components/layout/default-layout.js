@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 import Img from 'gatsby-image'
 import styled, { useTheme } from 'styled-components'
 import { useWindowWidth } from '@react-hook/window-size'
-import { useLogos, useScrollPosition } from '../../hooks'
+import { useHeroes, useLogos, useScrollPosition } from '../../hooks'
 import { Link } from '../link'
 import { Icon } from '../icon'
 import { Menu, MobileMenu } from '../menu'
@@ -119,10 +120,14 @@ export const DefaultLayout = ({ children }) => {
   const windowWidth = useWindowWidth()
   const scrollPosition = useScrollPosition()
   const { renciLogo } = useLogos()
+  const { heroImagePaths } = useHeroes()
   const theme = useTheme()
 
   return (
     <Wrapper>
+      <Helmet>
+        { heroImagePaths.map(path => <link rel="prefetch" src={ path } />) }
+      </Helmet>
       <Header height={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? '4rem' : '6rem' }>
         <Brand to="/">
           <Img fixed={ renciLogo.light } style={{ width: '82.5px', height: '54px', margin: 0 }} />
