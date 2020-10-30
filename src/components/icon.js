@@ -26,12 +26,13 @@ const icons = {
         </Fragment>
 }
 
-export const Icon = ({ icon, size, fill, margin, ...rest }) => {
+export const Icon = ({ icon, size, fill, margin, style, ...rest }) => {
   return (
     <svg { ...rest } version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width={ `${ size }px` } height={ `${ size }px` } viewBox="0 0 24 24" fill={ fill }
       style={{
         margin: margin,
-        transition: 'fill 250ms',
+        transition: 'all 250ms',
+        ...style,
       }}
     >
       { icons[icon] }

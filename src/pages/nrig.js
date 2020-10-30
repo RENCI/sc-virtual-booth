@@ -264,6 +264,7 @@ export default () => {
                     <Icon icon="renciDash"
                       size={ 12 } margin="0 0.5rem 0 0"
                       fill={ project === item.id ? theme.color.primary.main : theme.color.grey.light }
+                      style={{ transform: `scale(${ project === item.id ? '1.0' : '0.75' })`, transformOrigin: '100% 100%' }}
                     />
                     { item.text }
                   </a>

@@ -168,6 +168,7 @@ const ConsortiaPage = () => {
                     <Icon icon="renciDash"
                       size={ 12 } margin="0 0.5rem 0 0"
                       fill={ consortium === item.id ? theme.color.primary.main : theme.color.grey.light }
+                      style={{ transform: `scale(${ consortium === item.id ? '1.0' : '0.75' })`, transformOrigin: '100% 100%' }}
                     />
                     { item.text }
                   </a>
