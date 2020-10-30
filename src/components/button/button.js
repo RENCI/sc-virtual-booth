@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import styled, { keyframes } from 'styled-components'
-import { Link } from './link'
+import styled, { keyframes, useTheme } from 'styled-components'
+import { Link } from '../link'
 import { navigate } from '@reach/router'
 
 const RIPPLE_DURATION = 500 // in milliseconds
@@ -122,12 +122,11 @@ Button.propTypes = {
   cta: PropTypes.bool.isRequired,
   link: PropTypes.bool.isRequired,
   to: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 }
 
 Button.defaultProps = {
   cta: false,
   link: false,
   to: '',
-  children: PropTypes.node.isRequired,
 }

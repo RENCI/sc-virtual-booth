@@ -7,7 +7,7 @@ import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../components/typography'
-import { Button } from '../components/button'
+import { Button, IconButton } from '../components/button'
 import { Icon } from '../components/icon'
 import { Link } from '../components/link'
 import { List } from '../components/list'
@@ -183,11 +183,7 @@ const Fabric = () => {
 
       <Button cta>Schedule a Meeting</Button>
 
-      <Button style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', gap: '1rem' }}>
-          <Icon icon="zoomLogo" size={ 36 } fill={ theme.color.primary.main }/>
-          <span>Join Zoom Talk</span>
-      </Button>
-
+      <IconButton link to="https://zoom.us/" icon="zoomLogo">Join Zoom Talk</IconButton>
     </Fragment>
   )
 }
