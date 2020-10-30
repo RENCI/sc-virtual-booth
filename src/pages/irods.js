@@ -13,12 +13,12 @@ import { Link } from '../components/link'
 import { VideoPlayer } from '../components/video-player'
 import { useLogos } from '../hooks'
 
-const StackedLink = styled(Link)`
+const StackedLink = styled(Link)(({ theme }) => `
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  & embed {
+  & object {
      margin-bottom: 1rem;
      pointer-events: none;
   }
@@ -26,7 +26,14 @@ const StackedLink = styled(Link)`
     display: block;
     text-align: center;
   }
-`
+  object, img {
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
+    transition: filter 250ms;
+  }
+  &:hover object, &:hover img {
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.25));
+  }
+`)
 
 const documents = {
   general: [
@@ -92,9 +99,7 @@ export default () => {
             <StackedLink to={ item.path } key={ item.path }>
               {
                 item.path.endsWith('.pdf') ? (
-                  <Link to={ item.path }>
-                    <embed src={ item.path } type="application/pdf" width="100%" height="240px" />
-                  </Link>
+                    <object type="application/pdf" data={ item.path } width="100%" height="240px"></object>
                 ) : <img src={ item.path } width="100%" alt="" />
               }
               <span>{ item.text }</span>
