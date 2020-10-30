@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react"
+import { useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { useTheme } from 'styled-components'
 import { useLocation } from "@reach/router"
@@ -14,8 +15,8 @@ import heroBackground from '../images/hero-nrig.jpg'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { useLogos } from '../hooks'
 
-
 const AtlanticWaveSdx = () => {
+  const { atlanticWaveSdxFlyer } = useStaticQuery(flyerQuery)
   const { atlanticWaveSdx } = useLogos()
 
   return (
@@ -38,10 +39,25 @@ const AtlanticWaveSdx = () => {
           <Img fixed={ atlanticWaveSdx } />
         </Link>
       </Paragraph>
+
+      <a href={ atlanticWaveSdxFlyer.publicURL }>
+        <Img fluid={ atlanticWaveSdxFlyer.childImageSharp.fluid } style={{ height: `calc(762px * 0.75)` }} imgStyle={{ objectFit: 'contain' }} />
+      </a>
       
     </Section>
   )
 }
+
+const flyerQuery = graphql`{
+  atlanticWaveSdxFlyer: file(relativePath: {eq: "atlantic-wave-sdx-flyer.jpg"}) {
+    publicURL
+    childImageSharp {
+      fluid(maxWidth: 732) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}`
 
 const ChameleonCloud = () => {
   return (
