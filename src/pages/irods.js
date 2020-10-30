@@ -72,7 +72,9 @@ export default () => {
     <Fragment>
       <SEO title="iRODS" />
 
-      <Img fluid={ circleOfLifeImage } style={{ height: `25vw` }} imgStyle={{ objectFit: 'contain' }} />
+      <Link to="https://irods.org">
+        <Img fluid={ circleOfLifeImage } style={{ height: `25vw` }} imgStyle={{ objectFit: 'contain' }} alt="iRODS - Data Centric, Metadata Driven" />
+      </Link>
             
       <Container>
         <Button cta link to="https://forms.gle/cHxswNxrqoZMwJtJA">Request a Meeting</Button>
