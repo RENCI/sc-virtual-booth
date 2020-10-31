@@ -4,14 +4,12 @@ import { useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { SEO } from '../components/seo'
 import { Container, Section } from '../components/layout'
-import { Hero } from '../components/hero'
 import { Heading, Subheading } from '../components/typography'
 import { Button } from '../components/button'
 import { List } from '../components/list'
 import { ListGrid } from '../components/list-grid'
 import { Link } from '../components/link'
 import { VideoPlayer } from '../components/video-player'
-import { useLogos } from '../hooks'
 
 const StackedLink = styled(Link)(({ theme }) => `
   display: flex;
@@ -71,7 +69,6 @@ const additionalInfo = [
 ]
 
 export default () => {
-  const { irods } = useLogos()
   const data = useStaticQuery(circleOfLifeQuery)
   const circleOfLifeImage = data.file.childImageSharp.fluid
 
@@ -99,7 +96,9 @@ export default () => {
             <StackedLink to={ item.path } key={ item.path }>
               {
                 item.path.endsWith('.pdf') ? (
-                    <object type="application/pdf" data={ item.path } width="100%" height="240px"></object>
+                    <object type="application/pdf" data={ item.path } width="100%" height="240px">
+                      Download <Link to={ item.path } target="_blank" rel="noopener noreferrer">{ item.text }</Link>
+                    </object>
                 ) : <img src={ item.path } width="100%" alt="" />
               }
               <span>{ item.text }</span>

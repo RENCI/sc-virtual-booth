@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react"
-import { useTheme } from 'styled-components'
 import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
@@ -86,7 +85,6 @@ const projectsMenuItems = [
 
 export default () => {
   const [project, setProject] = useState('bdc')
-  const theme = useTheme()
   const location = useLocation()
 
   useEffect(() => {

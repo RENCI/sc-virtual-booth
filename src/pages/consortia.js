@@ -1,5 +1,4 @@
 import React, { Fragment, useEffect, useState } from "react"
-import { useTheme } from 'styled-components'
 import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
@@ -9,7 +8,6 @@ import { SideMenu } from '../components/menu'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
 import { List } from '../components/list'
-import { Icon } from '../components/icon'
 import heroBackground from '../images/hero-consortia.jpg'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 
@@ -133,7 +131,6 @@ const consortiaMenuItems = [
 
 const ConsortiaPage = () => {
   const [consortium, setConsortium] = useState('bdc')
-  const theme = useTheme()
   const location = useLocation()
 
   useEffect(() => {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import styled, { keyframes, useTheme } from 'styled-components'
-import { Link } from '../link'
+import styled, { keyframes } from 'styled-components'
 import { navigate } from '@reach/router'
 
 const RIPPLE_DURATION = 500 // in milliseconds

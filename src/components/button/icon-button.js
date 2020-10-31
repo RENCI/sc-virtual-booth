@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { useTheme } from 'styled-components'
+import { useTheme } from 'styled-components'
 import { Button } from './button'
 import { Icon, icons } from '../icon'
 
