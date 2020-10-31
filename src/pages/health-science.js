@@ -1,19 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react"
-import Img from 'gatsby-image'
 import { useTheme } from 'styled-components'
 import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
-import { Container, Section } from '../components/layout'
-import { Title, Heading, Subheading, Paragraph } from '../components/typography'
-import { Button } from '../components/button'
-import { Icon } from '../components/icon'
-import { Link } from '../components/link'
-import { List } from '../components/list'
 import heroBackground from '../images/hero-nrig.jpg'
+import { Container, Section } from '../components/layout'
+import { Title, Heading, Paragraph } from '../components/typography'
+import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
-import { useLogos } from '../hooks'
-
 
 const BioDataCatalyst = () => {
   return (
@@ -119,23 +113,7 @@ export default () => {
         <Grid fluid>
           <Row>
             <Col xs={ 12 } md={ 3 } style={{ position: 'relative' }}>
-              <List
-                items={ projectsMenuItems.map(item => (
-                  <a
-                    key={ item.id }
-                    href={ `${ location.pathname }#${ item.id }` }
-                    onClick={ () => setProject(item.id) }
-                  >
-                    <Icon icon="renciDash"
-                      size={ 12 } margin="0 0.5rem 0 0"
-                      fill={ project === item.id ? theme.color.primary.main : theme.color.grey.light }
-                      style={{ transform: `scale(${ project === item.id ? '1.0' : '0.75' })`, transformOrigin: '100% 100%' }}
-                    />
-                    { item.text }
-                  </a>
-                )) }
-                style={{ position: 'sticky', marginTop: '3rem', top: '6rem', }}
-              />
+              <SideMenu items={ projectsMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ project } />
             </Col>
             <Col xs={ 12 } md={ 9 }>
               { projectsMenuItems.map(item => project === item.id && item.component ) }

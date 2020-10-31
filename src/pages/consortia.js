@@ -5,6 +5,7 @@ import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
+import { SideMenu } from '../components/menu'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
 import { List } from '../components/list'
@@ -158,23 +159,7 @@ const ConsortiaPage = () => {
         <Grid fluid>
           <Row>
             <Col xs={ 12 } md={ 3 } style={{ position: 'relative' }}>
-              <List
-                items={ consortiaMenuItems.map(item => (
-                  <a
-                    key={ item.id }
-                    href={ `${ location.pathname }#${ item.id }` }
-                    onClick={ () => setConsortium(item.id) }
-                  >
-                    <Icon icon="renciDash"
-                      size={ 12 } margin="0 0.5rem 0 0"
-                      fill={ consortium === item.id ? theme.color.primary.main : theme.color.grey.light }
-                      style={{ transform: `scale(${ consortium === item.id ? '1.0' : '0.75' })`, transformOrigin: '100% 100%' }}
-                    />
-                    { item.text }
-                  </a>
-                )) }
-                style={{ position: 'sticky', marginTop: '3rem', top: '6rem', }}
-              />
+              <SideMenu items={ consortiaMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ consortium } />
             </Col>
             <Col xs={ 12 } md={ 9 }>
               { consortiaMenuItems.map(item => consortium === item.id && item.component ) }
