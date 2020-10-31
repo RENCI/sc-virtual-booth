@@ -34,16 +34,14 @@ const AtlanticWaveSdx = () => {
         showing how the Pegasus application benefits from the AtlanticWave-SDX.
       </Paragraph>
       
-      <Paragraph align="center">
-        <Link to="https://nsf.gov/awardsearch/showAward?AWD_ID=2029278&HistoricalAwards=false">
-          <Img fixed={ atlanticWaveSdx } />
-        </Link>
-      </Paragraph>
+      <Link to="https://nsf.gov/awardsearch/showAward?AWD_ID=2029278&HistoricalAwards=false">
+        <Img fluid={ atlanticWaveSdx } />
+      </Link>
 
-      <a href={ atlanticWaveSdxFlyer.publicURL }>
+      <Link to={ atlanticWaveSdxFlyer.publicURL }>
         <Img fluid={ atlanticWaveSdxFlyer.childImageSharp.fluid } style={{ height: `calc(762px * 0.75)` }} imgStyle={{ objectFit: 'contain' }} />
-      </a>
-      
+      </Link>
+
     </Section>
   )
 }

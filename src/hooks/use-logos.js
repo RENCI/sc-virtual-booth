@@ -24,8 +24,8 @@ const logosQuery = graphql`{
   }
   atlanticWaveSdxLogo: file(relativePath: {eq: "atlantic-wave-sdx-logo.png"}) {
     childImageSharp {
-      fixed {
-        ...GatsbyImageSharpFixed
+      fluid {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -44,7 +44,7 @@ export const useLogos = () => {
       dark: renciLogoDark.childImageSharp.fixed,
     }
     const irods = irodsLogo.childImageSharp.fixed
-    const atlanticWaveSdx = atlanticWaveSdxLogo.childImageSharp.fixed
+    const atlanticWaveSdx = atlanticWaveSdxLogo.childImageSharp.fluid
     return { renciLogo, irods, atlanticWaveSdx }
 }
 
