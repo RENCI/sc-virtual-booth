@@ -14,22 +14,23 @@ import { VideoPlayer } from '../components/video-player'
 const StackedLink = styled(Link)(({ theme }) => `
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  height: 100%;
   & object {
-     margin-bottom: 1rem;
-     pointer-events: none;
-  }
-  & > span {
-    display: block;
-    text-align: center;
+    flex: 1;
+    pointer-events: none;
   }
   object, img {
+    max-height: calc(100% - 2.5rem);
     filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
     transition: filter 250ms;
   }
   &:hover object, &:hover img {
     filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.25));
+  }
+  & > .title {
+    text-align: center;
   }
 `)
 
@@ -96,12 +97,12 @@ export default () => {
             <StackedLink to={ item.path } key={ item.path }>
               {
                 item.path.endsWith('.pdf') ? (
-                    <object type="application/pdf" data={ item.path } width="100%" height="240px">
-                      Download <Link to={ item.path } target="_blank" rel="noopener noreferrer">{ item.text }</Link>
-                    </object>
+                  <object type="application/pdf" data={ item.path } width="100%" height="240px">
+                    Download <Link to={ item.path } target="_blank" rel="noopener noreferrer">{ item.text }</Link>
+                  </object>
                 ) : <img src={ item.path } width="100%" alt="" />
               }
-              <span>{ item.text }</span>
+              <div className="title">{ item.text }</div>
             </StackedLink>
           )) } />
           
