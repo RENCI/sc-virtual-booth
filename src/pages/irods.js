@@ -19,7 +19,7 @@ const StackedLink = styled(Link)(({ theme }) => `
   height: 100%;
   & object {
     flex: 1;
-    pointer-events: none;
+    // pointer-events: none;
   }
   object, img {
     max-height: calc(100% - 2.5rem);
@@ -35,9 +35,12 @@ const StackedLink = styled(Link)(({ theme }) => `
 `)
 
 const documents = {
+  dataManagementModel: [
+    { text: 'iRODS Data Management Model', path: 'https://irods.org/images/data_management_model.jpg' },
+  ],
   general: [
     { text: 'Members Benefit Table', path: 'https://irods.org/uploads/members_benefit_sheet.pdf' },
-    { text: 'iRODS Data Management Model', path: 'https://irods.org/images/data_management_model.jpg' },
+    { text: 'Core Integration layer', path: 'https://irods.org/images/core_integration_layer.jpg' }
   ],
   patterns: [
     { text: 'Data to Compute', path: 'https://irods.org/images/pattern_data_to_compute.jpg' },
@@ -90,6 +93,15 @@ export default () => {
 
         <Section>
           <Heading>Documents</Heading>
+
+          <Subheading>Data Management Model</Subheading>
+
+          <ListGrid items={ documents.dataManagementModel.map(item => (
+            <StackedLink to={ item.path } key={ item.path }>
+              <img src={ item.path } width="100%" alt="" />
+              <span>{ item.text }</span>
+            </StackedLink>
+          )) } />
 
           <Subheading>General</Subheading>
 
