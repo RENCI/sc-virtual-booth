@@ -40,7 +40,8 @@ const documents = {
   ],
   general: [
     { text: 'Members Benefit Table', path: 'https://irods.org/uploads/members_benefit_sheet.pdf' },
-    { text: 'Core Integration layer', path: 'https://irods.org/images/core_integration_layer.jpg' }
+    { text: 'Core Integration layer', path: 'https://irods.org/images/core_integration_layer.jpg' },
+    { text: 'Data Lifecycle', path: 'https://irods.org/images/data_lifecycle_diagram.jpg' },
   ],
   patterns: [
     { text: 'Data to Compute', path: 'https://irods.org/images/pattern_data_to_compute.jpg' },
