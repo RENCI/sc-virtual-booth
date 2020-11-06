@@ -147,9 +147,8 @@ const Fabric = () => {
         </iframe>
       </Section>
 
-      <Button cta>Schedule a Meeting</Button>
+      <Button cta link to="https://www.whatisfabric.net/get-involved">Get Involved</Button>
 
-      <IconButton cta link to="https://zoom.us/" icon="zoomLogo">Join Zoom Talk</IconButton>
     </Fragment>
   )
 }
