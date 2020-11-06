@@ -5,12 +5,13 @@ import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import heroBackground from '../images/hero-nrig.jpg'
 import { Container, Section } from '../components/layout'
-import { Title, Heading, Subheading, Paragraph } from '../components/typography'
+import { Title, Heading, Paragraph } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
+import { List } from '../components/list'
 import { Button } from '../components/button'
-import { useLogos } from '../hooks'
 import { Link } from '../components/link'
+import { useLogos } from '../hooks'
 
 const BioDataCatalyst = () => {
   const { biodataCatalyst } = useLogos()
@@ -37,9 +38,12 @@ const BioDataCatalyst = () => {
       </Paragraph>
       
       <Heading>Links</Heading>
-      <Paragraph>
-        <Link to="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst Website</Link>
-      </Paragraph>
+      
+      <List bullets="disc"
+        items={[
+          <Link to="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst Website</Link>,
+        ]}
+      />
 
       <br/><br/>
 

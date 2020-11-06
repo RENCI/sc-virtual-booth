@@ -38,9 +38,12 @@ const BioDataCatalyst = () => {
       </Paragraph>
       
       <Heading>Links</Heading>
-      <Paragraph>
-        <Link to="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst Website</Link>
-      </Paragraph>
+      
+      <List bullets="disc"
+        items={[
+          <Link to="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst Website</Link>,
+        ]}
+      />
 
       <br/><br/>
 
@@ -80,9 +83,17 @@ const Irods = () => {
         The iRODS Consortium fields a team of software developers, application engineers, and support staff housed at RENCI at the University of North Carolina at Chapel Hill. Each year, the Consortium hosts the iRODS User Group Meeting, a symposium that draws 100+ participants to Chapel Hill to share iRODS technologies and case studies.
       </Paragraph>
 
-      <Link to="https://irods.org/about/">Consortium Members</Link>
-
       <Button cta>Request a Meeting</Button>
+
+      <Heading>Links</Heading>
+
+      <List bullets="disc"
+        items={[
+          <Link to="/irods">iRODS Virtual Booth</Link>,
+          <Link to="https://irods.org/about/">Consortium Members</Link>,
+        ]}
+      />
+
     </Section>
   )
 }
