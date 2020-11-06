@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react"
+import Img from 'gatsby-image'
 import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
@@ -10,6 +11,7 @@ import { Link } from '../components/link'
 import { List } from '../components/list'
 import heroBackground from '../images/hero-consortia.jpg'
 import { Container as Grid, Row, Col } from 'react-grid-system'
+import { useLogos } from '../hooks'
 
 const BioDataCatalyst = () => {
   return (
@@ -30,9 +32,16 @@ const BioDataCatalyst = () => {
 }
 
 const Irods = () => {
+  const { irods } = useLogos()
   return (
     <Section>
-      <Heading>iRODS</Heading>
+      <Heading hidden>iRODS</Heading>
+
+      <Link to="/irods">
+        <Img fixed={ irods } />
+      </Link>
+
+      <br/><br/>
 
       <Paragraph>
         The iRODS Consortium brings together businesses, research organizations, universities, and government agencies to ensure the sustainability of iRODS by:
