@@ -155,7 +155,7 @@ const SouthBigDataHub = () => {
         ]}
       />
 
-      <Button cta>Request a Meeting</Button>
+      <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact Us</Button>
     </Section>
   )
 }
