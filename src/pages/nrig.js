@@ -13,13 +13,24 @@ import { Button, IconButton } from '../components/button'
 import { Link } from '../components/link'
 import { useLogos } from '../hooks'
 
+const flyerQuery = graphql`{
+  atlanticWaveSdxFlyer: file(relativePath: {eq: "atlantic-wave-sdx-flyer.jpg"}) {
+    publicURL
+    childImageSharp {
+      fluid(maxWidth: 732) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}`
+
 const AtlanticWaveSdx = () => {
   const { atlanticWaveSdxFlyer } = useStaticQuery(flyerQuery)
   const { atlanticWaveSdx } = useLogos()
 
   return (
     <Section>
-      <Heading>AtlanticWave SDX</Heading>
+      <Heading>Atlantic Wave SDX</Heading>
       
       <Paragraph>
         <Link to="https://www.fiu.edu/">FIU</Link>
@@ -43,17 +54,6 @@ const AtlanticWaveSdx = () => {
     </Section>
   )
 }
-
-const flyerQuery = graphql`{
-  atlanticWaveSdxFlyer: file(relativePath: {eq: "atlantic-wave-sdx-flyer.jpg"}) {
-    publicURL
-    childImageSharp {
-      fluid(maxWidth: 732) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-}`
 
 const ChameleonCloud = () => {
   return (
@@ -88,10 +88,10 @@ const ChameleonCloud = () => {
   )
 }
 
-const ExoGeni = () => {
+const CiCoePilot = () => {
   return (
     <Section>
-      <Heading>ExoGENI</Heading>
+      <Heading>CI CoE Pilot</Heading>
 
       <Subheading>Overview</Subheading>
       <Paragraph>
@@ -153,10 +153,35 @@ const Fabric = () => {
   )
 }
 
-const Impact = () => {
+const FlyNet = () => {
   return (
     <Section>
-      <Heading>Impact</Heading>
+      <Heading>FlyNet</Heading>
+
+      <Subheading>Overview</Subheading>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </Paragraph>
+
+      <Subheading>Some Details</Subheading>
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+      </Paragraph>
+    </Section>
+  )
+}
+
+const Panorama = () => {
+  return (
+    <Section>
+      <Heading>Panorama</Heading>
 
       <Subheading>Overview</Subheading>
       <Paragraph>
@@ -179,15 +204,16 @@ const Impact = () => {
 }
 
 const projectsMenuItems = [
-  { text: 'AtlanticWave SDX', id: 'atlantic-wave-sdx', component: <AtlanticWaveSdx /> },
-  { text: 'Chameleon Cloud', id: 'chameleon-cloud', component: <ChameleonCloud /> },
-  { text: 'ExoGENI', id: 'exogeni', component: <ExoGeni /> },
   { text: 'FABRIC', id: 'fabric', component: <Fabric /> },
-  { text: 'ImPACT', id: 'impact', component: <Impact /> },
+  { text: 'Chameleon Cloud', id: 'chameleon-cloud', component: <ChameleonCloud /> },
+  { text: 'AtlanticWave SDX', id: 'atlantic-wave-sdx', component: <AtlanticWaveSdx /> },
+  { text: 'CI CoE Pilot', id: 'ci-coe-pilot', component: <CiCoePilot /> },
+  { text: 'Panorama', id: 'panorama', component: <Panorama /> },
+  { text: 'FlyNet', id: 'flynet', component: <FlyNet /> },
 ]
 
 export default () => {
-  const [project, setProject] = useState('atlantic-wave-sdx')
+  const [project, setProject] = useState('fabric')
   const location = useLocation()
 
   useEffect(() => {
