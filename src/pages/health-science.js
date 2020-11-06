@@ -1,35 +1,49 @@
 import React, { Fragment, useEffect, useState } from "react"
+import Img from 'gatsby-image'
 import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import heroBackground from '../images/hero-nrig.jpg'
 import { Container, Section } from '../components/layout'
-import { Title, Heading, Paragraph } from '../components/typography'
+import { Title, Heading, Subheading, Paragraph } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
+import { Button } from '../components/button'
+import { useLogos } from '../hooks'
+import { Link } from '../components/link'
 
 const BioDataCatalyst = () => {
+  const { biodataCatalyst } = useLogos()
   return (
     <Section>
-      <Heading>BioData Catalyst</Heading>
+      <Heading>NHLBI BioData Catalyst</Heading>
+
+      <br/><br/>
+
+      <Paragraph align="center" width="100%" maxWidth="500px">
+        <Img fluid={ biodataCatalyst.fluid } alt="Visit BioData Catalyst Website" />
+      </Paragraph>
+
+      <br/><br/>
+
+      <Paragraph>
+        NHLBI BioData Catalyst is a cloud-based ecosystem providing tools, applications, and workflows in secure workspaces.
+        The ecosystem is a dynamic resource that allows researchers to find, access, share, store, and compute on large scale datasets. 
+      </Paragraph>
+
+      <Paragraph>
+        User feedback is encouraged as BioData Catalyst is building a community of practice,
+        working collaboratively to solve technical and scientific challenges.
+      </Paragraph>
       
+      <Heading>Links</Heading>
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <Link to="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst Website</Link>
       </Paragraph>
-            
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
+
+      <br/><br/>
+
+      <Button cta link to="https://biodatacatalyst.nhlbi.nih.gov/contact">Contact BioData Catalyst</Button>
                         
     </Section>
   )
@@ -78,7 +92,7 @@ const PrecisionDosing = () => {
 }
 
 const projectsMenuItems = [
-  { text: 'BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
+  { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
   { text: 'Data Translator', id: 'data-translator', component: <DataTranslator /> },
   { text: 'Precision Dosing', id: 'pds', component: <PrecisionDosing /> },
 ]

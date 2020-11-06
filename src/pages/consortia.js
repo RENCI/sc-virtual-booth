@@ -14,21 +14,39 @@ import { Container as Grid, Row, Col } from 'react-grid-system'
 import { useLogos } from '../hooks'
 
 const BioDataCatalyst = () => {
+  const { biodataCatalyst } = useLogos()
   return (
     <Section>
-      <Heading>BioData Catalyst</Heading>
+      <Heading>NHLBI BioData Catalyst</Heading>
+
+      <br/><br/>
+
+      <Paragraph align="center" width="100%" maxWidth="500px">
+        <Img fluid={ biodataCatalyst.fluid } alt="Visit BioData Catalyst Website" />
+      </Paragraph>
+
+      <br/><br/>
 
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        NHLBI BioData Catalyst is a cloud-based ecosystem providing tools, applications, and workflows in secure workspaces.
+        The ecosystem is a dynamic resource that allows researchers to find, access, share, store, and compute on large scale datasets. 
+      </Paragraph>
+
+      <Paragraph>
+        User feedback is encouraged as BioData Catalyst is building a community of practice,
+        working collaboratively to solve technical and scientific challenges.
       </Paragraph>
       
-      <Button cta>Request a Meeting</Button>
-    </Section>
-  )
+      <Heading>Links</Heading>
+      <Paragraph>
+        <Link to="https://biodatacatalyst.nhlbi.nih.gov/">BioData Catalyst Website</Link>
+      </Paragraph>
+
+      <br/><br/>
+
+      <Button cta link to="https://biodatacatalyst.nhlbi.nih.gov/contact">Contact BioData Catalyst</Button>
+                        
+    </Section>  )
 }
 
 const Irods = () => {
@@ -132,7 +150,7 @@ const SouthBigDataHub = () => {
 }
 
 const consortiaMenuItems = [
-  { text: 'BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
+  { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
   { text: 'iRODS', id: 'irods', component: <Irods /> },
   { text: 'NCDS', id: 'ncds', component: <NationalConsortiumfForDataScience /> },
   { text: 'South Big Data Hub', id: 'sbdh', component: <SouthBigDataHub /> },

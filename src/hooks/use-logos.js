@@ -15,17 +15,27 @@ const logosQuery = graphql`{
       }
     }
   }
-  irodsLogo: file(relativePath: {eq: "irods-logo.png"}) {
-    childImageSharp {
-      fixed(width: 180) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
   atlanticWaveSdxLogo: file(relativePath: {eq: "atlantic-wave-sdx-logo.png"}) {
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  biodataCatalystLogo: file(relativePath: {eq: "biodata-catalyst-logo.png"}) {
+    childImageSharp {
+      fixed(width: 200) {
+        ...GatsbyImageSharpFixed
+      }
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  irodsLogo: file(relativePath: {eq: "irods-logo.png"}) {
+    childImageSharp {
+      fixed(width: 180) {
+        ...GatsbyImageSharpFixed
       }
     }
   }
@@ -35,16 +45,18 @@ export const useLogos = () => {
     const {
       renciLogoLight,
       renciLogoDark,
-      irodsLogo,
       atlanticWaveSdxLogo,
+      biodataCatalystLogo,
+      irodsLogo,
     } = useStaticQuery(logosQuery)
 
     const renciLogo = {
       light: renciLogoLight.childImageSharp.fixed,
       dark: renciLogoDark.childImageSharp.fixed,
     }
-    const irods = irodsLogo.childImageSharp.fixed
     const atlanticWaveSdx = atlanticWaveSdxLogo.childImageSharp.fluid
-    return { renciLogo, irods, atlanticWaveSdx }
+    const biodataCatalyst = biodataCatalystLogo.childImageSharp
+    const irods = irodsLogo.childImageSharp.fixed
+    return { renciLogo, atlanticWaveSdx, biodataCatalyst, irods }
 }
 
