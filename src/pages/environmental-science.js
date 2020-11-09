@@ -16,9 +16,9 @@ export default () => {
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Environmental Science</span></Title>
         <p className="highlight">
-            brief overview. brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview. brief overview. brief overview.
+            RENCI catalyzes data-driven discoveries in Earth science.
+            Our nationally-recognized subject matter experts lead and contribute to projects that advance
+            fundamental science and inform decision making in areas such as natural disasters, water, oceans, climate, and weather. 
         </p>
       </Hero>
       

@@ -229,10 +229,10 @@ export default () => {
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">NRIG</span></Title>
         <p className="highlight">
-            brief overview. brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview. brief overview. brief overview.
+          RENCI creates cyberinfrastructure solutions that enhance scientific research.
+          With expertise in networking, architectures, distributed systems, and applications,
+          our work enables secure and efficient collaboration and data management for
+          cutting-edge computer science and data-intensive domain research.
         </p>
       </Hero>
 

@@ -3,7 +3,7 @@ import Img from 'gatsby-image'
 import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
-import heroBackground from '../images/hero-nrig.jpg'
+import heroBackground from '../images/hero-health-science.jpg'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { SideMenu } from '../components/menu'
@@ -118,10 +118,8 @@ export default () => {
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Health Science</span></Title>
         <p className="highlight">
-            brief overview. brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview. brief overview. brief overview.
+          RENCI leverages systems and technologies to fight disease and improve health.
+          Our expert teams lead cross-cutting efforts to advance fundamental research and support meaningful improvements in clinical practice.
         </p>
       </Hero>
 

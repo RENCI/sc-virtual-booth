@@ -184,9 +184,9 @@ const ConsortiaPage = () => {
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Consortia</span></Title>
         <p className="highlight">
-            brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview. brief overview.
-            brief overview. brief overview. brief overview.
+          Via consortia development and participation, RENCI brings together leaders in academia, industry, and government
+          to address the data challenges and opportunities of the 21st century, such as democratizing data,
+          creating sustainable and equitable data science career paths, and bridging the gap between data scientists in the public and private sectors.
         </p>
       </Hero>
 
