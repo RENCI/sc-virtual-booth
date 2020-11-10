@@ -63,7 +63,7 @@ export default () => {
 
       </Container>
 
-      <Button cta link to="#">Connect with EDS</Button>
+      <Button cta link to="mailto:bblanton@renci.org">Contact Us</Button>
 
       <br/><br/><br/><br/>
 
