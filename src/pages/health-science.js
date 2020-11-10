@@ -155,10 +155,10 @@ export default () => {
       <Container>
         <Grid fluid>
           <Row>
-            <Col xs={ 12 } md={ 4 } style={{ position: 'relative' }}>
+            <Col md={ 12 } lg={ 4 } style={{ position: 'relative' }}>
               <SideMenu items={ projectsMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ project } />
             </Col>
-            <Col xs={ 12 } md={ 8 }>
+            <Col md={ 12 } lg={ 8 }>
               { projectsMenuItems.map(item => project === item.id && item.component ) }
             </Col>
           </Row>
