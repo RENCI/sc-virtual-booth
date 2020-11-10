@@ -119,7 +119,14 @@ const TranslationalScience = () => {
       <Button cta link to="https://txscience.renci.org/contact/">Contact Us</Button>
 
       <br/><br/>
-      
+
+      <Heading>Links</Heading>
+
+      <List bullets="disc" items={[
+          <Link to="https://txscience.renci.org/">Translation Science Website</Link>
+        ]}
+      />
+
     </Section>
   )
 }
