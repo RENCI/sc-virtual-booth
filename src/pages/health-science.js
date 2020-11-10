@@ -56,16 +56,45 @@ const BioDataCatalyst = () => {
 const DataTranslator = () => {
   return (
     <Section>
-      <Heading>Data Translator</Heading>
+      <Heading>NCATS Biomedical Data Translator</Heading>
       
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        The National Center for Advancing Translational Sciences (NCATS) launched
+        the Biomedical Data Translator program in October 2016 in an effort to
+        overcome data science challenges in biomedical research.
+        The Data Translator project applies semantic integration strategies to share
+        chemical, genetic, phenotypic, disease, ontological, and other knowledge sources
+        to form a technology platform for translational science.
+        This knowledge is integrated together into a knowledge graph,
+        which is then analyzed to produce novel insights and enhance human reasoning.
       </Paragraph>
+
+      <Paragraph>
+        RENCI contributes to a broad spectrum of Translator activities.
+        These are just a few of our projects:
+      </Paragraph>
+
+      <List bullets="disc" items={ [
+<<<<<<< HEAD
+          <Link to="#">ICEES: An overview</Link>,
+          <Link to="#">ROBOKOP: A use case</Link>,
+          <Link to="#">TranQL: A demo</Link>,
+=======
+          <Link to="https://drive.google.com/file/d/1nL-ZybPmriB_L8NkMYDYuA_wGmbhoCeL/view?usp=sharing" key="icees">ICEES: An overview</Link>,
+          <Link to="https://drive.google.com/file/d/1AUXiHSk72Gwy3lqZV-BCcFW64g7vsRiT/view" key="robokop">ROBOKOP: A use case</Link>,
+          <Link to="#" key="tranql">TranQL: A demo</Link>,
+>>>>>>> e2d1485... add translator links
+        ] }
+      />
+
+      <Heading>Additional Links</Heading>
+
+      <List bullets="disc" items={ [
+          <Link to="https://ncats.nih.gov/translator">Translator Website</Link>
+        ] }
+      />
+
+      <Button cta link to="">Connect with Us</Button>
             
     </Section>
   )
@@ -97,7 +126,7 @@ const PrecisionDosing = () => {
 
 const projectsMenuItems = [
   { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
-  { text: 'Data Translator', id: 'data-translator', component: <DataTranslator /> },
+  { text: 'NCATS Biomedical Data Translator', id: 'data-translator', component: <DataTranslator /> },
   { text: 'Precision Dosing', id: 'pds', component: <PrecisionDosing /> },
 ]
 
@@ -126,10 +155,10 @@ export default () => {
       <Container>
         <Grid fluid>
           <Row>
-            <Col xs={ 12 } md={ 3 } style={{ position: 'relative' }}>
+            <Col xs={ 12 } md={ 4 } style={{ position: 'relative' }}>
               <SideMenu items={ projectsMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ project } />
             </Col>
-            <Col xs={ 12 } md={ 9 }>
+            <Col xs={ 12 } md={ 8 }>
               { projectsMenuItems.map(item => project === item.id && item.component ) }
             </Col>
           </Row>
