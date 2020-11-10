@@ -1,7 +1,8 @@
-import React, { Fragment, useEffect, useState } from "react"
+import React, { Fragment, useEffect, useState } from 'react'
+import styled from 'styled-components'
 import { useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { useLocation } from "@reach/router"
+import { useLocation } from '@reach/router'
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import heroBackground from '../images/hero-nrig.jpg'
@@ -12,6 +13,7 @@ import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Button, IconButton } from '../components/button'
 import { Link } from '../components/link'
 import { useLogos } from '../hooks'
+import { ResponsiveIframe } from '../components/responsive-iframe'
 
 const flyerQuery = graphql`{
   atlanticWaveSdxFlyer: file(relativePath: {eq: "atlantic-wave-sdx-flyer.jpg"}) {
@@ -134,17 +136,7 @@ const Fabric = () => {
     <Fragment>
       <Section>
         <Heading>FABRIC</Heading>
-
-        <iframe
-          src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000"
-          frameborder="0"
-          width="700"
-          height="410"
-          allowfullscreen="true"
-          mozallowfullscreen="true"
-          webkitallowfullscreen="true"
-        >
-        </iframe>
+        <ResponsiveIframe src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000" />
       </Section>
 
       <Button cta link to="https://www.whatisfabric.net/get-involved">Get Involved</Button>
