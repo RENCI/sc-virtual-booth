@@ -36,37 +36,30 @@ export default () => {
           If our work interests you, please click the contact button on the page of interest, and one of our researchers will reach out to you shortly. 
         </Paragraph>
 
-        <br /><br /><br />
+        <br /><br />
 
-        <Grid fluid>
-          <Row>
-            <Col xs={ 12 } md={ 7 } lg={ 6 }>
-              <img src="https://picsum.photos/600/800" alt="placeholder" />
-            </Col>
-            <Col xs={ 12 } md={ 5 } lg={ 6 }>
-              <Heading>WE DO DATA SCIENCE</Heading>
-              <Paragraph>
-                Every sector of society is undergoing a historic transformation driven by big data.
-                RENCI is committed to transforming data into discoveries by partnering with leading universities, government, and
-                the private sector to create tools and technologies that facilitate data access, sharing, analysis, management, and archiving. 
-              </Paragraph>
-              
-              <Paragraph>
-                Our efforts in data science span multiple initiatives and domain areas, including: 
-              </Paragraph>
+        <Heading>WE DO DATA SCIENCE</Heading>
+        <Paragraph>
+          Every sector of society is undergoing a historic transformation driven by big data.
+          RENCI is committed to transforming data into discoveries by partnering with leading universities, government, and
+          the private sector to create tools and technologies that facilitate data access, sharing, analysis, management, and archiving. 
+        </Paragraph>
+        
+        <Paragraph>
+          Our efforts in data science span multiple initiatives and domain areas, including: 
+        </Paragraph>
 
-              <List bullets="disc"
-                items={ [
-                    'The Networking and Research Infrastructure Group (NRIG) and its $20 million NSF grant, FABRIC, along with other major projects such as DyNamo, IRIS, and Panorama 360.',
-                    'iRODS, open source data management software used by research, commercial, and governmental organizations worldwide.',
-                    'Cutting-edge health science research, including the NHLBI BioData Catalyst project, NCATS’ Biomedical Data Translator, and multiple translational science projects. ',
-                    'Earth Data Science solutions that address the intersection of high performance and high throughput computing with Earth research by utilizing computational tools such as the storm surge and wind-wave model ADCIRC. ',
-                    'National initiatives - such as the South Big Data Hub and the National Consortium for Data Science (NCDS) - that connect the data science community to each other and important resources.',
-                  ] }
-              />
-            </Col>
-          </Row>
-        </Grid>
+        <List bullets="disc"
+          items={ [
+              'The Networking and Research Infrastructure Group (NRIG) and its $20 million NSF grant, FABRIC, along with other major projects such as DyNamo, IRIS, and Panorama 360.',
+              'iRODS, open source data management software used by research, commercial, and governmental organizations worldwide.',
+              'Cutting-edge health science research, including the NHLBI BioData Catalyst project, NCATS’ Biomedical Data Translator, and multiple translational science projects. ',
+              'Earth Data Science solutions that address the intersection of high performance and high throughput computing with Earth research by utilizing computational tools such as the storm surge and wind-wave model ADCIRC. ',
+              'National initiatives - such as the South Big Data Hub and the National Consortium for Data Science (NCDS) - that connect the data science community to each other and important resources.',
+            ] }
+        />
+
+        <br /><br />
 
         <Button cta>Request a Meeting</Button>
 
