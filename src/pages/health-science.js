@@ -100,26 +100,26 @@ const DataTranslator = () => {
   )
 }
 
-const PrecisionDosing = () => {
+const TranslationalScience = () => {
   return (
     <Section>
-      <Heading>Precision Dosing</Heading>
+      <Heading>Translational Science</Heading>
       
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        Bridging the "Valley of Death" to bring light to "dark data" requires methods that are reproducible and data that are analyzable.
+        Maximizing the return on efforts expended for generating data and developing tools requires engaging multiple strategies, techniques, and innovations.
+        The Translational Science Team (TxScience) at RENCI is a highly skilled team with the advanced training and experience are required for executing on these efforts,
+        deemed essential by both the NIH and the NSF. TxScience is comprised of visualization scientists, architects, web developers, data scientists, data modelers, and project managers,
+        aiming to overtake the rate of “dark data” generation. We bring domain-specific research through to proof-of-concept and early stage technology development
+        by innovating interactive dashboards backed by FAIR , Usable, Scalable, Extensible (FUSE) architectures and robust data models.
       </Paragraph>
+      
+      <br/><br/>
 
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
-            
+      <Button cta link to="https://txscience.renci.org/contact/">Contact Us</Button>
+
+      <br/><br/>
+      
     </Section>
   )
 }
@@ -127,7 +127,7 @@ const PrecisionDosing = () => {
 const projectsMenuItems = [
   { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
   { text: 'NCATS Biomedical Data Translator', id: 'data-translator', component: <DataTranslator /> },
-  { text: 'Precision Dosing', id: 'pds', component: <PrecisionDosing /> },
+  { text: 'Translational Science', id: 'txscience', component: <TranslationalScience /> },
 ]
 
 export default () => {
