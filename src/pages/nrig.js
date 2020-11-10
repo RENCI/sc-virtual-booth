@@ -10,10 +10,12 @@ import { Container, Section } from '../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
+import { List } from '../components/list'
 import { Button, IconButton } from '../components/button'
 import { Link } from '../components/link'
 import { useLogos } from '../hooks'
 import { ResponsiveIframe } from '../components/responsive-iframe'
+import { VideoPlayer } from '../components/video-player'
 
 const flyerQuery = graphql`{
   atlanticWaveSdxFlyer: file(relativePath: {eq: "atlantic-wave-sdx-flyer.jpg"}) {
@@ -95,38 +97,8 @@ const CiCoePilot = () => {
     <Section>
       <Heading>CI CoE Pilot</Heading>
 
-      <Subheading>Overview</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
+      <VideoPlayer url="https://youtu.be/YtSfihl7zFc" />
 
-      <Subheading>Some Details</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-      </Paragraph>
     </Section>
   )
 }
@@ -150,22 +122,14 @@ const FlyNet = () => {
     <Section>
       <Heading>FlyNet</Heading>
 
-      <Subheading>Overview</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
+      <br/><br/>
 
-      <Subheading>Some Details</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-      </Paragraph>
+      <VideoPlayer url="https://www.dropbox.com/s/rojzs06hoz259du/renci_booth_elyons.mp4?raw=1" controls={ true } />
+
+      <br/><br/>
+      
+      <VideoPlayer url="https://youtu.be/MNN80OHMQUQ" />
+
     </Section>
   )
 }
@@ -175,22 +139,12 @@ const Panorama = () => {
     <Section>
       <Heading>Panorama</Heading>
 
-      <Subheading>Overview</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
+      <Heading>Links</Heading>
 
-      <Subheading>Some Details</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-      </Paragraph>
+      <List bullets="disc" items={[
+        <Link to="https://www.dropbox.com/s/6ejf4o8ea5ta48t/2020-11-panorama-sc-v4.pptx?dl=0">Panorama 360 Presentation</Link>
+      ]} />
+
     </Section>
   )
 }
@@ -200,7 +154,7 @@ const projectsMenuItems = [
   { text: 'Chameleon Cloud', id: 'chameleon-cloud', component: <ChameleonCloud /> },
   { text: 'AtlanticWave SDX', id: 'atlantic-wave-sdx', component: <AtlanticWaveSdx /> },
   { text: 'CI CoE Pilot', id: 'ci-coe-pilot', component: <CiCoePilot /> },
-  { text: 'Panorama', id: 'panorama', component: <Panorama /> },
+  { text: 'Panorama 360', id: 'panorama', component: <Panorama /> },
   { text: 'FlyNet', id: 'flynet', component: <FlyNet /> },
 ]
 
