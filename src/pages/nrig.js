@@ -152,7 +152,7 @@ const Panorama = () => {
 const projectsMenuItems = [
   { text: 'FABRIC', id: 'fabric', component: <Fabric /> },
   { text: 'Chameleon Cloud', id: 'chameleon-cloud', component: <ChameleonCloud /> },
-  { text: 'AtlanticWave SDX', id: 'atlantic-wave-sdx', component: <AtlanticWaveSdx /> },
+  { text: 'Atlantic Wave SDX', id: 'atlantic-wave-sdx', component: <AtlanticWaveSdx /> },
   { text: 'CI CoE Pilot', id: 'ci-coe-pilot', component: <CiCoePilot /> },
   { text: 'Panorama 360', id: 'panorama', component: <Panorama /> },
   { text: 'FlyNet', id: 'flynet', component: <FlyNet /> },

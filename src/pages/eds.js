@@ -19,28 +19,20 @@ export default () => {
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Earth Data Science</span></Title>
         <p className="highlight">
-            RENCI catalyzes data-driven discoveries in Earth science.
-            Our nationally-recognized subject matter experts lead and contribute to projects that advance
-            fundamental science and inform decision making in areas such as natural disasters, water, oceans, climate, and weather. 
+          Earth Data Science solutions that address the intersection of high performance and high throughput computing with living
+          at the coast by applying computational models such as the tide, storm surge and wind-wave model ADCIRC and data science.
         </p>
       </Hero>
       
       <Container>
         <br /><br />
 
-        <Paragraph width="600px" center>
-          Earth Data Science solutions that address the intersection of high performance and high throughput computing with living
-          at the coast by applying computational models such as the tide, storm surge and wind-wave model ADCIRC and data science.
-        </Paragraph>
-
-        <br /><br />
-
         <Grid fluid>
           <Row>
-            <Col xs={ 12 } md={ 7 } lg={ 6 }>
+            <Col xs={ 12 } lg={ 6 }>
               <Img fluid={ hurricaneImage.childImageSharp.fluid } style={{ height: '700px' }} alt="Overhead view of hurricane Bob" />
             </Col>
-            <Col xs={ 12 } md={ 5 } lg={ 6 }>
+            <Col xs={ 12 } lg={ 6 }>
               <Heading>Earth Data Science Research</Heading>
               <Paragraph>
                 The Earth Data Science (EDS) group conducts research and applications into coastal hazard and risk problems associated with living along the coast.
