@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react"
+import { useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
@@ -54,10 +55,15 @@ const BioDataCatalyst = () => {
 }
 
 const DataTranslator = () => {
+  const { translatorGraphic } = useStaticQuery(translatorGraphicQuery)
   return (
     <Section>
       <Heading>NCATS Biomedical Data Translator</Heading>
       
+      <Paragraph align="center" width="100%" maxWidth="600px">
+        <Img fluid={ translatorGraphic.childImageSharp.fluid } alt="Visit BioData Catalyst Website" />
+      </Paragraph>
+
       <Paragraph>
         The National Center for Advancing Translational Sciences (NCATS) launched
         the Biomedical Data Translator program in October 2016 in an effort to
@@ -163,3 +169,13 @@ export default () => {
     </Fragment>
   )
 }
+
+const translatorGraphicQuery = graphql`{
+  translatorGraphic: file(relativePath: {eq: "data-translator.jpg"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}`
