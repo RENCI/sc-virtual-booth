@@ -121,7 +121,7 @@ const NationalConsortiumfForDataScience = () => {
         ] }
       />
       
-      <Button cta>Request a Meeting</Button>
+      <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact NCDS</Button>
     </Section>
   )
 }
@@ -155,7 +155,7 @@ const SouthBigDataHub = () => {
         ]}
       />
 
-      <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact Us</Button>
+      <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact SBDH</Button>
     </Section>
   )
 }
