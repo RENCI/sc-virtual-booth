@@ -1,7 +1,7 @@
 export default [
   { text: 'Home', path: '/' },
   { text: 'Health Science', path: '/health-science' },
-  { text: 'Environmental Science', path: '/environmental-science' },
+  { text: 'Earth Data Science', path: '/eds' },
   { text: 'NRIG', path: '/nrig' },
   { text: 'iRODS', path: '/irods' },
   { text: 'Consortia', path: '/consortia' },
