@@ -13,7 +13,7 @@ const ListItem = styled.li(({ theme }) => `
 export const List = ({ items, bullets = 'none', ...props }) => {
   return (
     <Wrapper bullets={ bullets } { ...props }>
-      { items.map(item => <ListItem key={ item.key }>{ item }</ListItem>) }
+      { items.map((item, i) => <ListItem key={ item.key || i }>{ item }</ListItem>) }
     </Wrapper>
   )
 }

@@ -15,7 +15,7 @@ import './style.css'
 
 //
 
-const MOBILE_THRESHHOLD = 869
+const MOBILE_THRESHHOLD = 919
 const COMPACT_HEADER_SCROLL_THRESHOLD = 200
 
 //
@@ -89,10 +89,11 @@ const Main = styled.main(({ theme, yShift }) => `
 
 //
 
-const Floater = styled.span(({ theme }) => `
-  position: fixed;
-  bottom: ${ theme.spacing.small };
-  right: ${ theme.spacing.small };
+const SocialLinks = styled(Paragraph)(({ theme }) => `
+  text-align: center;
+  & > * {
+    margin: 0 1rem;
+  }
 `)
 
 //
@@ -103,13 +104,13 @@ const Footer = styled.footer(({ theme }) => `
   color: ${ theme.color.black };
   text-align: center;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
-  ${ Floater } {
+  ${ SocialLinks } {
     filter: opacity(0.2);
     transition: filter 250ms;
   }
   &:hover {
-    ${ Floater } {
-      filter: opacity(1.0);
+    ${ SocialLinks } {
+      filter: opacity(0.85);
     }
   }
 `)
@@ -126,7 +127,7 @@ export const DefaultLayout = ({ children }) => {
   return (
     <Wrapper>
       <Helmet>
-        { heroImagePaths.map(path => <link rel="prefetch" src={ path } />) }
+        { heroImagePaths.map(path => <link key={ path } rel="prefetch" src={ path } />) }
       </Helmet>
       <Header height={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? '4rem' : '6rem' }>
         <Brand to="/">
@@ -147,11 +148,12 @@ export const DefaultLayout = ({ children }) => {
 
         &copy; RENCI { new Date().getFullYear() }
 
-        <Floater>
-          <Link to="https://github.com/renci/sc-virtual-booth">
-            <Icon icon="github" size={ 24 } fill={ theme.color.primary.dark } />
-          </Link>
-        </Floater>
+        <SocialLinks>
+          <Link to="https://twitter.com/renci"><Icon icon="twitter" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://facebook.com/renci.org"><Icon icon="facebook" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://www.linkedin.com/company/renaissance-computing-institute"><Icon icon="linkedIn" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://github.com/renci/sc-virtual-booth"><Icon icon="github" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+        </SocialLinks>
 
       </Footer>
     </Wrapper>

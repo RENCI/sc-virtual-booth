@@ -24,16 +24,14 @@ export const SideMenu = ({ items, activeID }) => {
     <Nav>
       {
         items.map(item => (
-          <Fragment>
-            <MenuItem key={ item.text } href={ item.path }>
-              <Icon icon="renciDash"
-                size={ 12 } margin="0 0.5rem 0 0"
-                fill={ item.id === activeID ? theme.color.primary.main : theme.color.grey.light }
-                style={{ transform: `scale(${ item.id === activeID ? '1.0' : '0.75' })`, transformOrigin: '100% 100%' }}
-              />
-              { item.text }
-            </MenuItem>
-          </Fragment>
+          <MenuItem key={ item.text } href={ item.path }>
+            <Icon icon="renciDash"
+              size={ 12 } margin="0 0.5rem 0 0"
+              fill={ item.id === activeID ? theme.color.primary.main : theme.color.grey.light }
+              style={{ transform: `scale(${ item.id === activeID ? '1.0' : '0.75' })`, transformOrigin: '100% 100%' }}
+            />
+            { item.text }
+          </MenuItem>
         ))
       }
     </Nav>

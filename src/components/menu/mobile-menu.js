@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import { Link } from '../link'
 import styled from 'styled-components'
 import { Toggler } from './toggler'
 

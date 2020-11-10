@@ -22,9 +22,7 @@ const BioDataCatalyst = () => {
 
       <br/><br/>
 
-      <Paragraph align="center" width="100%" maxWidth="500px">
-        <Img fluid={ biodataCatalyst.fluid } alt="Visit BioData Catalyst Website" />
-      </Paragraph>
+      <Img fluid={ biodataCatalyst.fluid } style={{ maxWidth: '500px', margin: 'auto' }} alt="BioData Catalyst Logo" />
 
       <br/><br/>
 
@@ -60,9 +58,7 @@ const DataTranslator = () => {
     <Section>
       <Heading>NCATS Biomedical Data Translator</Heading>
       
-      <Paragraph align="center" width="100%" maxWidth="600px">
-        <Img fluid={ translatorGraphic.childImageSharp.fluid } alt="Visit BioData Catalyst Website" />
-      </Paragraph>
+      <Img fluid={ translatorGraphic.childImageSharp.fluid } alt="Visit BioData Catalyst Website" />
 
       <Paragraph>
         The National Center for Advancing Translational Sciences (NCATS) launched
@@ -114,11 +110,7 @@ const TranslationalScience = () => {
         by innovating interactive dashboards backed by FAIR , Usable, Scalable, Extensible (FUSE) architectures and robust data models.
       </Paragraph>
       
-      <br/><br/>
-
       <Button cta link to="https://txscience.renci.org/contact/">Contact Us</Button>
-
-      <br/><br/>
 
       <Heading>Links</Heading>
 

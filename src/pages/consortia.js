@@ -21,9 +21,7 @@ const BioDataCatalyst = () => {
 
       <br/><br/>
 
-      <Paragraph align="center" width="100%" maxWidth="500px">
-        <Img fluid={ biodataCatalyst.fluid } alt="Visit BioData Catalyst Website" />
-      </Paragraph>
+      <Img fluid={ biodataCatalyst.fluid } style={{ maxWidth: '500px', margin: 'auto' }} alt="BioData Catalyst Logo" />
 
       <br/><br/>
 
@@ -87,12 +85,10 @@ const Irods = () => {
 
       <Heading>Links</Heading>
 
-      <List bullets="disc"
-        items={[
-          <Link to="/irods">iRODS Virtual Booth</Link>,
-          <Link to="https://irods.org/about/">Consortium Members</Link>,
-        ]}
-      />
+      <List bullets="disc" items={[
+        <Link to="/irods">iRODS Virtual Booth</Link>,
+        <Link to="https://irods.org/about/">Consortium Members</Link>,
+      ]} />
 
     </Section>
   )
@@ -113,13 +109,11 @@ const NationalConsortiumfForDataScience = () => {
         We connect diverse communities of data science experts to support a 21st century data-driven economy by:
       </Paragraph>
 
-      <List bullets="disc"
-        items={ [
-          'Building data science career pathways and creating a data-literate workforce',
-          'Bridging the gap between data scientists in the public and private sectors',
-          'Supporting open and democratized data',
-        ] }
-      />
+      <List bullets="disc" items={[
+        'Building data science career pathways and creating a data-literate workforce',
+        'Bridging the gap between data scientists in the public and private sectors',
+        'Supporting open and democratized data',
+      ]} />
       
       <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact NCDS</Button>
     </Section>
@@ -142,18 +136,16 @@ const SouthBigDataHub = () => {
         The priority areas and areas of interest for the South Hub are:
       </Paragraph>
 
-      <List bullets="disc"
-        items={[
-          'Health Disparities',
-          'Smart Cities',
-          'Advanced Materials and Manufacturing',
-          'Data Sharing & Cyberinfrastructure',
-          'Social Cyber Security',
-          'Environmental & Hazard Response',
-          'Team Science',
-          'Education & Workforce Development',
-        ]}
-      />
+      <List bullets="disc" items={[
+        'Health Disparities',
+        'Smart Cities',
+        'Advanced Materials and Manufacturing',
+        'Data Sharing & Cyberinfrastructure',
+        'Social Cyber Security',
+        'Environmental & Hazard Response',
+        'Team Science',
+        'Education & Workforce Development',
+      ]} />
 
       <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact SBDH</Button>
     </Section>
