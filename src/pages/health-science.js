@@ -75,15 +75,9 @@ const DataTranslator = () => {
       </Paragraph>
 
       <List bullets="disc" items={ [
-<<<<<<< HEAD
-          <Link to="#">ICEES: An overview</Link>,
-          <Link to="#">ROBOKOP: A use case</Link>,
-          <Link to="#">TranQL: A demo</Link>,
-=======
           <Link to="https://drive.google.com/file/d/1nL-ZybPmriB_L8NkMYDYuA_wGmbhoCeL/view?usp=sharing" key="icees">ICEES: An overview</Link>,
           <Link to="https://drive.google.com/file/d/1AUXiHSk72Gwy3lqZV-BCcFW64g7vsRiT/view" key="robokop">ROBOKOP: A use case</Link>,
           <Link to="#" key="tranql">TranQL: A demo</Link>,
->>>>>>> e2d1485... add translator links
         ] }
       />
 
