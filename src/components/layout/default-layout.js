@@ -15,7 +15,7 @@ import './style.css'
 
 //
 
-const MOBILE_THRESHHOLD = 792
+const MOBILE_THRESHHOLD = 869
 const COMPACT_HEADER_SCROLL_THRESHOLD = 200
 
 //
