@@ -35,13 +35,13 @@ const StackedLink = styled(Link)(({ theme }) => `
 `)
 
 const documents = {
-  dataManagementModel: [
-    { text: 'iRODS Data Management Model', path: 'https://irods.org/images/data_management_model.jpg' },
+  membership: [
+    { text: 'Members Benefit Sheet', path: 'https://irods.org/images/members_benefit_sheet.jpg' },
   ],
   general: [
-    { text: 'Members Benefit Table', path: 'https://irods.org/uploads/members_benefit_sheet.pdf' },
     { text: 'Core Integration layer', path: 'https://irods.org/images/core_integration_layer.jpg' },
     { text: 'Data Lifecycle', path: 'https://irods.org/images/data_lifecycle_diagram.jpg' },
+    { text: 'iRODS Data Management Model', path: 'https://irods.org/images/data_management_model.jpg' },
   ],
   patterns: [
     { text: 'Data to Compute', path: 'https://irods.org/images/pattern_data_to_compute.jpg' },
@@ -95,9 +95,9 @@ export default () => {
         <Section>
           <Heading>Documents</Heading>
 
-          <Subheading>Data Management Model</Subheading>
+          <Subheading>Membership</Subheading>
 
-          <ListGrid items={ documents.dataManagementModel.map(item => (
+          <ListGrid items={ documents.membership.map(item => (
             <StackedLink to={ item.path } key={ item.path }>
               <img src={ item.path } width="100%" alt="" />
               <span>{ item.text }</span>
@@ -113,7 +113,7 @@ export default () => {
                   <object type="application/pdf" data={ item.path } width="100%" height="240px">
                     Download <Link to={ item.path } target="_blank" rel="noopener noreferrer">{ item.text }</Link>
                   </object>
-                ) : <img src={ item.path } width="100%" alt="" />
+                ) : <img src={ item.path } height="240px" alt="" />
               }
               <div className="title">{ item.text }</div>
             </StackedLink>
