@@ -8,6 +8,9 @@ export const Wrapper = styled.ul(({ theme, bullets }) => `
 `)
 
 const ListItem = styled.li(({ theme }) => `
+  &::marker {
+    color: ${ theme.color.primary.dark };
+  }
 `)
 
 export const List = ({ items, bullets = 'none', ...props }) => {

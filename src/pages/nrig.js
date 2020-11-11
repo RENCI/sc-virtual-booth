@@ -42,8 +42,12 @@ const AtlanticWaveSdx = () => {
 
   return (
     <Section>
-      <Heading>Atlantic Wave SDX</Heading>
+      <Heading hidden>Atlantic Wave SDX</Heading>
       
+      <Link to="https://nsf.gov/awardsearch/showAward?AWD_ID=2029278&HistoricalAwards=false">
+        <Img fluid={ atlanticWaveSdx } style={{ maxWidth: '562px' }}/>
+      </Link>
+
       <Paragraph>
         <Link to="https://www.fiu.edu/">FIU</Link>
         , <Link to="https://www.renci.org/">RENCI</Link>
@@ -55,15 +59,11 @@ const AtlanticWaveSdx = () => {
         showing how the Pegasus application benefits from the AtlanticWave-SDX.
       </Paragraph>
       
-      <Link to="https://nsf.gov/awardsearch/showAward?AWD_ID=2029278&HistoricalAwards=false">
-        <Img fluid={ atlanticWaveSdx } />
-      </Link>
-
       <Link to={ atlanticWaveSdxFlyer.publicURL }>
         <Img fluid={ atlanticWaveSdxFlyer.childImageSharp.fluid } style={{ height: `calc(762px * 0.75)` }} imgStyle={{ objectFit: 'contain' }} />
       </Link>
 
-      <Heading>Links</Heading>
+      <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
         <Link to="https://www.dropbox.com/s/5zk4wgd9cyze0il/Atlantic%20Wave-SDX_SC20%20presentation_v10.pptx?dl=0">Presentation</Link>,
@@ -74,33 +74,28 @@ const AtlanticWaveSdx = () => {
 }
 
 const ChameleonCloud = () => {
+  const { chameleon } = useLogos()
   return (
     <Section>
-      <Heading>Chameleon Cloud</Heading>
+      <Heading hidden>Chameleon Cloud</Heading>
+
+      <Link to="http://nrig.renci.org/project/chameleon/">
+        <Img fluid={ chameleon } />
+      </Link>
 
       <Subheading>Overview</Subheading>
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Paragraph>
 
       <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Chameleon is an NSF-funded testbed system for Computer Science experimentation.
+        It is designed to be deeply reconfigurable, with a wide variety of capabilities
+        for researching systems, networking, distributed and cluster computing and security.
       </Paragraph>
 
-      <Subheading>Some Details</Subheading>
+      <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.dropbox.com/sh/qn6fc01fvebg2ib/AABrX83YZrAnkFTzDW-C4QTLa?dl=0">Chameleon Presentation</Link>
+        <Link to="http://nrig.renci.org/project/chameleon/">Chameleon Cloud Website</Link>,
+        <Link to="https://www.dropbox.com/sh/qn6fc01fvebg2ib/AABrX83YZrAnkFTzDW-C4QTLa?dl=0">Chameleon Cloud Presentation</Link>,
       ]} />
     </Section>
   )
@@ -137,11 +132,11 @@ const CiCoePilot = () => {
         The result of this work will be a strategic plan for a CI CoE that will be evaluated and refined through community interactions: workshops and direct engagement with the facilities and the broader CI community.
       </Paragraph>
 
-      <Heading>Videos</Heading>
+      <Subheading>Videos</Subheading>
 
       <VideoPlayer url="https://youtu.be/YtSfihl7zFc" />
 
-      <Heading>Links</Heading>
+      <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
         <Link to="https://cicoe-pilot.org/">CI CoE Pilot &mdash; Cyberinfrastructure Center of Excellence</Link>
@@ -198,7 +193,7 @@ const FlyNet = () => {
         will promote participation of under-served/under-represented students in project activities.
       </Paragraph>
 
-      <Heading>Videos</Heading>
+      <Subheading>Videos</Subheading>
 
       <VideoPlayer url="https://www.dropbox.com/s/rojzs06hoz259du/renci_booth_elyons.mp4?raw=1" controls={ true } />
 
@@ -206,7 +201,7 @@ const FlyNet = () => {
       
       <VideoPlayer url="https://youtu.be/MNN80OHMQUQ" />
 
-      <Heading>Links</Heading>
+      <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
         <Link to="http://www.flynet-ci.org/">FlyNet</Link>
@@ -221,10 +216,45 @@ const Panorama = () => {
     <Section>
       <Heading>Panorama</Heading>
 
-      <Heading>Links</Heading>
+      <Subheading>Overview</Subheading>
+
+      <Paragraph>
+        Scientific workflows are now being used in a number of scientific domains, including
+        astronomy, bioinformatics, climate modeling, earth science, civil engineering, physics, and many others.
+        Unlike monolithic applications, workflows often run across heterogeneous resources distributed across wide area networks.
+        Some workflow tasks may require high performance computing resources, while others can run efficiently on high throughput computing systems.
+        Workflows also access data from potentially different data repositories and use data, often represented as files, to communicate between the workflow components.
+        Because of these data access patterns, the performance of networks and storage devices greatly influence how smoothly and quickly a workflow runs.
+      </Paragraph>
+      <Paragraph>
+        The PANORAMA project aims to address workflow performance through a three-pronged approach that involves:
+        1) developing analytical models that can predict the behavior of complex, data-aware scientific workflows executing in extreme-scale infrastructures;
+        2) determining what monitoring information and information analysis is needed to predict performance and detect anomalies in scientific workflow execution; and
+        3) discovering how to adapt the workflow execution and the infrastructure to achieve the potential performance predicted by the models.
+      </Paragraph>
+      <Paragraph>
+        Workflow performance will be studied using two Department of Energy applications
+        that depend on workflows: <Link to="http://climatemodeling.science.energy.gov/">Climate and Earth System Modeling</Link> (CESM),
+        which processes large amounts of community data; and <Link to="https://neutrons.ornl.gov/sns">Spallation Neutron Source</Link> (SNS),
+        which produces rich experimental data used in a variety of complex analyses.
+      </Paragraph>
+
+      <Subheading>RENCI's Role</Subheading>
+
+      <Paragraph>
+        RENCI employs analytical performance models and monitoring information to facilitate detection and diagnosis of performance anomalies,
+        to manage resources, and to adapt workflows as needed.
+        The RENCI team will use models to predict expected application behavior, and combined with correlated monitoring information,
+        will develop algorithms to automatically detect anomalies in system behavior and to automatically diagnose the most likely cause(s) of any found anomalies.
+        An analysis capability will correlate workflow monitoring information with resource performance measurements to provide a better understanding of which resources contributed to an observed behavior.
+        The RENCI team is also responsible for infrastructure and workflow adaptation in response to anomaly detection.
+      </Paragraph>
+
+      <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.dropbox.com/s/6ejf4o8ea5ta48t/2020-11-panorama-sc-v4.pptx?dl=0">Panorama 360 Presentation</Link>
+        <Link to="https://www.dropbox.com/s/6ejf4o8ea5ta48t/2020-11-panorama-sc-v4.pptx?dl=0">Panorama 360 Presentation</Link>,
+        <Link to="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=0">Panorama 360 Overview</Link>,
       ]} />
 
     </Section>

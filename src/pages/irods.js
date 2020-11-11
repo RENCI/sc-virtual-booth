@@ -141,12 +141,12 @@ export default () => {
 
         <Section>
           <Heading>Other Videos</Heading>
-          <List items={ videos.other.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
+          <List bullets="disc" items={ videos.other.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
         </Section>
 
         <Section>
           <Heading>Additional Info</Heading>
-          <List items={ additionalInfo.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
+          <List bullets="disc" items={ additionalInfo.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
 
         </Section>
 

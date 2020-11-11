@@ -6,7 +6,7 @@ import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import heroBackground from '../images/hero-health-science.jpg'
 import { Container, Section } from '../components/layout'
-import { Title, Heading, Paragraph } from '../components/typography'
+import { Title, Heading, Subheading, Paragraph } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { List } from '../components/list'
@@ -18,9 +18,7 @@ const BioDataCatalyst = () => {
   const { biodataCatalyst } = useLogos()
   return (
     <Section>
-      <Heading>NHLBI BioData Catalyst</Heading>
-
-      <br/><br/>
+      <Heading hidden>NHLBI BioData Catalyst</Heading>
 
       <Img fluid={ biodataCatalyst.fluid } style={{ maxWidth: '500px', margin: 'auto' }} alt="BioData Catalyst Logo" />
 
@@ -36,7 +34,7 @@ const BioDataCatalyst = () => {
         working collaboratively to solve technical and scientific challenges.
       </Paragraph>
       
-      <Heading>Links</Heading>
+      <Subheading>Links</Subheading>
       
       <List bullets="disc"
         items={[
@@ -83,7 +81,7 @@ const DataTranslator = () => {
         ] }
       />
 
-      <Heading>Additional Links</Heading>
+      <Subheading>Links</Subheading>
 
       <List bullets="disc" items={ [
           <Link to="https://ncats.nih.gov/translator">Translator Website</Link>
@@ -112,7 +110,7 @@ const TranslationalScience = () => {
       
       <Button cta link to="https://txscience.renci.org/contact/">Contact Us</Button>
 
-      <Heading>Links</Heading>
+      <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
           <Link to="https://txscience.renci.org/">Translation Science Website</Link>

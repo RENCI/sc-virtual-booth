@@ -4,7 +4,7 @@ import { useLocation } from "@reach/router"
 import { SEO } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
-import { Title, Heading, Paragraph } from '../components/typography'
+import { Title, Heading, Subheading, Paragraph } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
@@ -17,9 +17,7 @@ const BioDataCatalyst = () => {
   const { biodataCatalyst } = useLogos()
   return (
     <Section>
-      <Heading>NHLBI BioData Catalyst</Heading>
-
-      <br/><br/>
+      <Heading hidden>NHLBI BioData Catalyst</Heading>
 
       <Img fluid={ biodataCatalyst.fluid } style={{ maxWidth: '500px', margin: 'auto' }} alt="BioData Catalyst Logo" />
 
@@ -35,16 +33,14 @@ const BioDataCatalyst = () => {
         working collaboratively to solve technical and scientific challenges.
       </Paragraph>
       
-      <Heading>Links</Heading>
+      <Subheading>Links</Subheading>
       
-      <List bullets="disc"
-        items={[
-          <Link to="https://biodatacatalyst.nhlbi.nih.gov/">NHLBI BioData Catalyst Website</Link>,
-        ]}
-      />
+      <List bullets="disc" items={[
+        <Link to="https://biodatacatalyst.nhlbi.nih.gov/">NHLBI BioData Catalyst Website</Link>,
+      ]} />
 
-      <br/><br/>
-
+      <br/>
+      
       <Button cta link to="https://biodatacatalyst.nhlbi.nih.gov/contact">Contact BioData Catalyst</Button>
                         
     </Section>  )
@@ -66,8 +62,7 @@ const Irods = () => {
         The iRODS Consortium brings together businesses, research organizations, universities, and government agencies to ensure the sustainability of iRODS by:
       </Paragraph>
 
-      <List bullets="disc"
-        items={[
+      <List bullets="disc" items={[
         'Guiding further development of the software;',
         'Growing the user and developer communities; and',
         'Facilitating iRODS support, education, and collaboration opportunities.',
@@ -81,9 +76,11 @@ const Irods = () => {
         The iRODS Consortium fields a team of software developers, application engineers, and support staff housed at RENCI at the University of North Carolina at Chapel Hill. Each year, the Consortium hosts the iRODS User Group Meeting, a symposium that draws 100+ participants to Chapel Hill to share iRODS technologies and case studies.
       </Paragraph>
 
+      <br/>
+      
       <Button cta>Request a Meeting</Button>
 
-      <Heading>Links</Heading>
+      <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
         <Link to="/irods">iRODS Virtual Booth</Link>,
@@ -115,6 +112,8 @@ const NationalConsortiumfForDataScience = () => {
         'Supporting open and democratized data',
       ]} />
       
+      <br/>
+
       <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact NCDS</Button>
     </Section>
   )
@@ -147,6 +146,8 @@ const SouthBigDataHub = () => {
         'Education & Workforce Development',
       ]} />
 
+      <br/>
+      
       <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact SBDH</Button>
     </Section>
   )
