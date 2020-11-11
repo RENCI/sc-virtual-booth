@@ -34,7 +34,7 @@ const Brand = styled(Link)(({ compact }) => `
   text-transform: uppercase;
   transition: padding 250ms;
   padding: 0;
-  margin: auto 1rem;
+  margin: auto 0 auto 2rem;
 `)
 
 Brand.propTypes = {
