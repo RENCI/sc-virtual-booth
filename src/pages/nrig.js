@@ -295,7 +295,7 @@ const Panorama = () => {
 
       <br/><br/>
 
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Panorama</Button>
+      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Panorama 360</Button>
 
       <br/><br/>
       

@@ -88,7 +88,11 @@ const DataTranslator = () => {
         ] }
       />
 
-      <Button cta link to="">Connect with Us</Button>
+      <br/><br/>
+
+      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Data Translator</Button>
+
+      <br/><br/>
             
     </Section>
   )
@@ -108,14 +112,18 @@ const TranslationalScience = () => {
         by innovating interactive dashboards backed by FAIR , Usable, Scalable, Extensible (FUSE) architectures and robust data models.
       </Paragraph>
       
-      <Button cta link to="https://txscience.renci.org/contact/">Contact Us</Button>
-
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
           <Link to="https://txscience.renci.org/">Translational Science Website</Link>
         ]}
       />
+
+      <br/><br/>
+
+      <Button cta link to="https://txscience.renci.org/contact/">Contact Translational Science</Button>
+      
+      <br/><br/>
 
     </Section>
   )
