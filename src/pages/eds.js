@@ -7,6 +7,7 @@ import { Hero } from '../components/hero'
 import { Container } from '../components/layout'
 import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
+import { Link } from '../components/link'
 import heroBackground from '../images/hero-environmental-science.jpg'
 
 export default () => {
@@ -39,7 +40,7 @@ export default () => {
                 Primarily focused on weather-driven winds, storm surge, and waves, EDS uses state-of-the-art numerical/computational models
                 together with data science approaches to characterize the threat posed by tropical cyclones and extra-tropical storms along the US eastern seaboard.
                 From barrier islands to engineered levees, small details can matter significantly.
-                The ADCIRC tide, storm-surge, and wind-wave model is the primary engine for EDS’s research and applications.
+                The <Link to="https://adcirc.org/">ADCIRC</Link> tide, storm-surge, and wind-wave model is the primary engine for EDS’s research and applications.
                 Formulated using linear triangular finite elements, ADICRC enables very high-resolution representation of the complexities of the coast.
                 Together with academic, federal, state, and industry collaborators, EDS runs the operational ADCIRC Prediction System that provides
                 real-time information on storm surge during North Atlantic tropical cyclone events.  

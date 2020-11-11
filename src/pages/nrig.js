@@ -86,7 +86,7 @@ const ChameleonCloud = () => {
       <Subheading>Overview</Subheading>
 
       <Paragraph>
-        Chameleon is an NSF-funded testbed system for Computer Science experimentation.
+        Chameleon is an <Link to="https://www.nsf.gov/">NSF</Link>-funded testbed system for Computer Science experimentation.
         It is designed to be deeply reconfigurable, with a wide variety of capabilities
         for researching systems, networking, distributed and cluster computing and security.
       </Paragraph>
@@ -107,7 +107,7 @@ const CiCoePilot = () => {
       <Heading>CI CoE Pilot</Heading>
 
       <Paragraph>
-        CI CoE provides expertise and active support to cyberinfrastructure practitioners at NSF Major Facilities in order to
+        CI CoE provides expertise and active support to cyberinfrastructure practitioners at <Link to="https://www.nsf.gov/">NSF</Link> Major Facilities in order to
         accelerate the data lifecycle and ensure the integrity and effectiveness of the cyberinfrastructure upon which research and discovery depend.
       </Paragraph>
 
@@ -228,10 +228,12 @@ const Panorama = () => {
       </Paragraph>
       <Paragraph>
         The PANORAMA project aims to address workflow performance through a three-pronged approach that involves:
-        1) developing analytical models that can predict the behavior of complex, data-aware scientific workflows executing in extreme-scale infrastructures;
-        2) determining what monitoring information and information analysis is needed to predict performance and detect anomalies in scientific workflow execution; and
-        3) discovering how to adapt the workflow execution and the infrastructure to achieve the potential performance predicted by the models.
       </Paragraph>
+      <List bullets="disc" items={[
+        `developing analytical models that can predict the behavior of complex, data-aware scientific workflows executing in extreme-scale infrastructures;`,
+        `determining what monitoring information and information analysis is needed to predict performance and detect anomalies in scientific workflow execution; and`,
+        `discovering how to adapt the workflow execution and the infrastructure to achieve the potential performance predicted by the models.`,
+      ]} />
       <Paragraph>
         Workflow performance will be studied using two Department of Energy applications
         that depend on workflows: <Link to="http://climatemodeling.science.energy.gov/">Climate and Earth System Modeling</Link> (CESM),
@@ -242,7 +244,7 @@ const Panorama = () => {
       <Subheading>RENCI's Role</Subheading>
 
       <Paragraph>
-        RENCI employs analytical performance models and monitoring information to facilitate detection and diagnosis of performance anomalies,
+        <Link to="https://www.renci.org/">RENCI</Link> employs analytical performance models and monitoring information to facilitate detection and diagnosis of performance anomalies,
         to manage resources, and to adapt workflows as needed.
         The RENCI team will use models to predict expected application behavior, and combined with correlated monitoring information,
         will develop algorithms to automatically detect anomalies in system behavior and to automatically diagnose the most likely cause(s) of any found anomalies.
