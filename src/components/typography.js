@@ -4,8 +4,7 @@ import PropTypes from 'prop-types'
 export const Title = styled.h1(({ theme, align }) => `
   margin: ${ theme.spacing.extraLarge } 0 ${ theme.spacing.large } 0;
   text-align: ${ align };
-  font-size: clamp(1.0rem, 4vw, 2rem)
-  color: ${ theme.color.primary.dark };
+  font-size: clamp(1.0rem, 4vw, 2rem);
 `)
 
 Title.propTypes = {
