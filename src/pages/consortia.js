@@ -186,10 +186,10 @@ const ConsortiaPage = () => {
       <Container>
         <Grid fluid>
           <Row>
-            <Col xs={ 12 } md={ 3 } style={{ position: 'relative' }}>
+            <Col xs={ 12 } md={ 4 } lg={ 3 } style={{ position: 'relative' }}>
               <SideMenu items={ consortiaMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ consortium } />
             </Col>
-            <Col xs={ 12 } md={ 9 }>
+            <Col xs={ 12 } md={ 8 } lg={ 9 }>
               { consortiaMenuItems.map(item => consortium === item.id && item.component ) }
             </Col>
           </Row>
