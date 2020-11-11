@@ -53,7 +53,7 @@ const AtlanticWaveSdx = () => {
         , <Link to="https://www.renci.org/">RENCI</Link>
         , <Link to="https://www.isi.edu/">USC-ISI</Link>
         , and <Link to="https://www.gatech.edu/">Georgia Tech</Link> developed the AtlanticWave-SDX:
-        a distributed Software-Defined Exchange, supporting research, and experimental deployments, on international scales.
+        a distributed Software-Defined Exchange supporting research and experimental deployments on international scales.
         This demonstration will present the AtlanticWave-SDX and its features.
         We then create a network topology across four geographically dispersed exchange points,
         showing how the Pegasus application benefits from the AtlanticWave-SDX.
@@ -66,8 +66,14 @@ const AtlanticWaveSdx = () => {
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.dropbox.com/s/5zk4wgd9cyze0il/Atlantic%20Wave-SDX_SC20%20presentation_v10.pptx?dl=0">Presentation</Link>,
+        <Link to="https://www.dropbox.com/s/5zk4wgd9cyze0il/Atlantic%20Wave-SDX_SC20%20presentation_v10.pptx?dl=1">Atlantic Wave SDX Presentation</Link>,
       ]} />
+
+      <br/><br/>
+
+      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Atlantic Wave SDX</Button>
+
+      <br/><br/>
 
     </Section>
   )
@@ -95,8 +101,15 @@ const ChameleonCloud = () => {
 
       <List bullets="disc" items={[
         <Link to="http://nrig.renci.org/project/chameleon/">Chameleon Cloud Website</Link>,
-        <Link to="https://www.dropbox.com/sh/qn6fc01fvebg2ib/AABrX83YZrAnkFTzDW-C4QTLa?dl=0">Chameleon Cloud Presentation</Link>,
+        <Link to="https://www.dropbox.com/sh/qn6fc01fvebg2ib/AABrX83YZrAnkFTzDW-C4QTLa?dl=1">Chameleon Cloud Presentation</Link>,
       ]} />
+
+      <br/><br/>
+
+      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Chameleon Cloud</Button>
+
+      <br/><br/>
+
     </Section>
   )
 }
@@ -116,7 +129,7 @@ const CiCoePilot = () => {
         &mdash; such as large telescopes, interferometers and distributed sensor arrays &mdash;
         that serve diverse scientific disciplines. Major facilities are increasingly dependent on advanced cyberinfrastructure (CI)
         &mdash; computing, data and software systems, networking, and associated human capital &mdash;
-        to enable broad delivery and analysis of facility-generated data. As a result of these cyber infrastructure tools,
+        to enable broad delivery and analysis of facility-generated data. As a result of these cyberinfrastructure tools,
         scientists and the public gain new insights into fundamental questions.
         The goal of this pilot project is to develop a model for a Cyberinfrastructure Center of Excellence (CI CoE)
         that facilitates community building and sharing and applies knowledge of best practices and innovative solutions for facility CI.
@@ -124,7 +137,7 @@ const CiCoePilot = () => {
 
       <Paragraph>
         The pilot project will explore how such a center would facilitate CI improvements for existing facilities and
-        for the design of new facilities that exploit advanced CI architecture designs and leverage establish tools and solutions.
+        for the design of new facilities that exploit advanced CI architecture designs and leverage established tools and solutions.
         The pilot project will also catalyze a key function of an eventual CI CoE &mdash; to provide a forum for exchange of experience and knowledge among CI experts.
         The project will also gather best practices for major facilities, with the aim of enhancing individual facility CI efforts in the broader CI context.
         The discussion forum and planning effort for a future CI CoE will also address training and workforce development
@@ -141,6 +154,13 @@ const CiCoePilot = () => {
       <List bullets="disc" items={[
         <Link to="https://cicoe-pilot.org/">CI CoE Pilot &mdash; Cyberinfrastructure Center of Excellence</Link>
       ]} />
+
+      <br/><br/>
+
+      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact CI CoE Pilot</Button>
+
+      <br/><br/>
+
     </Section>
   )
 }
@@ -153,7 +173,11 @@ const Fabric = () => {
         <ResponsiveIframe src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000" />
       </Section>
 
+      <br/><br/>
+
       <Button cta link to="https://www.whatisfabric.net/get-involved">Get Involved</Button>
+
+      <br/><br/>
 
     </Fragment>
   )
@@ -207,6 +231,12 @@ const FlyNet = () => {
         <Link to="http://www.flynet-ci.org/">FlyNet</Link>
       ]} />
 
+      <br/><br/>
+
+      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact FlyNet</Button>
+
+      <br/><br/>
+
     </Section>
   )
 }
@@ -214,7 +244,7 @@ const FlyNet = () => {
 const Panorama = () => {
   return (
     <Section>
-      <Heading>Panorama</Heading>
+      <Heading>Panorama 360</Heading>
 
       <Subheading>Overview</Subheading>
 
@@ -252,13 +282,23 @@ const Panorama = () => {
         The RENCI team is also responsible for infrastructure and workflow adaptation in response to anomaly detection.
       </Paragraph>
 
+      <Link to="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=0">
+        <img src="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=1" alt="Infographic detailing Panorama 360 - Click to view larger" />
+      </Link>
+
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.dropbox.com/s/6ejf4o8ea5ta48t/2020-11-panorama-sc-v4.pptx?dl=0">Panorama 360 Presentation</Link>,
-        <Link to="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=0">Panorama 360 Overview</Link>,
+        <Link to="https://www.dropbox.com/s/6ejf4o8ea5ta48t/2020-11-panorama-sc-v4.pptx?dl=1">Panorama 360 Presentation</Link>,
+        <Link to="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=1">Panorama 360 Overview</Link>,
       ]} />
 
+      <br/><br/>
+
+      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Panorama</Button>
+
+      <br/><br/>
+      
     </Section>
   )
 }

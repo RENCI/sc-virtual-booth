@@ -5,11 +5,11 @@ import { navigate } from '@reach/router'
 
 const RIPPLE_DURATION = 500 // in milliseconds
 
-export const Wrapper = styled.button(({ theme, cta }) => `
+export const Wrapper = styled.button(({ theme, cta, small }) => `
   background-color: ${ theme.color.primary.main };
   background-image: linear-gradient(120deg, ${ theme.color.primary.main }, ${ theme.color.extended.ocean });
   color: ${ theme.color.white };
-  padding: ${ theme.spacing.sm } ${ theme.spacing.md };
+  padding: ${ small ? theme.spacing.xs : theme.spacing.sm } ${ small ? theme.spacing.sm : theme.spacing.md };
   border-radius: ${ theme.border.radius };
   border: 0;
   cursor: pointer;
@@ -32,7 +32,7 @@ export const Wrapper = styled.button(({ theme, cta }) => `
     display: block;
     margin: ${ theme.spacing.large } auto;
     padding: ${ theme.spacing.medium } ${ theme.spacing.large };
-    font-size: 150%;
+    font-size: 110%;
   }
 `)
 

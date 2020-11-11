@@ -78,7 +78,7 @@ const Irods = () => {
 
       <br/>
       
-      <Button cta>Request a Meeting</Button>
+      <Button cta link to="https://forms.gle/cHxswNxrqoZMwJtJA">Request a Meeting</Button>
 
       <Subheading>Links</Subheading>
 
@@ -114,7 +114,7 @@ const NationalConsortiumfForDataScience = () => {
       
       <br/>
 
-      <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact NCDS</Button>
+      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact NCDS</Button>
     </Section>
   )
 }
@@ -148,7 +148,7 @@ const SouthBigDataHub = () => {
 
       <br/>
       
-      <Button cta link to="mailto:Shannon_McKeen@kenan-flagler.unc.edu">Contact SBDH</Button>
+      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact SBDH</Button>
     </Section>
   )
 }

@@ -62,7 +62,9 @@ export default () => {
 
         <br /><br />
 
-        <Button cta>Request a Meeting</Button>
+        <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Request a Meeting</Button>
+
+        <Button cta link to="http://eepurl.com/bigt9f">Sign up for Updates about RENCI projects</Button>
 
         <br /><br />
 

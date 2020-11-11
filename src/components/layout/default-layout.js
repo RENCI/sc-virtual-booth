@@ -145,8 +145,14 @@ export const DefaultLayout = ({ children }) => {
           RENCI partners with researchers, government, and industry to engage and solve the problems
           that affect North Carolina, our nation, and the world.
         </Paragraph>
+        <Paragraph align="center" width="600px">
+          An institute of the University of North Carolina at Chapel Hill, RENCI was launched in 2004
+          as a collaboration involving UNC Chapel Hill, Duke University, and North Carolina State University.
+        </Paragraph>
 
-        &copy; RENCI { new Date().getFullYear() }
+        <Paragraph align="center" width="600px">
+          &copy; RENCI { new Date().getFullYear() }
+        </Paragraph>
 
         <SocialLinks>
           <Link to="https://twitter.com/renci"><Icon icon="twitter" size={ 24 } fill={ theme.color.primary.dark } /></Link>
