@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import styled from 'styled-components'
-// import axios from 'axios'
-import { useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { useLocation } from '@reach/router'
 import { SEO } from '../components/seo'
@@ -13,32 +12,30 @@ import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { List } from '../components/list'
 import { Button, IconButton } from '../components/button'
+import { Icon } from '../components/icon'
 import { Link } from '../components/link'
 import { useLogos } from '../hooks'
 import { ResponsiveIframe } from '../components/responsive-iframe'
 import { VideoPlayer } from '../components/video-player'
-
-const flyerQuery = graphql`{
-  atlanticWaveSdxFlyer: file(relativePath: {eq: "atlantic-wave-sdx-flyer.jpg"}) {
-    publicURL
-    childImageSharp {
-      fluid(maxWidth: 732) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-}`
+import { Table } from '../components/table'
 
 const AtlanticWaveSdx = () => {
-  const { atlanticWaveSdxFlyer } = useStaticQuery(flyerQuery)
+  const { atlanticWaveSdxFlyer, allSchedule } = useStaticQuery(awsdxQuery)
   const { atlanticWaveSdx } = useLogos()
   const [schedule, setSchedule] = useState()
-  
-  // useEffect(() => {
-  //   axios.get('https://docs.google.com/spreadsheets/d/1OGv6yZsotprneHjy1rTvs7hqej3OdMTtUpgaLdVM160/edit#gid=0')
-  //     .then(response => console.log(response.data))
-  //     .catch(error => console.error(error))
-  // }, [])
+ 
+  const scheduleFieldMap = {
+    Date: 'Date',
+    Start_Time: 'Start',
+    End_Time: 'End',
+    Person_on_Duty_1: 'Person on Duty',
+    Person_on_Duty_2: 'Person on Duty',
+    Host: 'Host',
+  }
+
+  useEffect(() => {
+    setSchedule(allSchedule.edges.map(({ node }) => node))
+  }, [])
 
   return (
     <Section>
@@ -58,7 +55,14 @@ const AtlanticWaveSdx = () => {
         We then create a network topology across four geographically dispersed exchange points,
         showing how the Pegasus application benefits from the AtlanticWave-SDX.
       </Paragraph>
-      
+
+      <div style={{ display: 'flex', justifyContent: 'space-around' }}>
+        <Button link to="https://docs.google.com/spreadsheets/d/1OGv6yZsotprneHjy1rTvs7hqej3OdMTtUpgaLdVM160/edit?usp=sharing">Demo Schedule</Button>
+        <IconButton link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo">Join Demo</IconButton>
+      </div>
+
+      <br/><br/>
+
       <Link to={ atlanticWaveSdxFlyer.publicURL }>
         <Img fluid={ atlanticWaveSdxFlyer.childImageSharp.fluid } style={{ height: `calc(762px * 0.75)` }} imgStyle={{ objectFit: 'contain' }} />
       </Link>
@@ -78,6 +82,19 @@ const AtlanticWaveSdx = () => {
     </Section>
   )
 }
+
+
+export const awsdxQuery = graphql`{
+  atlanticWaveSdxFlyer: file(relativePath: {eq: "atlantic-wave-sdx-flyer.jpg"}) {
+    publicURL
+    childImageSharp {
+      fluid(maxWidth: 732) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}`
+
 
 const ChameleonCloud = () => {
   const { chameleon } = useLogos()
