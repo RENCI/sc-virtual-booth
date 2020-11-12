@@ -179,12 +179,31 @@ const Fabric = () => {
       </Link>
 
       <br/><br/>
+
+      <Paragraph align="center" width="500px">
+        <strong>FABRIC</strong> is Adaptive Programmable Research Infrastructure for Computer Science and Science Applications
+      </Paragraph>
+
+      <Paragraph>
+        FABRIC is a unique national research infrastructure to enable cutting-edge and exploratory research at-scale in networking, cybersecurity, distributed computing and storage systems, machine learning, and science applications.
+      </Paragraph>
+
+      <Paragraph>
+        It is an everywhere programmable nationwide instrument comprised of novel extensible network elements equipped with large amounts of compute and storage, interconnected by high speed, dedicated optical links. It will connect a number of specialized testbeds (5G/IoT PAWR, NSF Clouds) and high-performance computing facilities to create a rich fabric for a wide variety of experimental activities
+      </Paragraph>
+
       <br/><br/>
 
       <ResponsiveIframe src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000" />
 
-      <br/><br/>
+      <Subheading>Links</Subheading>
 
+      <List bullets="disc" items={[
+        <Link to="https://whatisfabric.net/">whatisfabric.net</Link>,
+        <Link to="https://twitter.com/FABRICtestbed">FABRICTestbed on Twitter</Link>
+      ]} />
+
+      <br/><br/>
       <Button cta link to="https://www.whatisfabric.net/get-involved">Get Involved</Button>
 
       <br/><br/>
