@@ -20,22 +20,8 @@ import { VideoPlayer } from '../components/video-player'
 import { Table } from '../components/table'
 
 const AtlanticWaveSdx = () => {
-  const { atlanticWaveSdxFlyer, allSchedule } = useStaticQuery(awsdxQuery)
+  const { atlanticWaveSdxFlyer } = useStaticQuery(awsdxQuery)
   const { atlanticWaveSdx } = useLogos()
-  const [schedule, setSchedule] = useState()
- 
-  const scheduleFieldMap = {
-    Date: 'Date',
-    Start_Time: 'Start',
-    End_Time: 'End',
-    Person_on_Duty_1: 'Person on Duty',
-    Person_on_Duty_2: 'Person on Duty',
-    Host: 'Host',
-  }
-
-  useEffect(() => {
-    setSchedule(allSchedule.edges.map(({ node }) => node))
-  }, [])
 
   return (
     <Section>
@@ -336,6 +322,7 @@ export default () => {
   useEffect(() => {
     if (location.hash) {
       setProject(location.hash.replace('#', ''))
+      window.scroll({ top: 0 })
     }
   }, [location.hash])
 

@@ -156,6 +156,7 @@ export default () => {
   useEffect(() => {
     if (location.hash) {
       setProject(location.hash.replace('#', ''))
+      window.scroll({ top: 0 })
     }
   }, [location.hash])
 
