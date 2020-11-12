@@ -185,11 +185,37 @@ const Fabric = () => {
       </Paragraph>
 
       <Paragraph>
-        FABRIC is a unique national research infrastructure to enable cutting-edge and exploratory research at-scale in networking, cybersecurity, distributed computing and storage systems, machine learning, and science applications.
+        FABRIC is a unique national research infrastructure to enable cutting-edge and exploratory research at-scale in networking,
+        cybersecurity, distributed computing and storage systems, machine learning, and science applications.
       </Paragraph>
 
       <Paragraph>
-        It is an everywhere programmable nationwide instrument comprised of novel extensible network elements equipped with large amounts of compute and storage, interconnected by high speed, dedicated optical links. It will connect a number of specialized testbeds (5G/IoT PAWR, NSF Clouds) and high-performance computing facilities to create a rich fabric for a wide variety of experimental activities
+        It is an everywhere programmable nationwide instrument comprised of novel extensible network elements equipped with large amounts of compute and storage,
+        interconnected by high speed, dedicated optical links. It will connect a number of specialized testbeds (5G/IoT PAWR, NSF Clouds)
+        and high-performance computing facilities to create a rich fabric for a wide variety of experimental activities
+      </Paragraph>
+
+      <Paragraph>
+        FABRIC is a collaboration between the core team of
+        RENCI/UNC Chapel Hill,
+        UIUC,
+        University of Kentucky,
+        Clemson University,
+        LBNL/DOE,
+        and includes
+        University of Virginia,
+        FIU,
+        Georgia Tech,
+        SRI (early experiments),
+        CloudLab+Powder/University of Utah,
+        Chameleon Cloud/University of Chicago,
+        Cosmos+ERN/Rutgers University,
+        PRP,
+        PEERING/Columbia University,
+        TACC,
+        PSC,
+        NCSA, and
+        Internet2.
       </Paragraph>
 
       <br/><br/>
