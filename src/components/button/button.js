@@ -5,13 +5,17 @@ import { navigate } from '@reach/router'
 
 const RIPPLE_DURATION = 500 // in milliseconds
 
-export const Wrapper = styled.button(({ theme, cta, small }) => `
-  background-color: ${ theme.color.primary.main };
-  background-image: linear-gradient(120deg, ${ theme.color.primary.main }, ${ theme.color.extended.ocean });
-  color: ${ theme.color.white };
+export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
+  background-color: ${ inverted ? theme.color.white : theme.color.primary.main };
+  background-image: linear-gradient(
+    120deg,
+    ${ inverted ? theme.color.white : theme.color.primary.main },
+    ${ inverted ? theme.color.extended.mist : theme.color.extended.ocean }
+  );
+  color: ${ inverted ? theme.color.primary.dark : theme.color.white };
   padding: ${ small ? theme.spacing.xs : theme.spacing.sm } ${ small ? theme.spacing.sm : theme.spacing.md };
   border-radius: ${ theme.border.radius };
-  border: 0;
+  border: ${ inverted ? `1px solid ${ theme.color.primary.dark }` : '0' };
   cursor: pointer;
   transition: filter 250ms;
   text-transform: uppercase;
