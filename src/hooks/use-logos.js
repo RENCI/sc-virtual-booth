@@ -46,6 +46,13 @@ const logosQuery = graphql`{
       }
     }
   }
+  fabricLogo: file(relativePath: {eq: "fabric-logo.png"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 }`
 
 export const useLogos = () => {
@@ -55,7 +62,8 @@ export const useLogos = () => {
       atlanticWaveSdxLogo,
       biodataCatalystLogo,
       irodsLogo,
-      chameleonLogo
+      chameleonLogo,
+      fabricLogo,
     } = useStaticQuery(logosQuery)
 
     const renciLogo = {
@@ -66,6 +74,7 @@ export const useLogos = () => {
     const biodataCatalyst = biodataCatalystLogo.childImageSharp
     const irods = irodsLogo.childImageSharp.fixed
     const chameleon = chameleonLogo.childImageSharp.fluid
-    return { renciLogo, atlanticWaveSdx, biodataCatalyst, irods, chameleon }
+    const fabric = fabricLogo.childImageSharp.fluid
+    return { renciLogo, atlanticWaveSdx, biodataCatalyst, irods, chameleon, fabric }
 }
 

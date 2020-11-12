@@ -169,12 +169,19 @@ const CiCoePilot = () => {
 }
 
 const Fabric = () => {
+  const { fabric } = useLogos()
   return (
-    <Fragment>
-      <Section>
-        <Heading>FABRIC</Heading>
-        <ResponsiveIframe src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000" />
-      </Section>
+    <Section>
+      <Heading hidden>FABRIC</Heading>
+
+      <Link to="http://www.fabric-testbed.net/">
+        <Img fluid={ fabric } />
+      </Link>
+
+      <br/><br/>
+      <br/><br/>
+
+      <ResponsiveIframe src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000" />
 
       <br/><br/>
 
@@ -182,7 +189,7 @@ const Fabric = () => {
 
       <br/><br/>
 
-    </Fragment>
+    </Section>
   )
 }
 
