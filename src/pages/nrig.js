@@ -43,8 +43,8 @@ const AtlanticWaveSdx = () => {
       </Paragraph>
 
       <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-        <Button link to="https://docs.google.com/spreadsheets/d/1OGv6yZsotprneHjy1rTvs7hqej3OdMTtUpgaLdVM160/edit?usp=sharing">Demo Schedule</Button>
-        <IconButton link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo">Join Demo</IconButton>
+        <Button link to="">Watch our Demo</Button>
+        <IconButton link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo">Office Hours: Talk to us about our demo</IconButton>
       </div>
 
       <br/><br/>
