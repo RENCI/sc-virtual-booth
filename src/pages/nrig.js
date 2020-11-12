@@ -19,9 +19,22 @@ import { ResponsiveIframe } from '../components/responsive-iframe'
 import { VideoPlayer } from '../components/video-player'
 import { Table } from '../components/table'
 
+const scheduleFields = [
+  { key: 'Date',       name: 'Date',         hidden: false, },
+  { key: 'Start_Time', name: 'Start',        hidden: false, },
+  { key: 'End_Time',   name: 'End',          hidden: false, },
+  { key: 'On_Duty',    name: 'People  Duty', hidden: true, },
+  { key: 'Host',       name: 'Host',         hidden: true, },
+]
+
 const AtlanticWaveSdx = () => {
-  const { atlanticWaveSdxFlyer } = useStaticQuery(awsdxQuery)
+  const { atlanticWaveSdxFlyer, atlanticWaveSdxSchedule } = useStaticQuery(atlanticWaveSdxQuery)
   const { atlanticWaveSdx } = useLogos()
+  const [schedule, setSchedule] = useState()
+
+  useEffect(() => {
+    setSchedule(atlanticWaveSdxSchedule.edges.map((({ node }) => node)))
+  }, [atlanticWaveSdxSchedule])
 
   return (
     <Section>
@@ -49,6 +62,8 @@ const AtlanticWaveSdx = () => {
 
       <br/><br/>
 
+      { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
+
       <Link to={ atlanticWaveSdxFlyer.publicURL }>
         <Img fluid={ atlanticWaveSdxFlyer.childImageSharp.fluid } style={{ height: `calc(762px * 0.75)` }} imgStyle={{ objectFit: 'contain' }} />
       </Link>
@@ -70,12 +85,23 @@ const AtlanticWaveSdx = () => {
 }
 
 
-export const awsdxQuery = graphql`{
+export const atlanticWaveSdxQuery = graphql`{
   atlanticWaveSdxFlyer: file(relativePath: {eq: "atlantic-wave-sdx-flyer.jpg"}) {
     publicURL
     childImageSharp {
       fluid(maxWidth: 732) {
         ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  atlanticWaveSdxSchedule: allSchedule {
+    edges {
+      node {
+        Date
+        Start_Time
+        End_Time
+        On_Duty
+        Host
       }
     }
   }

@@ -6,8 +6,8 @@ export const Table = ({ columns, data }) => {
       <thead>
         <tr>
           {
-            Object.keys(columns).map(key => (
-              <th key={ `col-${ key }` }>{ columns[key] }</th>
+            columns.map(column => (
+              <th key={ `col-${ column.key }` }>{ column.name }</th>
             ))
           }
         </tr>
@@ -16,7 +16,7 @@ export const Table = ({ columns, data }) => {
         {
           data.map((row, i) => (
             <tr key={ `row-${ i }` }>
-              { Object.keys(columns).map((column, j) => <td key={ `${ i },${ j }` }>{ row[column] }</td>) }
+              { columns.map((column, j) => <td key={ `${ i },${ j }` }>{ row[column.key] }</td>) }
             </tr>
           ))
         }
