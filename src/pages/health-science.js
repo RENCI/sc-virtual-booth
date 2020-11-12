@@ -93,6 +93,20 @@ const DataTranslator = () => {
       <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Data Translator</Button>
 
       <br/><br/>
+
+      <Paragraph>
+        This work is supported by the National Center for Advancing Translational Sciences of the
+        National Institutes of Health under the following grant numbers.
+      </Paragraph>
+
+      <List bullets="disc" items={[
+        'ICEES: OT2-TR003430',
+        'ROBOKOP: OT2-TR002514',
+        'TranQL: OT3-TR002020',
+      ]} />
+
+ 
+
             
     </Section>
   )
