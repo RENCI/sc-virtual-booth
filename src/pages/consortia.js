@@ -53,7 +53,7 @@ const Irods = () => {
       <Heading hidden>iRODS</Heading>
 
       <Link to="/irods">
-        <Img fixed={ irods } />
+        <Img fluid={ irods } style={{ maxWidth: '400px', margin: 'auto' }} alt="iRODS Logo" />
       </Link>
 
       <br/><br/>
@@ -125,9 +125,13 @@ const NationalConsortiumfForDataScience = () => {
 }
 
 const SouthBigDataHub = () => {
+  const { sbdh } = useLogos()
+
   return (
     <Section>
-      <Heading>South Big Data Hub</Heading>
+      <Heading hidden>South Big Data Hub</Heading>
+
+      <Img fluid={ sbdh } style={{ maxWidth: '500px', margin: 'auto' }} alt="South Big Data Hub Logo" />
 
       <Paragraph>
         The South Big Data Innovation Hub is part of a network of four regional Big Data Hubs,
