@@ -77,7 +77,7 @@ const DataTranslator = () => {
       <List bullets="disc" items={ [
           <Link to="https://www.dropbox.com/s/t07ndxexnjugw6b/ICEES%20Overview.pdf?dl=1" key="icees">ICEES: An overview</Link>,
           <Link to="https://www.dropbox.com/s/r63go67mapt8mkz/ROBOKOP%20overview.pdf?dl=1" key="robokop">ROBOKOP: A use case</Link>,
-          <Link to="#" key="tranql">TranQL: A demo</Link>,
+          <Link to="https://www.dropbox.com/s/y2xv7ewlkvdlazr/SC20%20Data%20Translator%20video.mp4?dl=1" key="tranql">TranQL: A demo</Link>,
         ] }
       />
 
