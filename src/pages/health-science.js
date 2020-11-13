@@ -13,7 +13,6 @@ import { Container as Grid, Row, Col } from 'react-grid-system'
 import { List } from '../components/list'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
-import { VideoPlayer } from '../components/video-player'
 
 const BioDataCatalyst = () => {
   const { biodataCatalyst } = useLogos()
@@ -71,10 +70,6 @@ const DataTranslator = () => {
         This knowledge is integrated together into a knowledge graph,
         which is then analyzed to produce novel insights and enhance human reasoning.
       </Paragraph>
-
-      <VideoPlayer url="https://www.dropbox.com/s/y2xv7ewlkvdlazr/SC20%20Data%20Translator%20video.mp4?raw=1" controls={ true } />
-
-      <br />
 
       <Paragraph>
         <Link to="https://www.renci.org/">RENCI</Link> contributes to a broad spectrum of Translator activities.
