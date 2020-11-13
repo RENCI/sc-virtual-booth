@@ -102,8 +102,8 @@ const DataTranslator = () => {
       <br/><br/>
 
       <Paragraph>
-        This work is supported by the National Center for Advancing Translational Sciences of the
-        National Institutes of Health under the following grant numbers.
+        This work is supported by the <Link to="https://ncats.nih.gov/">National Center for Advancing Translational Sciences</Link> of
+        the <Link to="https://www.nih.gov/">National Institutes of Health</Link> under the following grant numbers.
       </Paragraph>
 
       <List bullets="disc" items={[
