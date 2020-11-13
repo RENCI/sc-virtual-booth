@@ -7,12 +7,13 @@ import { Hero } from '../components/hero'
 import heroBackground from '../images/hero-health-science.jpg'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../components/typography'
+import { useLogos } from '../hooks'
 import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { List } from '../components/list'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
-import { useLogos } from '../hooks'
+import { VideoPlayer } from '../components/video-player'
 
 const BioDataCatalyst = () => {
   const { biodataCatalyst } = useLogos()
@@ -58,6 +59,8 @@ const DataTranslator = () => {
       
       <Img fluid={ translatorGraphic.childImageSharp.fluid } alt="Visit BioData Catalyst Website" />
 
+      <br />
+
       <Paragraph>
         <Link to="https://ncats.nih.gov/">The National Center for Advancing Translational Sciences</Link> (NCATS)
         launched the <Link to="https://ncats.nih.gov/translator">Biomedical Data Translator</Link> program in October 2016
@@ -69,15 +72,19 @@ const DataTranslator = () => {
         which is then analyzed to produce novel insights and enhance human reasoning.
       </Paragraph>
 
+      <VideoPlayer url="https://www.dropbox.com/s/y2xv7ewlkvdlazr/SC20%20Data%20Translator%20video.mp4?raw=1" controls={ true } />
+
+      <br />
+
       <Paragraph>
         <Link to="https://www.renci.org/">RENCI</Link> contributes to a broad spectrum of Translator activities.
         These are just a few of our projects:
       </Paragraph>
 
       <List bullets="disc" items={ [
-          <Link to="https://www.dropbox.com/s/t07ndxexnjugw6b/ICEES%20Overview.pdf?dl=1" key="icees">ICEES: An overview</Link>,
-          <Link to="https://www.dropbox.com/s/r63go67mapt8mkz/ROBOKOP%20overview.pdf?dl=1" key="robokop">ROBOKOP: A use case</Link>,
-          <Link to="https://www.dropbox.com/s/y2xv7ewlkvdlazr/SC20%20Data%20Translator%20video.mp4?dl=1" key="tranql">TranQL: A demo</Link>,
+          <span>ICEES: <Link to="https://www.dropbox.com/s/t07ndxexnjugw6b/ICEES%20Overview.pdf?dl=1" key="icees">An Overview</Link></span>,
+          <span>ROBOKOP: <Link to="https://www.dropbox.com/s/r63go67mapt8mkz/ROBOKOP%20overview.pdf?dl=1" key="robokop">A Use Case</Link></span>,
+          <span>TranQL: <Link to="https://www.dropbox.com/s/y2xv7ewlkvdlazr/SC20%20Data%20Translator%20video.mp4?dl=1" key="tranql">A Demo</Link></span>,
         ] }
       />
 
