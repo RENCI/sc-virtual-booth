@@ -44,7 +44,7 @@ const BioDataCatalyst = () => {
 
       <br/><br/>
 
-      <Button cta link to="https://biodatacatalyst.nhlbi.nih.gov/contact">Contact BioData Catalyst</Button>
+      <Button cta link to="https://biodatacatalyst.nhlbi.nih.gov/contact">Contact NHLBI BioData Catalyst</Button>
                         
     </Section>
   )

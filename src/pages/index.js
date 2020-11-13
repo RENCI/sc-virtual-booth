@@ -54,7 +54,7 @@ export default () => {
           items={ [
               <span>The <Link to="/nrig">Networking and Research Infrastructure Group</Link> (NRIG) and its $20 million NSF grant, FABRIC, along with other major projects such as DyNamo, IRIS, and Panorama 360.</span>,
               <span><Link to="/irods">iRODS</Link>, open source data management software used by research, commercial, and governmental organizations worldwide.</span>,
-              <span>Cutting-edge health science research, including the <Link to="/health-science#bdc">NHLBI BioData Catalyst</Link> project, <Link to="/health-science/data-translator">NCATS’ Biomedical Data Translator</Link>, and multiple translational science projects.</span>,
+              <span>Cutting-edge health science research, including the <Link to="/health-science#bdc">NHLBI BioData Catalyst</Link> project, <Link to="/health-science#data-translator">NCATS’ Biomedical Data Translator</Link>, and multiple translational science projects.</span>,
               <span><Link to="/eds">Earth Data Science</Link> solutions that address the intersection of high performance and high throughput computing with Earth research by utilizing computational tools such as the storm surge and wind-wave model ADCIRC.</span>,
               <span>National initiatives - such as the <Link to="/consortia#sbdh">South Big Data Hub</Link> and the <Link to="/consortia#ncds">National Consortium for Data Science</Link> (NCDS) - that connect the data science community to each other and important resources.</span>,
             ] }

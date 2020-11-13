@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import styled from 'styled-components'
+import styled, { useTheme } from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { useLocation } from '@reach/router'
@@ -55,14 +55,22 @@ const AtlanticWaveSdx = () => {
         showing how the Pegasus application benefits from the AtlanticWave-SDX.
       </Paragraph>
 
+      <Paragraph>
+        Watch our recorded demo or watch it live! See the schedule below for times.
+      </Paragraph>
+
       <div style={{ display: 'flex', justifyContent: 'space-around' }}>
         <Button link to="">Watch our Demo</Button>
-        <IconButton link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo">Office Hours: Talk to us about our demo</IconButton>
+        <IconButton link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo">Live DEMO and Q&A</IconButton>
       </div>
 
       <br/><br/>
 
+      <Subheading>Office Hours</Subheading>
+
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
+
+      <br/><br/>
 
       <Link to={ atlanticWaveSdxFlyer.publicURL }>
         <Img fluid={ atlanticWaveSdxFlyer.childImageSharp.fluid } style={{ height: `calc(762px * 0.75)` }} imgStyle={{ objectFit: 'contain' }} />
@@ -323,6 +331,7 @@ const FlyNet = () => {
 }
 
 const Panorama = () => {
+  const theme = useTheme()
   return (
     <Section>
       <Heading>Panorama 360</Heading>
@@ -364,7 +373,7 @@ const Panorama = () => {
       </Paragraph>
 
       <Link to="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=0">
-        <img src="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=1" alt="Infographic detailing Panorama 360 - Click to view larger" />
+        <img src="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=1" alt="Infographic detailing Panorama 360 - Click to view larger" style={{ border: `2px solid ${ theme.color.primary.dark }` }} />
       </Link>
 
       <Subheading>Links</Subheading>
