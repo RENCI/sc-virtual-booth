@@ -55,18 +55,20 @@ const AtlanticWaveSdx = () => {
         showing how the Pegasus application benefits from the AtlanticWave-SDX.
       </Paragraph>
 
+      <Subheading>Demo/Office Hours</Subheading>
+
       <Paragraph>
-        Watch our recorded demo or watch it live! See the schedule below for times.
+        You can watch a recorded demo or watch it <em>live</em>!
+        Join a live demo by clicking the button below.
+        Demo times are listed in the schedule below
       </Paragraph>
 
-      <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-        <Button link to="">Watch our Demo</Button>
-        <IconButton link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo">Live DEMO and Q&A</IconButton>
+      <div style={{ display: 'flex', justifyContent: 'space-around', gap: '1rem' }}>
+        <Button link to="">Watch a recorded Demo</Button>
+        <IconButton link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo">Watch a Live Demo and Q&A</IconButton>
       </div>
 
       <br/><br/>
-
-      <Subheading>Office Hours</Subheading>
 
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
 
