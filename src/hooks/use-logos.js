@@ -53,6 +53,13 @@ const logosQuery = graphql`{
       }
     }
   }
+  ncdsLogo: file(relativePath: {eq: "ncds-logo.png"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 }`
 
 export const useLogos = () => {
@@ -64,6 +71,7 @@ export const useLogos = () => {
       irodsLogo,
       chameleonLogo,
       fabricLogo,
+      ncdsLogo,
     } = useStaticQuery(logosQuery)
 
     const renciLogo = {
@@ -75,6 +83,7 @@ export const useLogos = () => {
     const irods = irodsLogo.childImageSharp.fixed
     const chameleon = chameleonLogo.childImageSharp.fluid
     const fabric = fabricLogo.childImageSharp.fluid
-    return { renciLogo, atlanticWaveSdx, biodataCatalyst, irods, chameleon, fabric }
+    const ncds = ncdsLogo.childImageSharp.fluid
+    return { renciLogo, atlanticWaveSdx, biodataCatalyst, irods, chameleon, fabric, ncds }
 }
 

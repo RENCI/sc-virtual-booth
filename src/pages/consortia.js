@@ -92,9 +92,14 @@ const Irods = () => {
 }
 
 const NationalConsortiumfForDataScience = () => {
+  const { ncds } = useLogos()
   return (
     <Section>
-      <Heading>National Consortium for Data Science</Heading>
+      <Heading hidden>National Consortium for Data Science</Heading>
+
+      <Img fluid={ ncds } style={{ maxWidth: '400px', margin: 'auto' }} alt="NCDS Logo" />
+
+      <br /><br />
 
       <Paragraph>
         The National Consortium for Data Science (NCDS) is a collaboration of leaders in academia, industry,
