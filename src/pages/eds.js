@@ -20,8 +20,8 @@ export default () => {
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Earth Data Science</span></Title>
         <p className="highlight">
-          Earth Data Science solutions that address the intersection of high performance and high throughput computing with living
-          at the coast by applying computational models such as the tide, storm surge and wind-wave model ADCIRC and data science.
+          Earth Data Science solutions address the intersection of high performance and high throughput computing with living
+          at the coast by applying computational models (such as the tide, storm surge, and wind-wave model <Link to="https://adcirc.org/">ADCIRC</Link>) and data science.
         </p>
       </Hero>
       
