@@ -19,11 +19,12 @@ const Wrapper = styled.div`
 export const ResponsiveIframe = props => {
   return (
     <Wrapper>
-      <iframe frameBorder="0" allowFullScreen={ true } { ...props }></iframe>
+      <iframe title={ props.title } frameBorder="0" allowFullScreen={ true } { ...props }></iframe>
     </Wrapper>
   )
 }
 
 ResponsiveIframe.propTypes = {
+  title: PropTypes.string.isRequired,
   src: PropTypes.string.isRequired,
 }

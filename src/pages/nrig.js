@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import styled, { useTheme } from 'styled-components'
+import { useTheme } from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { useLocation } from '@reach/router'
@@ -12,7 +12,6 @@ import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { List } from '../components/list'
 import { Button, IconButton } from '../components/button'
-import { Icon } from '../components/icon'
 import { Link } from '../components/link'
 import { useLogos } from '../hooks'
 import { ResponsiveIframe } from '../components/responsive-iframe'
@@ -256,7 +255,10 @@ const Fabric = () => {
 
       <br/><br/>
 
-      <ResponsiveIframe src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000" />
+      <ResponsiveIframe
+        title="FABRIC Overview Presentation"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000"
+      />
 
       <Subheading>Links</Subheading>
 
