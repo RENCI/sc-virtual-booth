@@ -41,7 +41,7 @@ const Background = styled.div(({ color, image, yShift }) => css`
   animation: ${ bgZoom } 500ms ease-out forwards;
   background-image: url(${ image });
   background-size: cover;
-  background-position: 0% calc(50% + ${ yShift }px);
+  background-position: 0% calc(50%);
   position: absolute;
   left: 0;
   top: 0;
