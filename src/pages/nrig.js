@@ -80,7 +80,7 @@ const AtlanticWaveSdx = () => {
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.dropbox.com/s/5zk4wgd9cyze0il/Atlantic%20Wave-SDX_SC20%20presentation_v10.pptx?dl=1">Atlantic Wave SDX Presentation</Link>,
+        <Link to="https://www.dropbox.com/s/9afk6w61fnygman/AtlanticWave-SDX_SC20%20presentation_v11.pdf?dl=1">Atlantic Wave SDX Presentation</Link>,
       ]} />
 
       <br/><br/>
