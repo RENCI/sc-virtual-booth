@@ -79,7 +79,7 @@ const DataTranslator = () => {
       <List bullets="disc" items={ [
           <span>ICEES: <Link to="https://www.dropbox.com/s/t07ndxexnjugw6b/ICEES%20Overview.pdf?dl=1" key="icees">An Overview</Link></span>,
           <span>ROBOKOP: <Link to="https://www.dropbox.com/s/r63go67mapt8mkz/ROBOKOP%20overview.pdf?dl=1" key="robokop">A Use Case</Link></span>,
-          <span>TranQL: <Link to="https://www.dropbox.com/s/y2xv7ewlkvdlazr/SC20%20Data%20Translator%20video.mp4?dl=1" key="tranql">A Demo</Link></span>,
+          <span>TranQL: <Link to="https://www.dropbox.com/s/y2xv7ewlkvdlazr/SC20%20Data%20Translator%20video.mp4?dl=0" key="tranql">A Demo</Link></span>,
         ] }
       />
 
