@@ -260,6 +260,10 @@ const Fabric = () => {
         src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000"
       />
 
+      <br />
+
+      <VideoPlayer url="https://youtu.be/wvgoGMojZGM" controls={ true } />
+
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
