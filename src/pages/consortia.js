@@ -176,7 +176,7 @@ const ConsortiaPage = () => {
   useEffect(() => {
     if (location.hash) {
       setConsortium(location.hash.replace('#', ''))
-      window.scroll({ top: 0 })
+      window.scroll({ top: 400 })
     }
   }, [location.hash])
 
