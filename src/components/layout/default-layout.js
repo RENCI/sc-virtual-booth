@@ -105,7 +105,7 @@ const Footer = styled.footer(({ theme }) => `
   text-align: center;
   filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.25));
   ${ SocialLinks } {
-    filter: opacity(0.2);
+    filter: opacity(0.33);
     transition: filter 250ms;
   }
   &:hover {
@@ -155,10 +155,11 @@ export const DefaultLayout = ({ children }) => {
         </Paragraph>
 
         <SocialLinks>
-          <Link to="https://twitter.com/renci"><Icon icon="twitter" size={ 24 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://facebook.com/renci.org"><Icon icon="facebook" size={ 24 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://www.linkedin.com/company/renaissance-computing-institute"><Icon icon="linkedIn" size={ 24 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://github.com/renci/sc-virtual-booth"><Icon icon="github" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://twitter.com/renci" aria-label="Follow us on twitter"><Icon icon="twitter" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://facebook.com/renci.org" aria-label="Follow us on Facebook"><Icon icon="facebook" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://www.linkedin.com/company/renaissance-computing-institute" aria-label="Follow us on LinkedIn"><Icon icon="linkedIn" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://github.com/renci/sc-virtual-booth" aria-label="View the source for this site"><Icon icon="github" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://www.youtube.com/channel/UCSOkatGqnWS_o1rU1mYgxrA" aria-label="Follow us on YouTube"><Icon icon="youtube" size={ 24 } fill={ theme.color.primary.dark } /></Link>
         </SocialLinks>
 
       </Footer>

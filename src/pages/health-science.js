@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react"
-import { useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { useLocation } from "@reach/router"
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { Hero } from '../components/hero'
 import heroBackground from '../images/hero-health-science.jpg'
 import { Container, Section } from '../components/layout'
@@ -27,6 +27,12 @@ const BioDataCatalyst = () => {
       <Paragraph>
         NHLBI BioData Catalyst is a cloud-based ecosystem providing tools, applications, and workflows in secure workspaces.
         The ecosystem is a dynamic resource that allows researchers to find, access, share, store, and compute on large scale datasets. 
+      </Paragraph>
+
+      <Paragraph>
+        The ecosystem, which has undergone rigorous pilot testing, is now open to all researchers.
+        The BioData Catalyst ecosystem provides heart, lung, blood, and sleep researchers with high-value
+        NHLBI datasets in the cloud, streamlining access to the data.
       </Paragraph>
 
       <Paragraph>
@@ -92,7 +98,7 @@ const DataTranslator = () => {
 
       <br/><br/>
 
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Data Translator</Button>
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact Data Translator</Button>
 
       <br/><br/>
 
@@ -151,7 +157,7 @@ const projectsMenuItems = [
   { text: 'Translational Science', id: 'txscience', component: <TranslationalScience /> },
 ]
 
-export default () => {
+const HealthSciencePage = () => {
   const [project, setProject] = useState('bdc')
   const location = useLocation()
 
@@ -164,7 +170,7 @@ export default () => {
 
   return (
     <Fragment>
-      <SEO title="Health Science" />
+      <Seo title="Health Science" />
       
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Health Science</span></Title>
@@ -201,3 +207,5 @@ const translatorGraphicQuery = graphql`{
     }
   }
 }`
+
+export default HealthSciencePage

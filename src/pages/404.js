@@ -1,12 +1,14 @@
 import React from 'react'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { Container } from '../components/layout'
 
-export default () => (
+const NotFoundPage = () => (
   <Container>
-    <SEO title="404: Not found" />
+    <Seo title="404: Not found" />
 
     <h1>404: Not Found</h1>
 
   </Container>
 )
+
+export default NotFoundPage

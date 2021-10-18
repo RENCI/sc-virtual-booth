@@ -1,7 +1,7 @@
 import React, { Fragment } from "react"
-import { useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Hero } from '../components/hero'
 import { Container } from '../components/layout'
@@ -10,12 +10,12 @@ import { Button } from '../components/button'
 import { Link } from '../components/link'
 import heroBackground from '../images/hero-environmental-science.jpg'
 
-export default () => {
+const EdsPage = () => {
   const { hurricaneImage } = useStaticQuery(hurricaneImageQuery)
 
   return (
     <Fragment>
-      <SEO title="Earth Data Science" />
+      <Seo title="Earth Data Science" />
 
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Earth Data Science</span></Title>
@@ -56,7 +56,7 @@ export default () => {
 
       </Container>
 
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact EDS</Button>
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact EDS</Button>
 
       <br/><br/><br/><br/>
 
@@ -73,3 +73,5 @@ const hurricaneImageQuery = graphql`{
     }
   }
 }`
+
+export default EdsPage

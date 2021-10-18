@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react"
 import Img from 'gatsby-image'
 import { useLocation } from "@reach/router"
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container, Section } from '../components/layout'
 import { Title, Heading, Subheading, Paragraph } from '../components/typography'
@@ -46,6 +46,45 @@ const BioDataCatalyst = () => {
     </Section>  )
 }
 
+const Heal = () => {
+  const { heal } = useLogos()
+  return (
+    <Section>
+      <Heading hidden>NIH HEAL Initiative</Heading>
+
+      <Img fluid={ heal } style={{ maxWidth: '250px', margin: 'auto' }} alt="NIH HEAL Initiative logo" />
+
+      <br/><br/>
+
+      <Paragraph>
+        The National Institutes of Health (NIH) Helping to End Addiction Long-term (HEAL) Initiative is an aggressive, transagency effort to speed scientific solutions to stem the national opioid public health crisis. 
+      </Paragraph>
+      
+      <Paragraph>
+        As part of the HEAL Data Stewardship Group, RENCI will work with HEAL Investigators and other stakeholders to develop processes for data harmonization, data storage, metadata collection, and sharing within the HEAL Data Ecosystem. The Stewards will provide solutions to manage and coordinate diverse teams and data across the Initiative. 
+      </Paragraph>
+
+      <Paragraph>
+        The Stewards will:
+         <List bullets="disc" items={[
+          'Lead the HEAL Ecosystem engagement effort, which will examine and build upon the existing consensus-building activities, develop complementary stewardship and reporting structures, and incorporate extensive feedback from the HEAL community',
+          'Provide oversight and consultancy for data management, which will help HEAL investigators generating data across the complex landscape of the HEAL Initiative adhere to program objectives in a coordinated and efficient manner',
+          'Develop use cases to inform search capabilities, understand modeling requirements, adapt and promote flexible knowledge graph standards, create automated workflows to make HEAL data FAIR, provide data analytic and visualization tools, and collaborate with the HEAL Platform provider to enable novel discovery through the HEAL Data Ecosystem. ',
+        ]} />
+      </Paragraph>
+
+      <Subheading>Links</Subheading>
+
+      <List bullets="disc" items={[
+        <Link to="https://heal.nih.gov/">NIH HEAL Website</Link>,
+        <Link to="https://www.healdatafair.org/">NIH Data Stewards Website</Link>,
+      ]} />
+
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact HEAL</Button>
+    </Section>
+  )
+}
+
 const Irods = () => {
   const { irods } = useLogos()
   return (
@@ -69,11 +108,13 @@ const Irods = () => {
       ]} />
 
       <Paragraph>
-        The Consortium maintains and supports a commercial-grade distribution of <Link to="https://github.com/irods/irods">iRODS</Link>
+        The Consortium maintains and supports a commercial-grade distribution of <Link to="https://github.com/irods/irods">iRODS</Link>.
       </Paragraph>
 
       <Paragraph>
-        The iRODS Consortium fields a team of software developers, application engineers, and support staff housed at RENCI at the University of North Carolina at Chapel Hill. Each year, the Consortium hosts the iRODS User Group Meeting, a symposium that draws 100+ participants to Chapel Hill to share iRODS technologies and case studies.
+        The iRODS Consortium fields a team of software developers, application engineers, and support staff housed at RENCI
+        at the University of North Carolina at Chapel Hill. Each year, the Consortium hosts the iRODS User Group Meeting,
+        a symposium that draws 100+ participants to Chapel Hill to share iRODS technologies and case studies.
       </Paragraph>
 
       <br/>
@@ -119,7 +160,7 @@ const NationalConsortiumfForDataScience = () => {
       
       <br/>
 
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact NCDS</Button>
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact NCDS</Button>
     </Section>
   )
 }
@@ -149,21 +190,26 @@ const SouthBigDataHub = () => {
         'Smart Cities',
         'Advanced Materials and Manufacturing',
         'Data Sharing & Cyberinfrastructure',
-        'Social Cyber Security',
+        'Social Cybersecurity',
         'Environmental & Hazard Response',
         'Team Science',
         'Education & Workforce Development',
       ]} />
 
-      <br/>
-      
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact SBDH</Button>
+      <Subheading>Links</Subheading>
+
+      <List bullets="disc" items={[
+        <Link to="http://southbigdatahub.org/">South Big Data hub Website</Link>,
+      ]} />
+
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact SBDH</Button>
     </Section>
   )
 }
 
 const consortiaMenuItems = [
   { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
+  { text: 'NIH HEAL Initiative', id: 'heal', component: <Heal /> },
   { text: 'iRODS', id: 'irods', component: <Irods /> },
   { text: 'NCDS', id: 'ncds', component: <NationalConsortiumfForDataScience /> },
   { text: 'South Big Data Hub', id: 'sbdh', component: <SouthBigDataHub /> },
@@ -182,7 +228,7 @@ const ConsortiaPage = () => {
 
   return (
     <Fragment>
-      <SEO title="Consortia" />
+      <Seo title="Consortia" />
 
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Consortia</span></Title>

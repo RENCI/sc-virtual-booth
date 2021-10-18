@@ -1,33 +1,33 @@
 import React, { Fragment } from "react"
 import { useTheme } from 'styled-components'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container } from '../components/layout'
 import { Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { List } from '../components/list'
 import { Link } from '../components/link'
-import sc20Logo from '../images/sc20-logo.png'
+import sc21Logo from '../images/sc21-logo.png'
 
-export default () => {
+const HomePage = () => {
   const theme = useTheme()
 
   return (
     <Fragment>
-      <SEO title="Home" />
+      <Seo title="Home" />
 
       <Hero backgroundColor={ theme.color.black }>
         <img
-          src={ sc20Logo }
-          alt="SC20 Virtual Booth Logo"
-          style={{ width: '178px', height: '190px', margin: 'auto' }}
+          src={ sc21Logo }
+          alt="SC21 Virtual Booth Logo"
+          style={{ width: '178px', height: '191px', margin: 'auto' }}
         />
         <Heading style={{ color: theme.color.primary.main, fontWeight: 'normal', letterSpacing: '2px', margin: 'auto' }}>RENCI's Virtual Booth</Heading>
       </Hero>
       
       <Container>
         <Paragraph align="center" width="600px">
-          <Link to="https://sc20.supercomputing.org/">SC20</Link> &mdash; this year’s International Conference for High Performance Computing, Networking, Storage, and Analysis &mdash; will be held virtually Nov. 9-19, 2020.
+          <Link to="https://sc21.supercomputing.org/">SC21</Link> &mdash; this year’s International Conference for High Performance Computing, Networking, Storage, and Analysis &mdash; will be held virtually Nov. 14-19, 2021.
           RENCI’s virtual booth highlights the newest advances from our researchers. 
         </Paragraph>
         
@@ -61,9 +61,9 @@ export default () => {
 
         <br /><br />
 
-        <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Request a Meeting</Button>
+        <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Request a Meeting</Button>
 
-        <Button cta link to="http://eepurl.com/bigt9f">Sign up for RENCI project updates</Button>
+        <Button cta link to="https://us3.list-manage.com/subscribe?u=c8914f488de27003a4fd3f676&id=419ad26f9d">Sign up for RENCI project updates</Button>
 
         <br /><br />
 
@@ -71,3 +71,5 @@ export default () => {
     </Fragment>
   )
 }
+
+export default HomePage

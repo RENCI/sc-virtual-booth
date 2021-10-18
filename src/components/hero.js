@@ -3,25 +3,25 @@ import styled, { css, keyframes } from 'styled-components'
 import { useScrollPosition } from '../hooks'
 
 const bgZoom = keyframes`
-    0% {
-        opacity: 0.0;
-        transform: perspective(500px) translateZ(0px);
-    }
-    100% {
-        opacity: 1.0;
-        transform: perspective(500px) translateZ(20px);
-    }
+  0% {
+    opacity: 0.0;
+    transform: perspective(500px) translateZ(0px);
+  }
+  100% {
+    opacity: 1.0;
+    transform: perspective(500px) translateZ(20px);
+  }
 `
 
 const contentZoom = keyframes`
-    0% {
-        opacity: 0.0;
-        transform: perspective(500px) translateZ(-20px);
-    }
-    100% {
-        opacity: 1.0;
-        transform: perspective(500px) translateZ(0px);
-    }
+  0% {
+    opacity: 0.0;
+    transform: perspective(500px) translateZ(-20px);
+  }
+  100% {
+    opacity: 1.0;
+    transform: perspective(500px) translateZ(0px);
+  }
 `
 
 const Wrapper = styled.div(({ theme }) => `

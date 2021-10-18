@@ -1,15 +1,17 @@
 import React from 'react'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { Container } from '../components/layout'
 import { Title } from '../components/typography'
 
-export default () => {
+const ContactPage = () => {
   return (
     <Container>
-      <SEO title="Contact" />
+      <Seo title="Contact" />
 
       <Title>Contact</Title>
       
     </Container>
   )
 }
+
+export default ContactPage

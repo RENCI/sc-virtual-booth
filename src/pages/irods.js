@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
-import { useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { Container, Section } from '../components/layout'
 import { Heading, Subheading } from '../components/typography'
 import { Button } from '../components/button'
@@ -63,23 +63,23 @@ const videos = {
   overview: { text: 'Overview', path: 'https://www.youtube.com/watch?v=_5eVd3NJ5BU' },
   other: [
     { text: 'iRODS in Production', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZObEclkgMab9ROIeb19fL56' },
-    { text: 'User Group Meeting 2020', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZPxeQLdPBYTq8Ze9yEDK0Tz' },
+    { text: 'User Group Meeting 2021', path: 'https://www.youtube.com/playlist?list=PL29FhEN41mZP8LhLnShmP48SBAY4nHxQ1' },
   ]
 }
 
 const additionalInfo = [
-  { text: 'irods.org', path: 'https://irods.org/' },
-  { text: 'https://github.com/irods', path: 'https://github.com/irods' },
+  { text: 'iRODS Website', path: 'https://irods.org/' },
+  { text: 'iRODS GitHub', path: 'https://github.com/irods' },
   { text: 'iRODS Consortium Members', path: 'https://irods.org/about' },
 ]
 
-export default () => {
+const IrodsPage = () => {
   const data = useStaticQuery(circleOfLifeQuery)
   const circleOfLifeImage = data.file.childImageSharp.fluid
 
   return (
     <Fragment>
-      <SEO title="iRODS" />
+      <Seo title="iRODS" />
 
       <Link to="https://irods.org">
         <Img fluid={ circleOfLifeImage } style={{ height: `25vw` }} imgStyle={{ objectFit: 'contain' }} alt="iRODS - Data Centric, Metadata Driven" />
@@ -170,3 +170,5 @@ const circleOfLifeQuery = graphql`{
     }
   }
 }`
+
+export default IrodsPage

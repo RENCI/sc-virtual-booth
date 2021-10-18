@@ -67,6 +67,13 @@ const logosQuery = graphql`{
       }
     }
   }
+  healLogo: file(relativePath: {eq: "heal-logo.png"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 }`
 
 export const useLogos = () => {
@@ -75,9 +82,10 @@ export const useLogos = () => {
       renciLogoDark,
       atlanticWaveSdxLogo,
       biodataCatalystLogo,
-      irodsLogo,
       chameleonLogo,
       fabricLogo,
+      healLogo,
+      irodsLogo,
       ncdsLogo,
       sbdhLogo,
     } = useStaticQuery(logosQuery)
@@ -88,11 +96,22 @@ export const useLogos = () => {
     }
     const atlanticWaveSdx = atlanticWaveSdxLogo.childImageSharp.fluid
     const biodataCatalyst = biodataCatalystLogo.childImageSharp
-    const irods = irodsLogo.childImageSharp.fluid
     const chameleon = chameleonLogo.childImageSharp.fluid
     const fabric = fabricLogo.childImageSharp.fluid
+    const heal = healLogo.childImageSharp.fluid
+    const irods = irodsLogo.childImageSharp.fluid
     const ncds = ncdsLogo.childImageSharp.fluid
     const sbdh = sbdhLogo.childImageSharp.fluid
-    return { renciLogo, atlanticWaveSdx, biodataCatalyst, irods, chameleon, fabric, ncds, sbdh }
+    return {
+      renciLogo,
+      atlanticWaveSdx,
+      biodataCatalyst,
+      chameleon,
+      fabric,
+      heal,
+      irods,
+      ncds,
+      sbdh,
+    }
 }
 

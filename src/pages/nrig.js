@@ -3,7 +3,7 @@ import { useTheme } from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { useLocation } from '@reach/router'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { Hero } from '../components/hero'
 import heroBackground from '../images/hero-nrig.jpg'
 import { Container, Section } from '../components/layout'
@@ -410,7 +410,7 @@ const projectsMenuItems = [
   { text: 'FlyNet', id: 'flynet', component: <FlyNet /> },
 ]
 
-export default () => {
+const NrigPage = () => {
   const [project, setProject] = useState('fabric')
   const location = useLocation()
 
@@ -423,7 +423,7 @@ export default () => {
 
   return (
     <Fragment>
-      <SEO title="NRIG" />
+      <Seo title="NRIG" />
       
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">NRIG</span></Title>
@@ -452,3 +452,5 @@ export default () => {
     </Fragment>
   )
 }
+
+export default NrigPage
