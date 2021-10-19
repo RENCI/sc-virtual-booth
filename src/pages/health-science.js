@@ -24,6 +24,8 @@ const BioDataCatalyst = () => {
 
       <br/><br/>
 
+      <Subheading>Overview</Subheading>
+
       <Paragraph>
         NHLBI BioData Catalyst is a cloud-based ecosystem providing tools, applications, and workflows in secure workspaces.
         The ecosystem is a dynamic resource that allows researchers to find, access, share, store, and compute on large scale datasets. 
@@ -64,7 +66,7 @@ const DataTranslator = () => {
       
       <Img fluid={ translatorGraphic.childImageSharp.fluid } alt="Visit BioData Catalyst Website" />
 
-      <br />
+      <Subheading>Overview</Subheading>
 
       <Paragraph>
         <Link to="https://ncats.nih.gov/">The National Center for Advancing Translational Sciences</Link> (NCATS)
@@ -124,6 +126,8 @@ const TranslationalScience = () => {
   return (
     <Section>
       <Heading>Translational Science</Heading>
+      
+      <Subheading>Overview</Subheading>
       
       <Paragraph>
         Bridging the "Valley of Death" to bring light to "dark data" requires methods that are reproducible and data that are analyzable.

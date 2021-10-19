@@ -26,7 +26,7 @@ const EdsPage = () => {
       </Hero>
       
       <Container>
-        <br /><br />
+        <br />
 
         <Grid fluid>
           <Row>

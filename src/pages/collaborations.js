@@ -21,7 +21,7 @@ const BioDataCatalyst = () => {
 
       <Img fluid={ biodataCatalyst.fluid } style={{ maxWidth: '500px', margin: 'auto' }} alt="BioData Catalyst Logo" />
 
-      <br/><br/>
+      <Subheading>Overview</Subheading>
 
       <Paragraph>
         NHLBI BioData Catalyst is a cloud-based ecosystem providing tools, applications, and workflows in secure workspaces.
@@ -54,7 +54,7 @@ const Heal = () => {
 
       <Img fluid={ heal } style={{ maxWidth: '250px', margin: 'auto' }} alt="NIH HEAL Initiative logo" />
 
-      <br/><br/>
+      <Subheading>Overview</Subheading>
 
       <Paragraph>
         The National Institutes of Health (NIH) Helping to End Addiction Long-term (HEAL) Initiative is an aggressive, transagency effort to speed scientific solutions to stem the national opioid public health crisis. 
@@ -95,7 +95,7 @@ const Irods = () => {
         <Img fluid={ irods } style={{ maxWidth: '400px', margin: 'auto' }} alt="iRODS Logo" />
       </Link>
 
-      <br/><br/>
+      <Subheading>Overview</Subheading>
 
       <Paragraph>
         The iRODS Consortium brings together businesses, research organizations, universities, and government agencies to ensure the sustainability of iRODS by:
@@ -140,7 +140,7 @@ const NationalConsortiumfForDataScience = () => {
 
       <Img fluid={ ncds } style={{ maxWidth: '400px', margin: 'auto' }} alt="NCDS Logo" />
 
-      <br /><br />
+      <Subheading>Overview</Subheading>
 
       <Paragraph>
         The National Consortium for Data Science (NCDS) is a collaboration of leaders in academia, industry,
@@ -174,6 +174,8 @@ const SouthBigDataHub = () => {
 
       <Img fluid={ sbdh } style={{ maxWidth: '500px', margin: 'auto' }} alt="South Big Data Hub Logo" />
 
+      <Subheading>Overview</Subheading>
+      
       <Paragraph>
         The South Big Data Innovation Hub is part of a network of four regional Big Data Hubs,
         launched by the National Science Foundation and funded in part by host universities and other partners.
