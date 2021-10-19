@@ -7,10 +7,10 @@ import { Title } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import heroBackground from '../images/hero-collaborations.jpg'
 import { Container as Grid, Row, Col } from 'react-grid-system'
-import { BioDataCatalyst, Heal, Irods, NationalConsortiumfForDataScience, SouthBigDataHub } from '../components/projects'
+import { BioDataCatalystCoordinatingCenter, Heal, Irods, NationalConsortiumfForDataScience, SouthBigDataHub } from '../components/projects'
 
 const collaborationMenuItems = [
-  { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
+  { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalystCoordinatingCenter /> },
   { text: 'NIH HEAL Initiative', id: 'heal', component: <Heal /> },
   { text: 'iRODS', id: 'irods', component: <Irods /> },
   { text: 'NCDS', id: 'ncds', component: <NationalConsortiumfForDataScience /> },

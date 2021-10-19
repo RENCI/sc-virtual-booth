@@ -7,7 +7,7 @@ import { Link } from '../link'
 import { List } from '../list'
 import { useLogos } from '../../hooks'
 
-export const BioDataCatalyst = () => {
+export const BioDataCatalystCoordinatingCenter = () => {
   const { biodataCatalyst } = useLogos()
   return (
     <Section>
