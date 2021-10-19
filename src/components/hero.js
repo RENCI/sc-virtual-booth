@@ -3,17 +3,6 @@ import styled, { css, keyframes } from 'styled-components'
 import { useScrollPosition } from '../hooks'
 import { Container } from './layout'
 
-const bgZoom = keyframes`
-  0% {
-    opacity: 0.0;
-    transform: perspective(500px) translateZ(0px);
-  }
-  100% {
-    opacity: 1.0;
-    transform: perspective(500px) translateZ(20px);
-  }
-`
-
 const slideIn = keyframes`
   0% {
     opacity: 0.0;
@@ -22,17 +11,6 @@ const slideIn = keyframes`
   100% {
     opacity: 1.0;
     transform: translateX(0px);
-  }
-`
-
-const contentZoom = keyframes`
-  0% {
-    opacity: 0.0;
-    transform: perspective(500px) translateZ(-20px);
-  }
-  100% {
-    opacity: 1.0;
-    transform: perspective(500px) translateZ(0px);
   }
 `
 
@@ -50,10 +28,10 @@ const Wrapper = styled.div(({ theme }) => `
 
 const Background = styled.div(({ color, image, yShift }) => css`
   background-color: ${ color };
-  animation: ${ bgZoom } 500ms ease-out forwards;
   background-image: url(${ image });
   background-size: cover;
   background-position: 0% calc(50%);
+  transform: translateY(${ yShift }px);
   position: absolute;
   left: 0;
   top: 0;
