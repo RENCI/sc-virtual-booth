@@ -58,6 +58,7 @@ const Contents = styled.div(({ theme }) => css`
   align-items: flex-start;
   z-index: 1;
   padding: 2rem;
+  gap: 2rem;
   animation: ${ contentZoom } 750ms ease-out forwards;
   & .highlight {
     transition: background-color 250ms;
