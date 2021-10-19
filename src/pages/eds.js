@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import { graphql, useStaticQuery } from 'gatsby'
+import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { Seo } from '../components/seo'
 import { Container as Grid, Row, Col } from 'react-grid-system'
@@ -9,6 +10,11 @@ import { Title, Heading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
 import heroBackground from '../images/hero-environmental-science.jpg'
+
+const LightLink = styled(Link)`
+  color: #dde !important;
+  text-decoration-color: #aab !important;
+`
 
 const EdsPage = () => {
   const { hurricaneImage } = useStaticQuery(hurricaneImageQuery)
@@ -21,7 +27,7 @@ const EdsPage = () => {
         <Title><span className="highlight">Earth Data Science</span></Title>
         <p className="highlight">
           Earth Data Science solutions address the intersection of high performance and high throughput computing with living
-          at the coast by applying computational models (such as the tide, storm surge, and wind-wave model <Link to="https://adcirc.org/">ADCIRC</Link>) and data science.
+          at the coast by applying computational models (such as the tide, storm surge, and wind-wave model <LightLink to="https://adcirc.org/">ADCIRC</LightLink>) and data science.
         </p>
       </Hero>
       
