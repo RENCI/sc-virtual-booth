@@ -9,7 +9,7 @@ import { SideMenu } from '../components/menu'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
 import { List } from '../components/list'
-import heroBackground from '../images/hero-consortia.jpg'
+import heroBackground from '../images/hero-collaborations.jpg'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { useLogos } from '../hooks'
 
@@ -209,7 +209,7 @@ const SouthBigDataHub = () => {
   )
 }
 
-const consortiaMenuItems = [
+const collaborationMenuItems = [
   { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
   { text: 'NIH HEAL Initiative', id: 'heal', component: <Heal /> },
   { text: 'iRODS', id: 'irods', component: <Irods /> },
@@ -217,23 +217,23 @@ const consortiaMenuItems = [
   { text: 'South Big Data Hub', id: 'sbdh', component: <SouthBigDataHub /> },
 ]
 
-const ConsortiaPage = () => {
-  const [consortium, setConsortium] = useState('bdc')
+const CollaborationsPage = () => {
+  const [collaboration, setCollaboration] = useState('bdc')
   const location = useLocation()
 
   useEffect(() => {
     if (location.hash) {
-      setConsortium(location.hash.replace('#', ''))
+      setCollaboration(location.hash.replace('#', ''))
       window.scroll({ top: 400 })
     }
   }, [location.hash])
 
   return (
     <Fragment>
-      <Seo title="Consortia" />
+      <Seo title="Collaboration" />
 
       <Hero backgroundImage={ heroBackground }>
-        <Title><span className="highlight">Consortia</span></Title>
+        <Title><span className="highlight">Collaborations</span></Title>
         <p className="highlight">
           Via consortia development and participation, RENCI brings together leaders in academia, industry, and government
           to address the data challenges and opportunities of the 21st century, such as democratizing data,
@@ -245,10 +245,10 @@ const ConsortiaPage = () => {
         <Grid fluid>
           <Row>
             <Col xs={ 12 } md={ 4 } lg={ 3 } style={{ position: 'relative' }}>
-              <SideMenu items={ consortiaMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ consortium } />
+              <SideMenu items={ collaborationMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ collaboration } />
             </Col>
             <Col xs={ 12 } md={ 8 } lg={ 9 }>
-              { consortiaMenuItems.map(item => consortium === item.id && item.component ) }
+              { collaborationMenuItems.map(item => collaboration === item.id && item.component ) }
             </Col>
           </Row>
         </Grid>
@@ -259,4 +259,4 @@ const ConsortiaPage = () => {
   )
 }
 
-export default ConsortiaPage
+export default CollaborationsPage
