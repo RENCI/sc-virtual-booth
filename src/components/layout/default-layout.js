@@ -93,6 +93,14 @@ const SocialLinks = styled(Paragraph)(({ theme }) => `
   text-align: center;
   & > * {
     margin: 0 1rem;
+    svg {
+      fill: ${ theme.color.primary.dark };
+      transform: scale(0.9);
+    }
+    &:hover svg {
+      fill: ${ theme.color.primary.main };
+      transform: scale(1.0);
+    }
   }
 `)
 
@@ -157,11 +165,11 @@ export const DefaultLayout = ({ children }) => {
         </Paragraph>
 
         <SocialLinks>
-          <Link to="https://twitter.com/renci" aria-label="Follow us on twitter"><Icon icon="twitter" size={ 24 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://facebook.com/renci.org" aria-label="Follow us on Facebook"><Icon icon="facebook" size={ 24 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://www.linkedin.com/company/renaissance-computing-institute" aria-label="Follow us on LinkedIn"><Icon icon="linkedIn" size={ 24 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://github.com/renci/sc-virtual-booth" aria-label="View the source for this site"><Icon icon="github" size={ 24 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://www.youtube.com/channel/UCSOkatGqnWS_o1rU1mYgxrA" aria-label="Follow us on YouTube"><Icon icon="youtube" size={ 24 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://twitter.com/renci" aria-label="Follow us on twitter"><Icon icon="twitter" size={ 32 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://facebook.com/renci.org" aria-label="Follow us on Facebook"><Icon icon="facebook" size={ 32 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://www.linkedin.com/company/renaissance-computing-institute" aria-label="Follow us on LinkedIn"><Icon icon="linkedIn" size={ 32 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://github.com/renci/sc-virtual-booth" aria-label="View the source for this site"><Icon icon="github" size={ 32 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://www.youtube.com/channel/UCSOkatGqnWS_o1rU1mYgxrA" aria-label="Follow us on YouTube"><Icon icon="youtube" size={ 32 } fill={ theme.color.primary.dark } /></Link>
         </SocialLinks>
 
       </Footer>
