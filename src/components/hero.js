@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import { useScrollPosition } from '../hooks'
+import { Container } from './layout'
 
 const bgZoom = keyframes`
   0% {
@@ -51,11 +52,6 @@ const Background = styled.div(({ color, image, yShift }) => css`
 `)
 
 const Contents = styled.div(({ theme }) => css`
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -86,9 +82,11 @@ export const Hero = ({ backgroundImage, backgroundColor, children }) => {
   return (
     <Wrapper>
       <Background color={ backgroundColor } image={ backgroundImage } yShift={ scrollPosition / 4 } />
-      <Contents>
-        { children }
-      </Contents>
+        <Container>
+          <Contents>
+            { children }
+          </Contents>
+        </Container>
     </Wrapper>
   )
 }

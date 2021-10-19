@@ -56,13 +56,19 @@ progress {
 template {
   display: none;
 }
-a {
+a, a:visited {
+  color: #026a96;
+  text-decoration: underline;
+  text-decoration-color: #026a9666;
+  transition: text-decoration-color 250ms;
+  text-underline-offset: 2px;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  text-decoration-color: #026a96;
 }
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);

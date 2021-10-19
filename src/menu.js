@@ -1,5 +1,4 @@
 const menu = [
-  { text: 'Home', path: '/' },
   { text: 'Health Science', path: '/health-science' },
   { text: 'Earth Data Science', path: '/eds' },
   { text: 'Network Research', path: '/nrig' },

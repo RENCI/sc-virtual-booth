@@ -57,9 +57,8 @@ const AtlanticWaveSdx = () => {
       <Subheading>Demo/Office Hours</Subheading>
 
       <Paragraph>
-        You can watch a recorded demo or watch it <em>live</em>!
-        Join a live demo by clicking the button below.
-        Demo times are listed in the schedule below
+        Join a live demo on [TBD] at [TBD] by clicking the button below.
+        The recording will be available following the live demo.
       </Paragraph>
 
       <div style={{ display: 'flex', justifyContent: 'space-around', gap: '1rem' }}>
@@ -73,19 +72,15 @@ const AtlanticWaveSdx = () => {
 
       <br/><br/>
 
-      <Link to={ atlanticWaveSdxFlyer.publicURL }>
-        <Img fluid={ atlanticWaveSdxFlyer.childImageSharp.fluid } style={{ height: `calc(762px * 0.75)` }} imgStyle={{ objectFit: 'contain' }} />
-      </Link>
-
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.dropbox.com/s/9afk6w61fnygman/AtlanticWave-SDX_SC20%20presentation_v11.pdf?dl=1">Atlantic Wave SDX Presentation</Link>,
+        <Link to="https://www.example.com/">Atlantic Wave SDX Presentation</Link>,
       ]} />
 
       <br/><br/>
 
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Atlantic Wave SDX</Button>
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact Atlantic Wave SDX</Button>
 
       <br/><br/>
 
@@ -127,8 +122,6 @@ const ChameleonCloud = () => {
         <Img fluid={ chameleon } />
       </Link>
 
-      <Subheading>Overview</Subheading>
-
       <Paragraph>
         Chameleon is an <Link to="https://www.nsf.gov/">NSF</Link>-funded testbed system for Computer Science experimentation.
         It is designed to be deeply reconfigurable, with a wide variety of capabilities
@@ -144,7 +137,7 @@ const ChameleonCloud = () => {
 
       <br/><br/>
 
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Chameleon Cloud</Button>
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact Chameleon Cloud</Button>
 
       <br/><br/>
 
@@ -152,50 +145,44 @@ const ChameleonCloud = () => {
   )
 }
 
-const CiCoePilot = () => {
+const CiCompass = () => {
   return (
     <Section>
-      <Heading>CI CoE Pilot</Heading>
+      <Heading>CI Compass</Heading>
 
       <Paragraph>
-        CI CoE provides expertise and active support to cyberinfrastructure practitioners at <Link to="https://www.nsf.gov/">NSF</Link> Major Facilities in order to
-        accelerate the data lifecycle and ensure the integrity and effectiveness of the cyberinfrastructure upon which research and discovery depend.
+        The vision for CI Compass is to be the leader in supporting and enhancing the national CI ecosystem that includes people,
+        practical knowledge, and processes to facilitate knowledge sharing and discovery across the National Science Foundation's
+        (NSF) <Link to="https://ci-compass.org/about/nsf-major-facilities/">Major Facilities</Link> (MFs).
       </Paragraph>
 
       <Paragraph>
-        NSF's major multi-user research facilities (major facilities) are sophisticated research instruments and platforms
-        &mdash; such as large telescopes, interferometers and distributed sensor arrays &mdash;
-        that serve diverse scientific disciplines. Major facilities are increasingly dependent on advanced cyberinfrastructure (CI)
-        &mdash; computing, data and software systems, networking, and associated human capital &mdash;
-        to enable broad delivery and analysis of facility-generated data. As a result of these cyberinfrastructure tools,
-        scientists and the public gain new insights into fundamental questions.
-        The goal of this pilot project is to develop a model for a Cyberinfrastructure Center of Excellence (CI CoE)
-        that facilitates community building and sharing and applies knowledge of best practices and innovative solutions for facility CI.
+        The <Link to="https://ci-compass.org/about/ci-coe-pilot/">CICoE Pilot</Link> developed a data lifecycle (DLC) model that identifies
+        specific stages of the data flow within MFs. The model captures the transformation of raw data into more interoperable
+        and integration-ready data products that can be visualized, disseminated, and transformed into insights and knowledge.
       </Paragraph>
 
+      <Subheading>RENCI's Role</Subheading>
+
       <Paragraph>
-        The pilot project will explore how such a center would facilitate CI improvements for existing facilities and
-        for the design of new facilities that exploit advanced CI architecture designs and leverage established tools and solutions.
-        The pilot project will also catalyze a key function of an eventual CI CoE &mdash; to provide a forum for exchange of experience and knowledge among CI experts.
-        The project will also gather best practices for major facilities, with the aim of enhancing individual facility CI efforts in the broader CI context.
-        The discussion forum and planning effort for a future CI CoE will also address training and workforce development
-        by expanding the pool of skilled facility CI experts and forging career paths for CI professionals.
-        The result of this work will be a strategic plan for a CI CoE that will be evaluated and refined through community interactions: workshops and direct engagement with the facilities and the broader CI community.
+        <Link to="https://renci.org/">RENCI</Link> will play a pivotal role in the success of CI Compass by leading working groups that offer expertise and services to
+        NSF Major Facilities for processing, data movement, data storage, curation, and archiving elements of the Major Facilities DLC.   
       </Paragraph>
 
       <Subheading>Videos</Subheading>
 
-      <VideoPlayer url="https://youtu.be/YtSfihl7zFc" />
+      <VideoPlayer url="https://www.youtube.com/watch?v=-LUjPwqd_VY" />
 
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://cicoe-pilot.org/">CI CoE Pilot &mdash; Cyberinfrastructure Center of Excellence</Link>
+        <Link to="https://ci-compass.org/">CI Compass Website</Link>,
+        <Link to="https://ci-compass.org/">CI Compass Presentation</Link>,
       ]} />
 
       <br/><br/>
 
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact CI CoE Pilot</Button>
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact CI CoE Pilot</Button>
 
       <br/><br/>
 
@@ -212,8 +199,6 @@ const Fabric = () => {
       <Link to="http://www.fabric-testbed.net/">
         <Img fluid={ fabric } />
       </Link>
-
-      <br/><br/>
 
       <Paragraph align="center" width="500px">
         <strong>FABRIC</strong> is Adaptive Programmable Research Infrastructure for Computer Science and Science Applications
@@ -253,7 +238,7 @@ const Fabric = () => {
         Internet2.
       </Paragraph>
 
-      <br/><br/>
+      <Subheading>Resources</Subheading>
 
       <ResponsiveIframe
         title="FABRIC Overview Presentation"
@@ -267,12 +252,16 @@ const Fabric = () => {
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://whatisfabric.net/">whatisfabric.net</Link>,
-        <Link to="https://twitter.com/FABRICtestbed">FABRICTestbed on Twitter</Link>
+        <Link to="https://www.example.com/">FABRIC Testbed Presentation</Link>,
+        <Link to="https://whatisfabric.net/">FABRIC Testbed Website</Link>,
+        <Link to="https://twitter.com/FABRICtestbed">FABRICTestbed on Twitter</Link>,
+        <Link to="https://learn.fabric-testbed.net/">FABRIC Knowledge Base</Link>,
+        <Link to="https://www.whatisfabric.net/get-involved/beta-testers-request">Beta Testers Request Form</Link>,
+        <Link to="https://www.whatisfabric.net/get-involved/funding-opportunities">Funding Opportunities</Link>,
       ]} />
 
       <br/><br/>
-      <Button cta link to="https://www.whatisfabric.net/get-involved">Get Involved</Button>
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact FABRIC</Button>
 
       <br/><br/>
 
@@ -330,7 +319,7 @@ const FlyNet = () => {
 
       <br/><br/>
 
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact FlyNet</Button>
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact FlyNet</Button>
 
       <br/><br/>
 
@@ -338,62 +327,38 @@ const FlyNet = () => {
   )
 }
 
-const Panorama = () => {
+const Poseidon = () => {
   const theme = useTheme()
   return (
     <Section>
-      <Heading>Panorama 360</Heading>
-
-      <Subheading>Overview</Subheading>
+      <Heading>Poseidon</Heading>
 
       <Paragraph>
-        Scientific workflows are now being used in a number of scientific domains, including
-        astronomy, bioinformatics, climate modeling, earth science, civil engineering, physics, and many others.
-        Unlike monolithic applications, workflows often run across heterogeneous resources distributed across wide area networks.
-        Some workflow tasks may require high performance computing resources, while others can run efficiently on high throughput computing systems.
-        Workflows also access data from potentially different data repositories and use data, often represented as files, to communicate between the workflow components.
-        Because of these data access patterns, the performance of networks and storage devices greatly influence how smoothly and quickly a workflow runs.
-      </Paragraph>
-      <Paragraph>
-        The PANORAMA project aims to address workflow performance through a three-pronged approach that involves:
-      </Paragraph>
-      <List bullets="disc" items={[
-        `developing analytical models that can predict the behavior of complex, data-aware scientific workflows executing in extreme-scale infrastructures;`,
-        `determining what monitoring information and information analysis is needed to predict performance and detect anomalies in scientific workflow execution; and`,
-        `discovering how to adapt the workflow execution and the infrastructure to achieve the potential performance predicted by the models.`,
-      ]} />
-      <Paragraph>
-        Workflow performance will be studied using two Department of Energy applications
-        that depend on workflows: <Link to="http://climatemodeling.science.energy.gov/">Climate and Earth System Modeling</Link> (CESM),
-        which processes large amounts of community data; and <Link to="https://neutrons.ornl.gov/sns">Spallation Neutron Source</Link> (SNS),
-        which produces rich experimental data used in a variety of complex analyses.
+        PosEiDon will explore the use of simulation, ML, and hybrid methods to predict, understand, and optimize
+        the behavior of complex DOE science workflows (simulation, instrument data analysis, ML, and superfacility)
+        on production DOE computational and data infrastructure (CDI). The solutions will be developed based on
+        data collected from DOE and NSF testbeds and validated and refined in production CDI.
       </Paragraph>
 
       <Subheading>RENCI's Role</Subheading>
 
       <Paragraph>
-        <Link to="https://www.renci.org/">RENCI</Link> employs analytical performance models and monitoring information to facilitate detection and diagnosis of performance anomalies,
-        to manage resources, and to adapt workflows as needed.
-        The RENCI team will use models to predict expected application behavior, and combined with correlated monitoring information,
-        will develop algorithms to automatically detect anomalies in system behavior and to automatically diagnose the most likely cause(s) of any found anomalies.
-        An analysis capability will correlate workflow monitoring information with resource performance measurements to provide a better understanding of which resources contributed to an observed behavior.
-        The RENCI team is also responsible for infrastructure and workflow adaptation in response to anomaly detection.
+        RENCI will play a pivotal role in the Poseidon project. RENCI researchers will lead project efforts in data
+        acquisition from the DOE CDI and NSF testbeds (FABRIC and Chameleon Cloud) and emulation of distributed
+        facility models, enabling ML model training and validation on the testbeds and DOE CDI. Additionally, the
+        RENCI team will lead the project portion on performance guidance for optimizing workflows.
       </Paragraph>
-
-      <Link to="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=0">
-        <img src="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=1" alt="Infographic detailing Panorama 360 - Click to view larger" style={{ border: `2px solid ${ theme.color.primary.dark }` }} />
-      </Link>
 
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.dropbox.com/s/6ejf4o8ea5ta48t/2020-11-panorama-sc-v4.pptx?dl=1">Panorama 360 Presentation</Link>,
-        <Link to="https://www.dropbox.com/s/xw6dmybpvnef7m5/Panorama%20360%20visual.PNG?dl=1">Panorama 360 Overview</Link>,
+        <Link to="https://www.example.com/">Poseidon Website</Link>,
+        <Link to="https://www.example.com/">Poseidon Presentation</Link>,
       ]} />
 
       <br/><br/>
 
-      <Button cta link to="https://forms.gle/GfzeKFR1LB6HAtvn9">Contact Panorama 360</Button>
+      <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact Poseidon</Button>
 
       <br/><br/>
       
@@ -405,8 +370,8 @@ const projectsMenuItems = [
   { text: 'FABRIC', id: 'fabric', component: <Fabric /> },
   { text: 'Chameleon Cloud', id: 'chameleon-cloud', component: <ChameleonCloud /> },
   { text: 'Atlantic Wave SDX', id: 'atlantic-wave-sdx', component: <AtlanticWaveSdx /> },
-  { text: 'CI CoE Pilot', id: 'ci-coe-pilot', component: <CiCoePilot /> },
-  { text: 'Panorama 360', id: 'panorama', component: <Panorama /> },
+  { text: 'CI Compass', id: 'ci-compass', component: <CiCompass /> },
+  { text: 'Poseidon', id: 'poseidon', component: <Poseidon /> },
   { text: 'FlyNet', id: 'flynet', component: <FlyNet /> },
 ]
 

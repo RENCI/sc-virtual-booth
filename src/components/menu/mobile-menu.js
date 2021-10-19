@@ -28,7 +28,7 @@ const Nav = styled.nav`
 `
 
 const MenuItem = styled(Link)(({ theme }) => `
-  color: #eee;
+  color: #eee !important;
   text-decoration: none;
   display: flex;
   justify-content: flex-start;
@@ -42,7 +42,7 @@ const MenuItem = styled(Link)(({ theme }) => `
     transition: background-color 250ms;
   }
   &.active {
-    color: ${ theme.color.primary.main };
+    color: ${ theme.color.primary.main } !important;
   }
 `)
 

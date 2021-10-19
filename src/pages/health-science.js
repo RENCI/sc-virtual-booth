@@ -24,6 +24,8 @@ const BioDataCatalyst = () => {
 
       <br/><br/>
 
+      <Subheading>Overview</Subheading>
+
       <Paragraph>
         NHLBI BioData Catalyst is a cloud-based ecosystem providing tools, applications, and workflows in secure workspaces.
         The ecosystem is a dynamic resource that allows researchers to find, access, share, store, and compute on large scale datasets. 
@@ -64,7 +66,7 @@ const DataTranslator = () => {
       
       <Img fluid={ translatorGraphic.childImageSharp.fluid } alt="Visit BioData Catalyst Website" />
 
-      <br />
+      <Subheading>Overview</Subheading>
 
       <Paragraph>
         <Link to="https://ncats.nih.gov/">The National Center for Advancing Translational Sciences</Link> (NCATS)
@@ -79,20 +81,36 @@ const DataTranslator = () => {
 
       <Paragraph>
         <Link to="https://www.renci.org/">RENCI</Link> contributes to a broad spectrum of Translator activities.
-        These are just a few of our projects:
+        These are just a few of our current projects:
       </Paragraph>
 
       <List bullets="disc" items={ [
-          <span>ICEES: <Link to="https://www.dropbox.com/s/t07ndxexnjugw6b/ICEES%20Overview.pdf?dl=1" key="icees">An Overview</Link></span>,
-          <span>ROBOKOP: <Link to="https://www.dropbox.com/s/r63go67mapt8mkz/ROBOKOP%20overview.pdf?dl=1" key="robokop">A Use Case</Link></span>,
-          <span>TranQL: <Link to="https://www.dropbox.com/s/y2xv7ewlkvdlazr/SC20%20Data%20Translator%20video.mp4?dl=0" key="tranql">A Demo</Link></span>,
+          <Paragraph>
+            <em>ICEES+ Knowledge Provider</em>: 
+            The ICEES+ (Integrated Clinical and Environmental Exposures Service) Knowledge Provider is an initiative of the Biomedical
+            Data Translator program that provides a regulatory-compliant framework for sharing and exploring integrated data from
+            electronic health records and public sources of environmental exposures.
+          </Paragraph>,
+          <Paragraph>
+            <em>ARAGORN</em>: 
+            ARAGORN (Autonomous Relay Agent for Generation Of Ranked Networks) is an offshoot
+            of <Link to="https://researchsoftwareinstitute.github.io/data-translator/apps/robokop">ROBOKOP</Link> that assembles
+            information relevant to a user query, and uses that information to synthesize well-supported answers.
+          </Paragraph>,
+          <Paragraph>
+            <em>Standards and Reference Implementation</em>: 
+            Along with collaborators from Oregon State University and Lawrence Berkeley National Labs, RENCI co-leads the Standards
+            and Reference Implementations (SRI) team for Data Translator. This group is responsible for producing a suite of standards
+            and products, a model for their governance, and processes to coordinate integration and shared implementation.
+          </Paragraph>,
         ] }
       />
 
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={ [
-          <Link to="https://ncats.nih.gov/translator">Translator Website</Link>
+          <Link to="https://ncats.nih.gov/translator">Translator Website</Link>,
+          <Link to="https://www.dropbox.com/s/za50wocuxek8ua6/2021_Translator_One-Pager.pdf?dl=0">Translator Handout</Link>,
         ] }
       />
 
@@ -124,6 +142,8 @@ const TranslationalScience = () => {
   return (
     <Section>
       <Heading>Translational Science</Heading>
+      
+      <Subheading>Overview</Subheading>
       
       <Paragraph>
         Bridging the "Valley of Death" to bring light to "dark data" requires methods that are reproducible and data that are analyzable.

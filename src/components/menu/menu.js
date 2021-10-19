@@ -6,7 +6,7 @@ import { Link } from '../link'
 const Wrapper = styled.nav`
   display: flex;
   flex-direction: row;
-  font-size: clamp(10pt, 1vw, 14pt);
+  font-size: clamp(10pt, 1vw, 12pt);
 `
 
 const MenuItem = styled(Link)(({ theme }) => `
