@@ -200,6 +200,8 @@ const Fabric = () => {
         <Img fluid={ fabric } />
       </Link>
 
+      <br/>
+
       <Paragraph align="center" width="500px">
         <strong>FABRIC</strong> is Adaptive Programmable Research Infrastructure for Computer Science and Science Applications
       </Paragraph>
