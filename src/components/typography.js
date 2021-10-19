@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 export const Title = styled.h1(({ theme, align }) => `
-  margin: ${ theme.spacing.extraLarge } 0 ${ theme.spacing.large } 0;
+  margin: ${ theme.spacing.large } 0 ${ theme.spacing.medium } 0;
   text-align: ${ align };
   font-size: clamp(1.0rem, 4vw, 2rem);
 `)
@@ -17,7 +17,6 @@ Title.defaultProps = {
 
 export const Heading = styled.h2(({ theme }) => `
   margin: ${ theme.spacing.extraLarge } 0 ${ theme.spacing.large } 0;
-  // text-transform: uppercase;
   color: ${ theme.color.primary.dark };
 `)
 

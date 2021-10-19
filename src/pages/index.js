@@ -8,6 +8,7 @@ import { Button } from '../components/button'
 import { List } from '../components/list'
 import { Link } from '../components/link'
 import sc21Logo from '../images/sc21-logo.png'
+import { Container as Grid, Row, Col } from 'react-grid-system'
 
 const HomePage = () => {
   const theme = useTheme()
@@ -61,9 +62,16 @@ const HomePage = () => {
 
         <br /><br />
 
-        <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Request a Meeting</Button>
-
-        <Button cta link to="https://us3.list-manage.com/subscribe?u=c8914f488de27003a4fd3f676&id=419ad26f9d">Sign up for RENCI project updates</Button>
+        <Grid>
+          <Row>
+            <Col xs={ 12 } lg={ 6 }>
+              <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Request a Meeting</Button>
+            </Col>
+            <Col xs={ 12 } lg={ 6 }>
+              <Button cta link to="https://us3.list-manage.com/subscribe?u=c8914f488de27003a4fd3f676&id=419ad26f9d">Sign up for RENCI project updates</Button>
+            </Col>
+          </Row>
+        </Grid>
 
         <br /><br />
 
