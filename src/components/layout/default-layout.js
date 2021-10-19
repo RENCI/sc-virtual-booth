@@ -140,14 +140,16 @@ export const DefaultLayout = ({ children }) => {
       </Main>
       <Footer>
         <Paragraph align="center" width="600px">
-          RENCI (Renaissance Computing Institute) develops and deploys advanced technologies
+          <Link to="https://renci.org">RENCI</Link> (Renaissance Computing Institute) develops and deploys advanced technologies
           to enable research discoveries and practical innovations.
           RENCI partners with researchers, government, and industry to engage and solve the problems
           that affect North Carolina, our nation, and the world.
         </Paragraph>
         <Paragraph align="center" width="600px">
-          An institute of the University of North Carolina at Chapel Hill, RENCI was launched in 2004
-          as a collaboration involving UNC Chapel Hill, Duke University, and North Carolina State University.
+          An institute of the University of North Carolina at Chapel Hill, RENCI was launched in 2004 as a collaboration
+          involving <Link to="https://unc.edu/">UNC Chapel Hill</Link>
+          , <Link to="https://duke.edu/">Duke University</Link>
+          , and <Link to="https://www.ncsu.edu/">North Carolina State University</Link>.
         </Paragraph>
 
         <Paragraph align="center" width="600px">
