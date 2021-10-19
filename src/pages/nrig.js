@@ -27,7 +27,7 @@ const scheduleFields = [
 ]
 
 const AtlanticWaveSdx = () => {
-  const { atlanticWaveSdxFlyer, atlanticWaveSdxSchedule } = useStaticQuery(atlanticWaveSdxQuery)
+  const { atlanticWaveSdxSchedule } = useStaticQuery(atlanticWaveSdxQuery)
   const { atlanticWaveSdx } = useLogos()
   const [schedule, setSchedule] = useState()
 
@@ -90,14 +90,6 @@ const AtlanticWaveSdx = () => {
 
 
 export const atlanticWaveSdxQuery = graphql`{
-  atlanticWaveSdxFlyer: file(relativePath: {eq: "atlantic-wave-sdx-flyer.jpg"}) {
-    publicURL
-    childImageSharp {
-      fluid(maxWidth: 732) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
   atlanticWaveSdxSchedule: allSchedule {
     edges {
       node {
@@ -200,7 +192,7 @@ const Fabric = () => {
         <Img fluid={ fabric } />
       </Link>
 
-      <br/>
+      <br />
 
       <Paragraph align="center" width="500px">
         <strong>FABRIC</strong> is Adaptive Programmable Research Infrastructure for Computer Science and Science Applications
@@ -330,7 +322,6 @@ const FlyNet = () => {
 }
 
 const Poseidon = () => {
-  const theme = useTheme()
   return (
     <Section>
       <Heading>Poseidon</Heading>
