@@ -13,8 +13,8 @@ This is the source code for RENCI's Virtual Booth for the annual Supercomputing 
 ## 1 install dependencies
   - `npm i`
 
-## 2 spin up a development server
-  - `npm start`
+## 2 spin up dev server
+  - `npm start` spins up a development server on port 8000.
 
 # Production
 
