@@ -12,6 +12,8 @@ export const Covid19 = () => {
     <Section>
       <Heading>COVID-19 Efforts</Heading>
 
+      <Subheading>Overview</Subheading>
+
       <Paragraph>
         Working closely with partner research institutions and the private sector, RENCI is adapting
         and extending its existing capabilities to accelerate COVID-19 response and research efforts.

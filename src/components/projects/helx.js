@@ -8,9 +8,14 @@ import { Link } from '../link'
 import { useLogos } from '../../hooks'
 
 export const Helx = () => {
+  const { helx } = useLogos()
   return (
     <Section>
-      <Heading>HeLx</Heading>
+      <Heading hidden>HeLx</Heading>
+
+      <Img fluid={ helx } style={{ maxWidth: '400px', margin: 'auto' }} alt="HeLx logo" />
+
+      <Subheading>Overview</Subheading>
 
       <Paragraph>
         HeLx is a command center for data science communities. HeLx empowers researchers in
