@@ -26,8 +26,10 @@ export const Fabric = () => {
       </Paragraph>
 
       <Paragraph>
-        FABRIC is a unique national research infrastructure to enable cutting-edge and exploratory research at-scale in networking,
-        cybersecurity, distributed computing and storage systems, machine learning, and science applications.
+        FABRIC is a unique national research infrastructure to enable cutting-edge and exploratory research at-scale
+        in networking, cybersecurity, distributed computing and storage systems, machine learning, and science applications.
+        FABRIC Across Borders (FAB) is an extension of the FABRIC testbed connecting the core North America infrastructure
+        to nodes in Asia, Europe, and South America. 
       </Paragraph>
 
       <Paragraph>
