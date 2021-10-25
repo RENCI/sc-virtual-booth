@@ -7,7 +7,7 @@ import { Container } from '../components/layout'
 import { Title } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
-import { AtlanticWaveSdx, ChameleonCloud, CiCompass, Fabric, FlyNet, Poseidon } from '../components/projects'
+import { AtlanticWaveSdx, ChameleonCloud, CiCompass, Fabric, FlyNet, Iris, Poseidon } from '../components/projects'
 
 const projectsMenuItems = [
   { text: 'FABRIC', id: 'fabric', component: <Fabric /> },
@@ -16,6 +16,7 @@ const projectsMenuItems = [
   { text: 'CI Compass', id: 'ci-compass', component: <CiCompass /> },
   { text: 'Poseidon', id: 'poseidon', component: <Poseidon /> },
   { text: 'FlyNet', id: 'flynet', component: <FlyNet /> },
+  { text: 'IRIS', id: 'iris', component: <Iris /> },
 ]
 
 const NrigPage = () => {
