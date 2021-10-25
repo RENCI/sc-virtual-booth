@@ -1,21 +1,19 @@
 import React from "react"
 import Img from 'gatsby-image'
-import { Section } from '../layout'
-import { Heading, Subheading, Paragraph } from '../typography'
-import { useLogos } from '../../hooks'
-import { List } from '../list'
-import { Button } from '../button'
-import { Link } from '../link'
+import { Section } from '../components/layout'
+import { Heading, Subheading, Paragraph } from '../components/typography'
+import { Button } from '../components/button'
+import { Link } from '../components/link'
+import { List } from '../components/list'
+import { useLogos } from '../hooks'
 
-export const BioDataCatalyst = () => {
+export const BioDataCatalystCoordinatingCenter = () => {
   const { biodataCatalyst } = useLogos()
   return (
     <Section>
       <Heading hidden>NHLBI BioData Catalyst</Heading>
 
       <Img fluid={ biodataCatalyst.fluid } style={{ maxWidth: '500px', margin: 'auto' }} alt="BioData Catalyst Logo" />
-
-      <br/><br/>
 
       <Subheading>Overview</Subheading>
 
@@ -25,29 +23,20 @@ export const BioDataCatalyst = () => {
       </Paragraph>
 
       <Paragraph>
-        The ecosystem, which has undergone rigorous pilot testing, is now open to all researchers.
-        The BioData Catalyst ecosystem provides heart, lung, blood, and sleep researchers with high-value
-        NHLBI datasets in the cloud, streamlining access to the data.
-      </Paragraph>
-
-      <Paragraph>
         User feedback is encouraged as BioData Catalyst is building a community of practice,
         working collaboratively to solve technical and scientific challenges.
       </Paragraph>
       
       <Subheading>Links</Subheading>
       
-      <List bullets="disc"
-        items={[
-          <Link to="https://biodatacatalyst.nhlbi.nih.gov/">NHLBI BioData Catalyst Website</Link>,
-        ]}
-      />
+      <List bullets="disc" items={[
+        <Link to="https://biodatacatalyst.nhlbi.nih.gov/">NHLBI BioData Catalyst Website</Link>,
+      ]} />
 
-      <br/><br/>
-
+      <br/>
+      
       <Button cta link to="https://biodatacatalyst.nhlbi.nih.gov/contact">Contact NHLBI BioData Catalyst</Button>
                         
     </Section>
   )
 }
-

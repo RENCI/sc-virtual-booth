@@ -1,10 +1,10 @@
 import React from "react"
 import Img from 'gatsby-image'
-import { Section } from '../layout'
-import { Heading, Subheading, Paragraph } from '../typography'
-import { Button } from '../button'
-import { List } from '../list'
-import { useLogos } from '../../hooks'
+import { Section } from '../components/layout'
+import { Heading, Subheading, Paragraph } from '../components/typography'
+import { Button } from '../components/button'
+import { List } from '../components/list'
+import { useLogos } from '../hooks'
 
 export const NationalConsortiumfForDataScience = () => {
   const { ncds } = useLogos()

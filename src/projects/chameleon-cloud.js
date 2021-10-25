@@ -1,11 +1,11 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { Section } from '../layout'
-import { Heading, Subheading, Paragraph } from '../typography'
-import { useLogos } from '../../hooks'
-import { List } from '../list'
-import { Button } from '../button'
-import { Link } from '../link'
+import { Section } from '../components/layout'
+import { Heading, Subheading, Paragraph } from '../components/typography'
+import { List } from '../components/list'
+import { Button } from '../components/button'
+import { Link } from '../components/link'
+import { useLogos } from '../hooks'
 
 export const ChameleonCloud = () => {
   const { chameleon } = useLogos()

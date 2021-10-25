@@ -7,7 +7,7 @@ import { Container } from '../components/layout'
 import { Title } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
-import { Covid19, Helx } from '../components/projects'
+import { Covid19, Helx } from '../projects'
 
 const projectsMenuItems = [
   { text: 'HeLx', id: 'helx', component: <Helx /> },

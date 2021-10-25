@@ -135,7 +135,7 @@ export const DefaultLayout = ({ children }) => {
   return (
     <Wrapper>
       <Helmet>
-        { heroImagePaths.map(path => <link key={ path } rel="prefetch" src={ path } />) }
+        { heroImagePaths.map(path => <link key={ path } rel="preload" src={ path } />) }
       </Helmet>
       <Header height={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? '4rem' : '6rem' }>
         <Brand to="/">

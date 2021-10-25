@@ -1,9 +1,9 @@
 import React from 'react'
-import { Section } from '../layout'
-import { Heading, Subheading, Paragraph } from '../typography'
-import { List } from '../list'
-import { Button } from '../button'
-import { Link } from '../link'
+import { Section } from '../components/layout'
+import { Heading, Subheading, Paragraph } from '../components/typography'
+import { List } from '../components/list'
+import { Button } from '../components/button'
+import { Link } from '../components/link'
 
 export const Iris = () => {
   return (
