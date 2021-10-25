@@ -30,7 +30,7 @@ const CollaborationsPage = () => {
 
   return (
     <Fragment>
-      <Seo title="Collaboration" />
+      <Seo title="Collaborations" />
 
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Collaborations</span></Title>
