@@ -7,20 +7,15 @@ import { Container } from '../components/layout'
 import { Title } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
-import { AtlanticWaveSdx, ChameleonCloud, CiCompass, Fabric, FlyNet, Iris, Poseidon } from '../components/projects'
+import { Covid19, Helx } from '../components/projects'
 
 const projectsMenuItems = [
-  { text: 'FABRIC', id: 'fabric', component: <Fabric /> },
-  { text: 'Chameleon Cloud', id: 'chameleon-cloud', component: <ChameleonCloud /> },
-  { text: 'Atlantic Wave SDX', id: 'atlantic-wave-sdx', component: <AtlanticWaveSdx /> },
-  { text: 'CI Compass', id: 'ci-compass', component: <CiCompass /> },
-  { text: 'Poseidon', id: 'poseidon', component: <Poseidon /> },
-  { text: 'FlyNet', id: 'flynet', component: <FlyNet /> },
-  { text: 'IRIS', id: 'iris', component: <Iris /> },
+  { text: 'HeLx', id: 'helx', component: <Helx /> },
+  { text: 'COVID-19 Efforts', id: 'covid-19', component: <Covid19 /> },
 ]
 
-const NrigPage = () => {
-  const [project, setProject] = useState('fabric')
+const OtherPage = () => {
+  const [project, setProject] = useState('helx')
   const location = useLocation()
 
   useEffect(() => {
@@ -32,16 +27,10 @@ const NrigPage = () => {
 
   return (
     <Fragment>
-      <Seo title="NRIG" />
+      <Seo title="Other RENCI Projects" />
       
       <Hero backgroundImage={ heroBackground }>
-        <Title><span className="highlight">NRIG</span></Title>
-        <p className="highlight">
-          RENCI creates cyberinfrastructure solutions that enhance scientific research.
-          With expertise in networking, architectures, distributed systems, and applications,
-          our work enables secure and efficient collaboration and data management for
-          cutting-edge computer science and data-intensive domain research.
-        </p>
+        <Title><span className="highlight">Other RENCI Projects</span></Title>
       </Hero>
 
       <Container>
@@ -62,4 +51,4 @@ const NrigPage = () => {
   )
 }
 
-export default NrigPage
+export default OtherPage

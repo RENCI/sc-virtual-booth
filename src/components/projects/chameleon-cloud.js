@@ -26,7 +26,7 @@ export const ChameleonCloud = () => {
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="http://nrig.renci.org/project/chameleon/">Chameleon Cloud Website</Link>,
+        <Link to="https://www.chameleoncloud.org/">Chameleon Cloud Website</Link>,
         <Link to="https://www.dropbox.com/sh/qn6fc01fvebg2ib/AABrX83YZrAnkFTzDW-C4QTLa?dl=0&preview=ChameleonSC2020.pptx">Chameleon Cloud Presentation</Link>,
       ]} />
 
