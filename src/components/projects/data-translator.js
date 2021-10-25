@@ -59,7 +59,7 @@ export const DataTranslator = () => {
 
       <List bullets="disc" items={ [
           <Link to="https://ncats.nih.gov/translator">Translator Website</Link>,
-          <Link to="https://www.dropbox.com/s/za50wocuxek8ua6/2021_Translator_One-Pager.pdf?dl=0">Translator Handout</Link>,
+          <Link to="https://www.dropbox.com/s/za50wocuxek8ua6/2021_Translator_One-Pager.pdf?dl=1">Translator Handout</Link>,
         ] }
       />
 
