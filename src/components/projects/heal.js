@@ -18,11 +18,14 @@ export const Heal = () => {
       <Subheading>Overview</Subheading>
 
       <Paragraph>
-        The National Institutes of Health (NIH) Helping to End Addiction Long-term (HEAL) Initiative is an aggressive, transagency effort to speed scientific solutions to stem the national opioid public health crisis. 
+        The National Institutes of Health (NIH) Helping to End Addiction Long-term (HEAL) Initiative is an aggressive,
+        transagency effort to speed scientific solutions to stem the national opioid public health crisis. 
       </Paragraph>
       
       <Paragraph>
-        As part of the HEAL Data Stewardship Group, RENCI will work with HEAL Investigators and other stakeholders to develop processes for data harmonization, data storage, metadata collection, and sharing within the HEAL Data Ecosystem. The Stewards will provide solutions to manage and coordinate diverse teams and data across the Initiative. 
+        As part of the HEAL Data Stewardship Group, RENCI will work with HEAL Investigators and other stakeholders to develop
+        processes for data harmonization, data storage, metadata collection, and sharing within the HEAL Data Ecosystem.
+        The Stewards will provide solutions to manage and coordinate diverse teams and data across the Initiative. 
       </Paragraph>
 
       <Paragraph>
@@ -39,6 +42,7 @@ export const Heal = () => {
       <List bullets="disc" items={[
         <Link to="https://heal.nih.gov/">NIH HEAL Website</Link>,
         <Link to="https://www.healdatafair.org/">NIH Data Stewards Website</Link>,
+        <Link to="https://www.dropbox.com/s/2rsytothpzqe67v/2021_HEALStewards_One-Pager.pdf?dl=1">HEAL Stewards Handout</Link>,
       ]} />
 
       <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact HEAL</Button>
