@@ -47,7 +47,7 @@ const EdsPage = () => {
                 together with data science approaches to characterize the threat posed by tropical cyclones and extra-tropical storms along the US eastern seaboard.
                 From barrier islands to engineered levees, small details can matter significantly.
                 The <Link to="https://adcirc.org/">ADCIRC</Link> tide, storm-surge, and wind-wave model is the primary engine for EDS’s research and applications.
-                Formulated using linear triangular finite elements, ADICRC enables very high-resolution representation of the complexities of the coast.
+                Formulated using linear triangular finite elements, ADCIRC enables very high-resolution representation of the complexities of the coast.
                 Together with academic, federal, state, and industry collaborators, EDS runs the operational ADCIRC Prediction System that provides
                 real-time information on storm surge during North Atlantic tropical cyclone events.  
               </Paragraph>
