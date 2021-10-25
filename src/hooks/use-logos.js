@@ -74,6 +74,13 @@ const logosQuery = graphql`{
       }
     }
   }
+  helxLogo: file(relativePath: {eq: "helx-logo.png"}) {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
 }`
 
 export const useLogos = () => {
@@ -85,6 +92,7 @@ export const useLogos = () => {
       chameleonLogo,
       fabricLogo,
       healLogo,
+      helxLogo,
       irodsLogo,
       ncdsLogo,
       sbdhLogo,
@@ -99,6 +107,7 @@ export const useLogos = () => {
     const chameleon = chameleonLogo.childImageSharp.fluid
     const fabric = fabricLogo.childImageSharp.fluid
     const heal = healLogo.childImageSharp.fluid
+    const helx = helxLogo.childImageSharp.fluid
     const irods = irodsLogo.childImageSharp.fluid
     const ncds = ncdsLogo.childImageSharp.fluid
     const sbdh = sbdhLogo.childImageSharp.fluid
@@ -109,6 +118,7 @@ export const useLogos = () => {
       chameleon,
       fabric,
       heal,
+      helx,
       irods,
       ncds,
       sbdh,
