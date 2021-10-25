@@ -1,11 +1,11 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { Heading, Subheading, Paragraph } from '../typography'
-import { Section } from '../layout'
-import { List } from '../list'
-import { Button } from '../button'
-import { Link } from '../link'
+import { Heading, Subheading, Paragraph } from '../components/typography'
+import { Section } from '../components/layout'
+import { List } from '../components/list'
+import { Button } from '../components/button'
+import { Link } from '../components/link'
 
 export const DataTranslator = () => {
   const { translatorGraphic } = useStaticQuery(translatorGraphicQuery)

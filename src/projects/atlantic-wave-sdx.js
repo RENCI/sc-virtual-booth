@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { Section } from '../layout'
-import { Heading, Subheading, Paragraph } from '../typography'
-import { useLogos } from '../../hooks'
-import { List } from '../list'
-import { Button, IconButton } from '../button'
-import { Table } from '../table'
-import { Link } from '../link'
+import { Section } from '../components/layout'
+import { Heading, Subheading, Paragraph } from '../components/typography'
+import { useLogos } from '../hooks'
+import { List } from '../components/list'
+import { Button, IconButton } from '../components/button'
+import { Table } from '../components/table'
+import { Link } from '../components/link'
 
 const scheduleFields = [
   { key: 'Date',       name: 'Date',         hidden: false, },

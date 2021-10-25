@@ -7,7 +7,7 @@ import { Container } from '../components/layout'
 import { Title, } from '../components/typography'
 import { SideMenu } from '../components/menu'
 import { Container as Grid, Row, Col } from 'react-grid-system'
-import { BioDataCatalyst, DataTranslator, TranslationalScience } from '../components/projects'
+import { BioDataCatalyst, DataTranslator, TranslationalScience } from '../projects'
 
 const projectsMenuItems = [
   { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },

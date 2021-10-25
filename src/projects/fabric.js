@@ -1,13 +1,13 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import { Section } from '../layout'
-import { Heading, Subheading, Paragraph } from '../typography'
-import { useLogos } from '../../hooks'
-import { List } from '../list'
-import { Button } from '../button'
-import { Link } from '../link'
-import { ResponsiveIframe } from '../responsive-iframe'
-import { VideoPlayer } from '../video-player'
+import { Section } from '../components/layout'
+import { Heading, Subheading, Paragraph } from '../components/typography'
+import { List } from '../components/list'
+import { Button } from '../components/button'
+import { Link } from '../components/link'
+import { ResponsiveIframe } from '../components/responsive-iframe'
+import { VideoPlayer } from '../components/video-player'
+import { useLogos } from '../hooks'
 
 export const Fabric = () => {
   const { fabric } = useLogos()
