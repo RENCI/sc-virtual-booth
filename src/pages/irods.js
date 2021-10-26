@@ -10,6 +10,7 @@ import { List } from '../components/list'
 import { ListGrid } from '../components/list-grid'
 import { Link } from '../components/link'
 import { VideoPlayer } from '../components/video-player'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const StackedLink = styled(Link)(({ theme }) => `
   display: flex;
@@ -84,7 +85,7 @@ const IrodsPage = () => {
       <Heading hidden>iRODS</Heading>
 
       <Link to="https://irods.org">
-        <Img fluid={ circleOfLifeImage } style={{ height: `25vw` }} imgStyle={{ objectFit: 'contain' }} alt="iRODS - Data Centric, Metadata Driven" />
+        <GatsbyImage fluid={ circleOfLifeImage } style={{ height: `25vw` }} imgStyle={{ objectFit: 'contain' }} alt="iRODS - Data Centric, Metadata Driven" />
       </Link>
             
       <Container>

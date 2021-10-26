@@ -1,5 +1,4 @@
 import React from "react"
-import Img from 'gatsby-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'

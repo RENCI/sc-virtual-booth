@@ -1,5 +1,5 @@
 import React from "react"
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
@@ -13,7 +13,7 @@ export const Helx = () => {
     <Section>
       <Heading hidden>HeLx</Heading>
 
-      <Img fluid={ helx } style={{ maxWidth: '400px', margin: 'auto' }} alt="HeLx logo" />
+      <GatsbyImage image={ helx.gatsbyImageData } alt="HeLx logo" />
 
       <Subheading>Overview</Subheading>
 

@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect, useState } from "react"
-import { useLocation } from "@reach/router"
+import React, { Fragment, useEffect, useState } from 'react'
+import { useLocation } from '@reach/router'
 import { Seo } from '../components/seo'
 import { Hero } from '../components/hero'
 import heroBackground from '../images/hero-health-science.jpg'

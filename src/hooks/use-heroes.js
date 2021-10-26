@@ -4,9 +4,7 @@ const heroesQuery = graphql`{
   allFile(filter: {relativePath: {regex: "/hero/"}}) {
     nodes {
       childImageSharp {
-        original {
-          src
-        }
+        gatsbyImageData(layout: FULL_WIDTH)
       }
     }
   }
@@ -14,7 +12,7 @@ const heroesQuery = graphql`{
 
 export const useHeroes = () => {
     const { allFile } = useStaticQuery(heroesQuery)
-    const heroImagePaths = allFile.nodes.map(node => node.childImageSharp.original.src)
+    const heroImagePaths = allFile.nodes.map(node => node.childImageSharp.gatsbyImageData)
 
     return { heroImagePaths }
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { useLogos } from '../hooks'
@@ -34,7 +34,7 @@ export const AtlanticWaveSdx = () => {
       <Heading hidden>Atlantic Wave SDX</Heading>
       
       <Link to="https://nsf.gov/awardsearch/showAward?AWD_ID=2029278&HistoricalAwards=false">
-        <Img fluid={ atlanticWaveSdx } style={{ maxWidth: '500px', margin: 'auto' }} alt="Atlantic Wave-SDX Logo" />
+        <GatsbyImage image={ atlanticWaveSdx.gatsbyImageData } alt="Atlantic Wave-SDX Logo" />
       </Link>
       
       <br/>

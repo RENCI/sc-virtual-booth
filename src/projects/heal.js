@@ -1,5 +1,5 @@
 import React from "react"
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
@@ -13,7 +13,7 @@ export const Heal = () => {
     <Section>
       <Heading hidden>NIH HEAL Initiative</Heading>
 
-      <Img fluid={ heal } style={{ maxWidth: '450px', margin: 'auto' }} alt="NIH HEAL Initiative logo" />
+      <GatsbyImage image={ heal.gatsbyImageData } alt="NIH HEAL Initiative logo" />
 
       <Subheading>Overview</Subheading>
 

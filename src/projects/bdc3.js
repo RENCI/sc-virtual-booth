@@ -1,5 +1,5 @@
 import React from "react"
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
@@ -13,7 +13,7 @@ export const BioDataCatalystCoordinatingCenter = () => {
     <Section>
       <Heading hidden>NHLBI BioData Catalyst</Heading>
 
-      <Img fluid={ biodataCatalyst.fluid } style={{ maxWidth: '500px', margin: 'auto' }} alt="BioData Catalyst Logo" />
+      <GatsbyImage image={ biodataCatalyst.gatsbyImageData } alt="BioData Catalyst Logo" />
 
       <Subheading>Overview</Subheading>
 

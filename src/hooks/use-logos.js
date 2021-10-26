@@ -3,82 +3,57 @@ import { graphql, useStaticQuery } from 'gatsby'
 const logosQuery = graphql`{
   renciLogoLight: file(relativePath: {eq: "renci.png"}) {
     childImageSharp {
-      fixed(width: 110) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(layout: FIXED)
     }
   }
   renciLogoDark: file(relativePath: {eq: "renci-dark.png"}) {
     childImageSharp {
-      fixed(width: 110) {
-        ...GatsbyImageSharpFixed
-      }
+      gatsbyImageData(layout: FIXED)
     }
   }
   atlanticWaveSdxLogo: file(relativePath: {eq: "atlantic-wave-sdx-logo.png"}) {
     childImageSharp {
-      fluid(maxWidth: 500) {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
   biodataCatalystLogo: file(relativePath: {eq: "biodata-catalyst-logo.png"}) {
     childImageSharp {
-      fixed(width: 200) {
-        ...GatsbyImageSharpFixed
-      }
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
   irodsLogo: file(relativePath: {eq: "irods-logo.png"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
   chameleonLogo: file(relativePath: {eq: "chameleon-logo.png"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
   fabricLogo: file(relativePath: {eq: "fabric-logo.png"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
   ncdsLogo: file(relativePath: {eq: "ncds-logo.png"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
   sbdhLogo: file(relativePath: {eq: "sbdh-logo.png"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
   healLogo: file(relativePath: {eq: "heal-logo.png"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
   helxLogo: file(relativePath: {eq: "helx-logo.png"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
 }`
@@ -102,15 +77,15 @@ export const useLogos = () => {
       light: renciLogoLight.childImageSharp.fixed,
       dark: renciLogoDark.childImageSharp.fixed,
     }
-    const atlanticWaveSdx = atlanticWaveSdxLogo.childImageSharp.fluid
+    const atlanticWaveSdx = atlanticWaveSdxLogo.childImageSharp
     const biodataCatalyst = biodataCatalystLogo.childImageSharp
-    const chameleon = chameleonLogo.childImageSharp.fluid
-    const fabric = fabricLogo.childImageSharp.fluid
-    const heal = healLogo.childImageSharp.fluid
-    const helx = helxLogo.childImageSharp.fluid
-    const irods = irodsLogo.childImageSharp.fluid
-    const ncds = ncdsLogo.childImageSharp.fluid
-    const sbdh = sbdhLogo.childImageSharp.fluid
+    const chameleon = chameleonLogo.childImageSharp
+    const fabric = fabricLogo.childImageSharp
+    const heal = healLogo.childImageSharp
+    const helx = helxLogo.childImageSharp
+    const irods = irodsLogo.childImageSharp
+    const ncds = ncdsLogo.childImageSharp
+    const sbdh = sbdhLogo.childImageSharp
     return {
       renciLogo,
       atlanticWaveSdx,

@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { List } from '../components/list'
@@ -11,12 +11,13 @@ import { useLogos } from '../hooks'
 
 export const Fabric = () => {
   const { fabric } = useLogos()
+
   return (
     <Section>
       <Heading hidden>FABRIC</Heading>
 
       <Link to="http://www.fabric-testbed.net/">
-        <Img fluid={ fabric } style={{ maxWidth: '500px', margin: 'auto' }} />
+        <GatsbyImage image={ fabric.gatsbyImageData } alt="FABRIC logo" />
       </Link>
 
       <br />
