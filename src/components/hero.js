@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { css, keyframes } from 'styled-components'
 import { useScrollPosition } from '../hooks'
 import { Container } from './layout'
+import backgroundLines from '../images/background-lines.png'
 
 const slideIn = keyframes`
   0% {
@@ -66,16 +67,31 @@ const Contents = styled.div(({ theme }) => css`
   }
 `)
 
+const Overlay = styled.div`
+  position: absolute;
+  right: -100px;
+  top: 0;
+  width: 800px;
+  height: 400px;
+  background-image: url(${ backgroundLines });
+  background-size: 1000px;
+  background-repeat: no-repeat;
+  background-position: 150% 50%;
+  filter: brightness(1.25);
+  transform: rotate(180deg);
+`
+
 export const Hero = ({ backgroundImage, backgroundColor, children }) => {
   const scrollPosition = useScrollPosition()
   return (
     <Wrapper>
       <Background color={ backgroundColor } image={ backgroundImage } yShift={ scrollPosition / 4 } />
-        <Container>
-          <Contents>
-            { children }
-          </Contents>
-        </Container>
+      <Container>
+        <Contents>
+          { children }
+        </Contents>
+      </Container>
+      <Overlay />
     </Wrapper>
   )
 }
