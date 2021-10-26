@@ -9,8 +9,13 @@ const Nav = styled.nav`
   justify-content: center;
   align-items: stretch;
   position: sticky;
-  margin-top: 3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
   top: 6rem;
+  @media (min-width: 992px) {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
 `
 
 const MenuItem = styled.a(({ theme, active }) => `
