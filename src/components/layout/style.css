@@ -25,6 +25,16 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
   line-height: 1.5;
 }
+::selection {
+  /* WebKit/Blink Browsers */
+  background: #02aac655;
+  color: #022a36;
+}
+::-moz-selection {
+  /* Gecko Browsers */
+  background: #02aac655;
+  color: #022a36;
+}
 article,
 aside,
 details,
