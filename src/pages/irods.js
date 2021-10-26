@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Seo } from '../components/seo'
 import { Container, Section } from '../components/layout'
 import { Heading, Subheading, Subsubheading } from '../components/typography'
@@ -10,7 +10,6 @@ import { List } from '../components/list'
 import { ListGrid } from '../components/list-grid'
 import { Link } from '../components/link'
 import { VideoPlayer } from '../components/video-player'
-import { GatsbyImage } from 'gatsby-plugin-image'
 
 const StackedLink = styled(Link)(({ theme }) => `
   display: flex;

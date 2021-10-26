@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
