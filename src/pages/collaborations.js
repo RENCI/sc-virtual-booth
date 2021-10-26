@@ -44,10 +44,10 @@ const CollaborationsPage = () => {
       <Container>
         <Grid fluid>
           <Row>
-            <Col xs={ 12 } md={ 4 } lg={ 3 } style={{ position: 'relative' }}>
+            <Col xs={ 12 } lg={ 4 } style={{ position: 'relative' }}>
               <SideMenu items={ collaborationMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ collaboration } />
             </Col>
-            <Col xs={ 12 } md={ 8 } lg={ 9 }>
+            <Col xs={ 12 } lg={ 8 }>
               { collaborationMenuItems.map(item => collaboration === item.id && item.component ) }
             </Col>
           </Row>
