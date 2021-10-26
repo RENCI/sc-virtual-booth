@@ -9,26 +9,52 @@ const Nav = styled.nav`
   justify-content: center;
   align-items: stretch;
   position: sticky;
-  margin-top: 3rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
   top: 6rem;
+  @media (min-width: 992px) {
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
 `
 
 const MenuItem = styled.a(({ theme, active }) => `
-  padding: ${ theme.spacing.extraSmall } 0;
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.25rem;
+  align-items: stretch;
+  gap: 0.5rem;
   margin: 0.25rem 0;
-  padding: ${ theme.spacing.small } ${ theme.spacing.medium };
-  border-radius: 0.5rem;
+  border-radius: ${ theme.border.radius };
   text-decoration: none !important;
   background-color: ${ theme.color.grey.light }${ active ? '66' : '22' };
   transition: background-color 500ms !important;
   &:hover {
     background-color: ${ theme.color.grey.light }55;
+    & svg {
+      transform-origin: 100% 100%;
+      transform: scale(1.0);
+    }
   }
   border: 1px solid ${ active ? `${ theme.color.primary.dark }33` : 'transparent' };
+  & svg {
+    transform-origin: 100% 100%;
+    transform: scale(${ active ? '1.25' : '0.75' });
+    fill: ${ active ? theme.color.primary.main : theme.color.grey.light };
+  }
+  & > .iconContainer {
+    padding: 0.5rem 0.25rem;
+    display: flex;
+    flex: 0 0 32px;
+    justify-content: center;
+    align-items: center;
+  }
+  & > .textContainer {
+    padding: 0.5rem 0.25rem;
+    flex: 1;
+    display: flex,
+    justify-content: center;
+    align-items: center;
+  }
 `)
 
 export const SideMenu = ({ items, activeID }) => {
@@ -39,14 +65,12 @@ export const SideMenu = ({ items, activeID }) => {
       {
         items.map(item => (
           <MenuItem key={ item.text } href={ item.path } active={ item.id === activeID }>
-            <Icon icon="renciDash"
-              size={ 12 } margin="0 0.5rem 0 0"
-              fill={ item.id === activeID ? theme.color.primary.main : theme.color.grey.light }
-              style={{ transform: `scale(${ item.id === activeID ? '1.0' : '0.75' })`, transformOrigin: '100% 100%', marginTop: '0.25rem' }}
-            />
-            <span>
+            <div className="iconContainer">
+              <Icon icon="renciDash" size={ 12 }  />
+            </div>
+            <div className="textContainer">
               { item.text }
-            </span>
+            </div>
           </MenuItem>
         ))
       }
