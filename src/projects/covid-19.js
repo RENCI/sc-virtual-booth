@@ -4,7 +4,6 @@ import { Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
 import { List } from '../components/list'
 import { Link } from '../components/link'
-import { useLogos } from '../hooks'
 
 export const Covid19 = () => {
   return (
