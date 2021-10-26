@@ -74,8 +74,8 @@ export const useLogos = () => {
     } = useStaticQuery(logosQuery)
 
     const renciLogo = {
-      light: renciLogoLight.childImageSharp.fixed,
-      dark: renciLogoDark.childImageSharp.fixed,
+      light: renciLogoLight.childImageSharp,
+      dark: renciLogoDark.childImageSharp,
     }
     const atlanticWaveSdx = atlanticWaveSdxLogo.childImageSharp
     const biodataCatalyst = biodataCatalystLogo.childImageSharp
