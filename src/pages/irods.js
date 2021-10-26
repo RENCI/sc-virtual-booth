@@ -113,9 +113,9 @@ const IrodsPage = () => {
               {
                 item.path.endsWith('.pdf') ? (
                   <object type="application/pdf" data={ item.path } width="100%" height="240px">
-                    Download <Link to={ item.path } target="_blank" rel="noopener noreferrer">{ item.text }</Link>
+                    Download <Link to={ item.path }>{ item.text }</Link>
                   </object>
-                ) : <img src={ item.path } height="240px" alt="" />
+                ) : <img src={ item.path } width="100%" alt="" />
               }
               <div className="title">{ item.text }</div>
             </StackedLink>
