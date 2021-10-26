@@ -14,7 +14,7 @@ export const ChameleonCloud = () => {
       <Heading hidden>Chameleon Cloud</Heading>
 
       <Link to="http://nrig.renci.org/project/chameleon/">
-        <Img fluid={ chameleon } />
+        <Img fluid={ chameleon } style={{ maxWidth: '500px', margin: 'auto' }} />
       </Link>
 
       <br/>

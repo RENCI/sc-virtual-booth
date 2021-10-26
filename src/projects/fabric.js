@@ -16,7 +16,7 @@ export const Fabric = () => {
       <Heading hidden>FABRIC</Heading>
 
       <Link to="http://www.fabric-testbed.net/">
-        <Img fluid={ fabric } />
+        <Img fluid={ fabric } style={{ maxWidth: '500px', margin: 'auto' }} />
       </Link>
 
       <br />
