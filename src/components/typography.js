@@ -18,6 +18,7 @@ Title.defaultProps = {
 export const Heading = styled.h2(({ theme }) => `
   margin: ${ theme.spacing.extraLarge } 0 ${ theme.spacing.large } 0;
   color: ${ theme.color.primary.dark };
+  text-align: center;
 `)
 
 export const Subheading = styled.h3(({ theme }) => `

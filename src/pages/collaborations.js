@@ -10,11 +10,11 @@ import { Container as Grid, Row, Col } from 'react-grid-system'
 import { BioDataCatalystCoordinatingCenter, Heal, Irods, NationalConsortiumfForDataScience, SouthBigDataHub } from '../projects'
 
 const collaborationMenuItems = [
-  { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalystCoordinatingCenter /> },
-  { text: 'NIH HEAL Initiative', id: 'heal', component: <Heal /> },
-  { text: 'iRODS', id: 'irods', component: <Irods /> },
-  { text: 'NCDS', id: 'ncds', component: <NationalConsortiumfForDataScience /> },
-  { text: 'South Big Data Hub', id: 'sbdh', component: <SouthBigDataHub /> },
+  { text: 'NHLBI BioData Catalyst', id: 'bdc', component: BioDataCatalystCoordinatingCenter },
+  { text: 'NIH HEAL Initiative', id: 'heal', component: Heal },
+  { text: 'iRODS', id: 'irods', component: Irods },
+  { text: 'NCDS', id: 'ncds', component: NationalConsortiumfForDataScience },
+  { text: 'South Big Data Hub', id: 'sbdh', component: SouthBigDataHub },
 ]
 
 const CollaborationsPage = () => {
@@ -48,7 +48,7 @@ const CollaborationsPage = () => {
               <SideMenu items={ collaborationMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ collaboration } />
             </Col>
             <Col xs={ 12 } lg={ 8 }>
-              { collaborationMenuItems.map(item => collaboration === item.id && item.component ) }
+              { collaborationMenuItems.map(item => collaboration === item.id && <item.component key={ item.id }/> ) }
             </Col>
           </Row>
         </Grid>

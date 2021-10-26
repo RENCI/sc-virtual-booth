@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { Section } from '../components/layout'
 import { List } from '../components/list'
@@ -13,7 +13,7 @@ export const DataTranslator = () => {
     <Section>
       <Heading>NCATS Biomedical Data Translator</Heading>
       
-      <Img fluid={ translatorGraphic.childImageSharp.fluid } alt="Visit BioData Catalyst Website" />
+      <GatsbyImage image={ translatorGraphic.childImageSharp.gatsbyImageData } alt="BioData Catalyst logo" />
 
       <Subheading>Overview</Subheading>
 
@@ -86,9 +86,7 @@ export const DataTranslator = () => {
 const translatorGraphicQuery = graphql`{
   translatorGraphic: file(relativePath: {eq: "data-translator.jpg"}) {
     childImageSharp {
-      fluid {
-        ...GatsbyImageSharpFluid
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
 }`

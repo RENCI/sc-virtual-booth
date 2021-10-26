@@ -10,8 +10,8 @@ import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Covid19, Helx } from '../projects'
 
 const projectsMenuItems = [
-  { text: 'HeLx', id: 'helx', component: <Helx /> },
-  { text: 'COVID-19 Efforts', id: 'covid-19', component: <Covid19 /> },
+  { text: 'HeLx', id: 'helx', component: Helx },
+  { text: 'COVID-19 Efforts', id: 'covid-19', component: Covid19 },
 ]
 
 const OtherPage = () => {
@@ -40,7 +40,7 @@ const OtherPage = () => {
               <SideMenu items={ projectsMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ project } />
             </Col>
             <Col xs={ 12 } md={ 9 }>
-              { projectsMenuItems.map(item => project === item.id && item.component ) }
+              { projectsMenuItems.map(item => project === item.id && <item.component key={ `section-${ item.id }` } /> ) }
             </Col>
           </Row>
         </Grid>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { List } from '../components/list'
@@ -14,8 +14,10 @@ export const ChameleonCloud = () => {
       <Heading hidden>Chameleon Cloud</Heading>
 
       <Link to="http://nrig.renci.org/project/chameleon/">
-        <Img fluid={ chameleon } />
+        <GatsbyImage image={ chameleon.gatsbyImageData } alt="Chameleon Cloud logo" />
       </Link>
+
+      <br/>
 
       <Paragraph>
         Chameleon is an <Link to="https://www.nsf.gov/">NSF</Link>-funded testbed system for Computer Science experimentation.

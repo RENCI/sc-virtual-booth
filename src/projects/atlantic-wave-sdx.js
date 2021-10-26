@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import React from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { useLogos } from '../hooks'
@@ -10,29 +9,34 @@ import { Table } from '../components/table'
 import { Link } from '../components/link'
 
 const scheduleFields = [
-  { key: 'Date',       name: 'Date',         hidden: false, },
-  { key: 'Start_Time', name: 'Start',        hidden: false, },
-  { key: 'End_Time',   name: 'End',          hidden: false, },
-  { key: 'On_Duty',    name: 'People  Duty', hidden: true, },
-  { key: 'Host',       name: 'Host',         hidden: true, },
+  { key: 'date',       name: 'Date',            hidden: false, },
+  { key: 'timeEnd',    name: 'Start',           hidden: false, },
+  { key: 'timeStart',  name: 'End',             hidden: false, },
+  { key: 'onDuty',     name: 'People on Duty',  hidden: true, },
+  { key: 'Host',       name: 'Host',            hidden: true, },
+]
+
+const schedule = [
+  { date: 'Nov 17',           timeEnd: '10:30am EST',      timeStart: "11:15 am EST",     onDuty: 'Yufeng Julio',         Host: 'Vassi' },
+  { date: 'Nov 17',           timeEnd: '3:00pm EST',       timeStart: "3:45 pm EST",      onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
+  { date: 'Nov 18',           timeEnd: '10:30am EST',      timeStart: "11:15 am EST",     onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
+  { date: 'Nov 18',           timeEnd: '3:30pm EST',       timeStart: "4:15 pm EST",      onDuty: 'Yufeng Julio',         Host: 'Vassi' },
+  { date: 'Nov 19',           timeEnd: '11:00am EST',      timeStart: "11:45 am EST",     onDuty: 'Yufeng Julio',         Host: 'Vassi' },
+  { date: 'Nov 19',           timeEnd: '4:00pm EST',       timeStart: "4:45 pm EST",      onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
 ]
 
 export const AtlanticWaveSdx = () => {
-  const { atlanticWaveSdxSchedule } = useStaticQuery(atlanticWaveSdxQuery)
   const { atlanticWaveSdx } = useLogos()
-  const [schedule, setSchedule] = useState()
-
-  useEffect(() => {
-    setSchedule(atlanticWaveSdxSchedule.edges.map((({ node }) => node)))
-  }, [atlanticWaveSdxSchedule])
 
   return (
     <Section>
       <Heading hidden>Atlantic Wave SDX</Heading>
       
       <Link to="https://nsf.gov/awardsearch/showAward?AWD_ID=2029278&HistoricalAwards=false">
-        <Img fluid={ atlanticWaveSdx } style={{ maxWidth: '562px' }}/>
+        <GatsbyImage image={ atlanticWaveSdx.gatsbyImageData } alt="Atlantic Wave-SDX Logo" />
       </Link>
+      
+      <br/>
 
       <Paragraph>
         <Link to="https://www.fiu.edu/">FIU</Link>
@@ -78,19 +82,3 @@ export const AtlanticWaveSdx = () => {
     </Section>
   )
 }
-
-
-export const atlanticWaveSdxQuery = graphql`{
-  atlanticWaveSdxSchedule: allSchedule {
-    edges {
-      node {
-        Date
-        Start_Time
-        End_Time
-        On_Duty
-        Host
-      }
-    }
-  }
-}`
-

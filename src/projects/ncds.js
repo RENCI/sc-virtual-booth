@@ -1,5 +1,5 @@
 import React from "react"
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
@@ -12,7 +12,7 @@ export const NationalConsortiumfForDataScience = () => {
     <Section>
       <Heading hidden>National Consortium for Data Science</Heading>
 
-      <Img fluid={ ncds } style={{ maxWidth: '400px', margin: 'auto' }} alt="NCDS Logo" />
+      <GatsbyImage image={ ncds.gatsbyImageData } alt="NCDS Logo" />
 
       <Subheading>Overview</Subheading>
 

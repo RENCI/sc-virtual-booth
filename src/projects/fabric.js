@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { List } from '../components/list'
@@ -11,15 +11,17 @@ import { useLogos } from '../hooks'
 
 export const Fabric = () => {
   const { fabric } = useLogos()
+
   return (
     <Section>
       <Heading hidden>FABRIC</Heading>
 
       <Link to="http://www.fabric-testbed.net/">
-        <Img fluid={ fabric } />
+        <GatsbyImage image={ fabric.gatsbyImageData } alt="FABRIC logo" />
       </Link>
 
       <br />
+      <br/>
 
       <Paragraph align="center" width="500px">
         <strong>FABRIC</strong> is Adaptive Programmable Research Infrastructure for Computer Science and Science Applications

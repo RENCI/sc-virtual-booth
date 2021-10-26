@@ -58,8 +58,6 @@ const MenuItem = styled.a(({ theme, active }) => `
 `)
 
 export const SideMenu = ({ items, activeID }) => {
-  const theme = useTheme()
-
   return (
     <Nav>
       {

@@ -10,13 +10,13 @@ import { Container as Grid, Row, Col } from 'react-grid-system'
 import { AtlanticWaveSdx, ChameleonCloud, CiCompass, Fabric, FlyNet, Iris, Poseidon } from '../projects'
 
 const projectsMenuItems = [
-  { text: 'FABRIC', id: 'fabric', component: <Fabric /> },
-  { text: 'Chameleon Cloud', id: 'chameleon-cloud', component: <ChameleonCloud /> },
-  { text: 'Atlantic Wave SDX', id: 'atlantic-wave-sdx', component: <AtlanticWaveSdx /> },
-  { text: 'CI Compass', id: 'ci-compass', component: <CiCompass /> },
-  { text: 'Poseidon', id: 'poseidon', component: <Poseidon /> },
-  { text: 'FlyNet', id: 'flynet', component: <FlyNet /> },
-  { text: 'IRIS', id: 'iris', component: <Iris /> },
+  { text: 'FABRIC', id: 'fabric', component: Fabric },
+  { text: 'Chameleon Cloud', id: 'chameleon-cloud', component: ChameleonCloud },
+  { text: 'Atlantic Wave SDX', id: 'atlantic-wave-sdx', component: AtlanticWaveSdx },
+  { text: 'CI Compass', id: 'ci-compass', component: CiCompass },
+  { text: 'Poseidon', id: 'poseidon', component: Poseidon },
+  { text: 'FlyNet', id: 'flynet', component: FlyNet },
+  { text: 'IRIS', id: 'iris', component: Iris },
 ]
 
 const NrigPage = () => {
@@ -51,7 +51,7 @@ const NrigPage = () => {
               <SideMenu items={ projectsMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ project } />
             </Col>
             <Col xs={ 12 } md={ 9 }>
-              { projectsMenuItems.map(item => project === item.id && item.component ) }
+              { projectsMenuItems.map(item => project === item.id && <item.component key={ `section-${ item.id }` } /> ) }
             </Col>
           </Row>
         </Grid>

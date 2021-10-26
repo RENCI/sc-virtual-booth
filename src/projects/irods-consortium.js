@@ -1,5 +1,5 @@
 import React from "react"
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
@@ -14,7 +14,7 @@ export const Irods = () => {
       <Heading hidden>iRODS</Heading>
 
       <Link to="/irods">
-        <Img fluid={ irods } style={{ maxWidth: '400px', margin: 'auto' }} alt="iRODS Logo" />
+        <GatsbyImage image={ irods.gatsbyImageData } alt="iRODS Logo" />
       </Link>
 
       <Subheading>Overview</Subheading>

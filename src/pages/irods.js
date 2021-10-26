@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Seo } from '../components/seo'
 import { Container, Section } from '../components/layout'
-import { Heading, Subheading } from '../components/typography'
+import { Heading, Subheading, Subsubheading } from '../components/typography'
 import { Button } from '../components/button'
 import { List } from '../components/list'
 import { ListGrid } from '../components/list-grid'
@@ -81,8 +81,10 @@ const IrodsPage = () => {
     <Fragment>
       <Seo title="iRODS" />
 
+      <Heading hidden>iRODS</Heading>
+
       <Link to="https://irods.org">
-        <Img fluid={ circleOfLifeImage } style={{ height: `25vw` }} imgStyle={{ objectFit: 'contain' }} alt="iRODS - Data Centric, Metadata Driven" />
+        <GatsbyImage fluid={ circleOfLifeImage } style={{ height: `25vw` }} imgStyle={{ objectFit: 'contain' }} alt="iRODS - Data Centric, Metadata Driven" />
       </Link>
             
       <Container>
@@ -93,9 +95,9 @@ const IrodsPage = () => {
         <VideoPlayer url={ videos.overview.path } key={ videos.overview.path } />
 
         <Section>
-          <Heading>Documents</Heading>
+          <Subheading>Documents</Subheading>
 
-          <Subheading>Membership</Subheading>
+          <Subsubheading>Membership</Subsubheading>
 
           <ListGrid items={ documents.membership.map(item => (
             <StackedLink to={ item.path } key={ item.path }>
@@ -104,22 +106,22 @@ const IrodsPage = () => {
             </StackedLink>
           )) } />
 
-          <Subheading>General</Subheading>
+          <Subsubheading>General</Subsubheading>
 
           <ListGrid items={ documents.general.map(item => (
             <StackedLink to={ item.path } key={ item.path }>
               {
                 item.path.endsWith('.pdf') ? (
                   <object type="application/pdf" data={ item.path } width="100%" height="240px">
-                    Download <Link to={ item.path } target="_blank" rel="noopener noreferrer">{ item.text }</Link>
+                    Download <Link to={ item.path }>{ item.text }</Link>
                   </object>
-                ) : <img src={ item.path } height="240px" alt="" />
+                ) : <img src={ item.path } width="100%" alt="" />
               }
               <div className="title">{ item.text }</div>
             </StackedLink>
           )) } />
           
-          <Subheading>Patterns</Subheading>
+          <Subsubheading>Patterns</Subsubheading>
 
           <ListGrid items={ documents.patterns.map(item => (
             <StackedLink to={ item.path } key={ item.path }>
@@ -128,7 +130,7 @@ const IrodsPage = () => {
             </StackedLink>
           )) } />
 
-          <Subheading>Capabilities</Subheading>
+          <Subsubheading>Capabilities</Subsubheading>
 
           <ListGrid items={ documents.capabilities.map(item => (
             <StackedLink to={ item.path } key={ item.path }>
@@ -140,12 +142,12 @@ const IrodsPage = () => {
         </Section>
 
         <Section>
-          <Heading>Other Videos</Heading>
+          <Subheading>Other Videos</Subheading>
           <List bullets="disc" items={ videos.other.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
         </Section>
 
         <Section>
-          <Heading>Additional Info</Heading>
+          <Subheading>Additional Info</Subheading>
           <List bullets="disc" items={ additionalInfo.map(item => <Link to={ item.path } key={ item.path }>{ item.text }</Link>) } />
 
         </Section>

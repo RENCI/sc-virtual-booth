@@ -1,5 +1,5 @@
 import React from "react"
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { Button } from '../components/button'
@@ -14,7 +14,7 @@ export const SouthBigDataHub = () => {
     <Section>
       <Heading hidden>South Big Data Hub</Heading>
 
-      <Img fluid={ sbdh } style={{ maxWidth: '500px', margin: 'auto' }} alt="South Big Data Hub Logo" />
+      <GatsbyImage image={ sbdh.gatsbyImageData } alt="South Big Data Hub Logo" />
 
       <Subheading>Overview</Subheading>
       
