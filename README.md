@@ -22,4 +22,4 @@ This is a [React](https://reactjs.org/) application built with [Gatsby](https://
 
 # Production
 
-Netlify will automatically deploy upon changes to the master branch.
+Netlify will automatically deploy upon changes to the `main` branch.
