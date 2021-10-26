@@ -75,7 +75,7 @@ const additionalInfo = [
 
 const IrodsPage = () => {
   const data = useStaticQuery(circleOfLifeQuery)
-  const circleOfLifeImage = data.file.childImageSharp.fluid
+  const circleOfLifeImage = data.file.childImageSharp
 
   return (
     <Fragment>
@@ -84,7 +84,7 @@ const IrodsPage = () => {
       <Heading hidden>iRODS</Heading>
 
       <Link to="https://irods.org">
-        <GatsbyImage fluid={ circleOfLifeImage } style={{ height: `25vw` }} imgStyle={{ objectFit: 'contain' }} alt="iRODS - Data Centric, Metadata Driven" />
+        <GatsbyImage image={ circleOfLifeImage.gatsbyImageData } alt="iRODS - Data Centric, Metadata Driven" />
       </Link>
             
       <Container>
@@ -161,14 +161,7 @@ const IrodsPage = () => {
 const circleOfLifeQuery = graphql`{
   file(relativePath: {eq: "hero-irods.jpg"}) {
     childImageSharp {
-      fluid(maxWidth: 800) {
-        base64
-        tracedSVG
-        srcWebp
-        srcSetWebp
-        originalImg
-        originalName
-      }
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
 }`
