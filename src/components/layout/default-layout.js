@@ -139,7 +139,7 @@ export const DefaultLayout = ({ children }) => {
       </Helmet>
       <Header height={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? '4rem' : '6rem' }>
         <Brand to="/">
-          <GatsbyImage image={ renciLogo.light.gatsbyImageData } style={{ width: '82.5px', height: '54px', margin: 0 }} />
+          <GatsbyImage image={ renciLogo.light.gatsbyImageData } style={{ width: '82.5px', height: '54px', margin: 0 }} alt="RENCI Logo" />
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
       </Header>
