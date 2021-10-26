@@ -10,9 +10,9 @@ import { Container as Grid, Row, Col } from 'react-grid-system'
 import { BioDataCatalyst, DataTranslator, TranslationalScience } from '../projects'
 
 const projectsMenuItems = [
-  { text: 'NHLBI BioData Catalyst', id: 'bdc', component: <BioDataCatalyst /> },
-  { text: 'NCATS Biomedical Data Translator', id: 'data-translator', component: <DataTranslator /> },
-  { text: 'Translational Science', id: 'txscience', component: <TranslationalScience /> },
+  { text: 'NHLBI BioData Catalyst', id: 'bdc', component: BioDataCatalyst },
+  { text: 'NCATS Biomedical Data Translator', id: 'data-translator', component: DataTranslator },
+  { text: 'Translational Science', id: 'txscience', component: TranslationalScience },
 ]
 
 const HealthSciencePage = () => {
@@ -45,7 +45,7 @@ const HealthSciencePage = () => {
               <SideMenu items={ projectsMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ project } />
             </Col>
             <Col md={ 12 } lg={ 8 }>
-              { projectsMenuItems.map(item => project === item.id && item.component ) }
+              { projectsMenuItems.map(item => project === item.id && <item.component key={ `section-${ item.id }` } /> ) }
             </Col>
           </Row>
         </Grid>
