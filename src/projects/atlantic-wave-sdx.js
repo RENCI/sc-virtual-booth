@@ -34,8 +34,10 @@ export const AtlanticWaveSdx = () => {
       <Heading hidden>Atlantic Wave SDX</Heading>
       
       <Link to="https://nsf.gov/awardsearch/showAward?AWD_ID=2029278&HistoricalAwards=false">
-        <Img fluid={ atlanticWaveSdx } style={{ maxWidth: '562px' }}/>
+        <Img fluid={ atlanticWaveSdx } style={{ maxWidth: '500px', margin: 'auto' }} alt="Atlantic Wave-SDX Logo" />
       </Link>
+      
+      <br/>
 
       <Paragraph>
         <Link to="https://www.fiu.edu/">FIU</Link>

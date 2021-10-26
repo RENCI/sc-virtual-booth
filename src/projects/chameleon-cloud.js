@@ -17,6 +17,8 @@ export const ChameleonCloud = () => {
         <Img fluid={ chameleon } />
       </Link>
 
+      <br/>
+
       <Paragraph>
         Chameleon is an <Link to="https://www.nsf.gov/">NSF</Link>-funded testbed system for Computer Science experimentation.
         It is designed to be deeply reconfigurable, with a wide variety of capabilities
