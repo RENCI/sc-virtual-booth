@@ -1,9 +1,9 @@
 {
-  "name": "renci-gatsby-starter",
+  "name": "@renci/sc-virtual-booth",
   "private": true,
-  "description": "A simple starter to get up and developing RENCI sites quickly with Gatsby",
-  "version": "0.2.0",
-  "author": "Matt Watson <mattwat@gmail.com>",
+  "description": "RENCI's Virtual Booth for the Supercomputing Conference",
+  "version": "2021.0.1",
+  "author": "Matt Watson <mwatson@renci.org>",
   "dependencies": {
     "@react-hook/window-size": "^3.0.7",
     "gatsby": "^3.14.2",
@@ -40,9 +40,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mbwatson/renci-gatsby-starter"
+    "url": "https://github.com/RENCI/sc-virtual-booth"
   },
   "bugs": {
-    "url": "https://github.com/mbwatson/renci-gatsby-starter/issues"
+    "url": "https://github.com/RENCI/sc-virtual-booth/issues"
   }
 }
