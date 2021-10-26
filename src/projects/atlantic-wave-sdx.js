@@ -10,20 +10,20 @@ import { Table } from '../components/table'
 import { Link } from '../components/link'
 
 const scheduleFields = [
-  { key: 'Date',       name: 'Date',            hidden: false, },
-  { key: 'Start_Time', name: 'Start',           hidden: false, },
-  { key: 'End_Time',   name: 'End',             hidden: false, },
-  { key: 'On_Duty',    name: 'People on Duty',  hidden: true, },
+  { key: 'date',       name: 'Date',            hidden: false, },
+  { key: 'timeEnd',    name: 'Start',           hidden: false, },
+  { key: 'timeStart',  name: 'End',             hidden: false, },
+  { key: 'onDuty',     name: 'People on Duty',  hidden: true, },
   { key: 'Host',       name: 'Host',            hidden: true, },
 ]
 
 const schedule = [
-  { Date: 'Nov 17',           Start_Time: '10:30am EST',      End_Time: "11:15 am EST",     On_Duty: 'Yufeng Julio',         Host: 'Vassi' },
-  { Date: 'Nov 17',           Start_Time: '3:00pm EST',       End_Time: "3:45 pm EST",      On_Duty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
-  { Date: 'Nov 18',           Start_Time: '10:30am EST',      End_Time: "11:15 am EST",     On_Duty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
-  { Date: 'Nov 18',           Start_Time: '3:30pm EST',       End_Time: "4:15 pm EST",      On_Duty: 'Yufeng Julio',         Host: 'Vassi' },
-  { Date: 'Nov 19',           Start_Time: '11:00am EST',      End_Time: "11:45 am EST",     On_Duty: 'Yufeng Julio',         Host: 'Vassi' },
-  { Date: 'Nov 19',           Start_Time: '4:00pm EST',       End_Time: "4:45 pm EST",      On_Duty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
+  { date: 'Nov 17',           timeEnd: '10:30am EST',      timeStart: "11:15 am EST",     onDuty: 'Yufeng Julio',         Host: 'Vassi' },
+  { date: 'Nov 17',           timeEnd: '3:00pm EST',       timeStart: "3:45 pm EST",      onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
+  { date: 'Nov 18',           timeEnd: '10:30am EST',      timeStart: "11:15 am EST",     onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
+  { date: 'Nov 18',           timeEnd: '3:30pm EST',       timeStart: "4:15 pm EST",      onDuty: 'Yufeng Julio',         Host: 'Vassi' },
+  { date: 'Nov 19',           timeEnd: '11:00am EST',      timeStart: "11:45 am EST",     onDuty: 'Yufeng Julio',         Host: 'Vassi' },
+  { date: 'Nov 19',           timeEnd: '4:00pm EST',       timeStart: "4:45 pm EST",      onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
 ]
 
 export const AtlanticWaveSdx = () => {
