@@ -30,12 +30,13 @@ export const Heal = () => {
 
       <Paragraph>
         The Stewards will:
-         <List bullets="disc" items={[
-          'Lead the HEAL Ecosystem engagement effort, which will examine and build upon the existing consensus-building activities, develop complementary stewardship and reporting structures, and incorporate extensive feedback from the HEAL community',
-          'Provide oversight and consultancy for data management, which will help HEAL investigators generating data across the complex landscape of the HEAL Initiative adhere to program objectives in a coordinated and efficient manner',
-          'Develop use cases to inform search capabilities, understand modeling requirements, adapt and promote flexible knowledge graph standards, create automated workflows to make HEAL data FAIR, provide data analytic and visualization tools, and collaborate with the HEAL Platform provider to enable novel discovery through the HEAL Data Ecosystem. ',
-        ]} />
       </Paragraph>
+      
+      <List bullets="disc" items={[
+        'Lead the HEAL Ecosystem engagement effort, which will examine and build upon the existing consensus-building activities, develop complementary stewardship and reporting structures, and incorporate extensive feedback from the HEAL community',
+        'Provide oversight and consultancy for data management, which will help HEAL investigators generating data across the complex landscape of the HEAL Initiative adhere to program objectives in a coordinated and efficient manner',
+        'Develop use cases to inform search capabilities, understand modeling requirements, adapt and promote flexible knowledge graph standards, create automated workflows to make HEAL data FAIR, provide data analytic and visualization tools, and collaborate with the HEAL Platform provider to enable novel discovery through the HEAL Data Ecosystem. ',
+      ]} />
 
       <Subheading>Links</Subheading>
 
