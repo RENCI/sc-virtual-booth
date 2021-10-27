@@ -69,7 +69,7 @@ export const SideMenu = ({ items, activeID }) => {
         items.map(item => (
           <MenuItem key={ item.text } href={ item.path } active={ item.id === activeID }>
             <div className="iconContainer">
-              <Icon icon="renciDash" size={ 12 }  />
+              <Icon icon="renciDash" size={ 12 } role="presentation" />
             </div>
             <div className="textContainer">
               { item.text }

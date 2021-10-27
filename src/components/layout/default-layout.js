@@ -138,8 +138,8 @@ export const DefaultLayout = ({ children }) => {
         { heroImagePaths.map(path => <link key={ path } rel="preload" src={ path } />) }
       </Helmet>
       <Header height={ scrollPosition > COMPACT_HEADER_SCROLL_THRESHOLD ? '4rem' : '6rem' }>
-        <Brand to="/">
-          <GatsbyImage image={ renciLogo.light.gatsbyImageData } style={{ width: '82.5px', height: '54px', margin: 0 }} alt="RENCI Logo" />
+        <Brand to="/" aria-label="Go home">
+          <GatsbyImage image={ renciLogo.light.gatsbyImageData } style={{ width: '82.5px', height: '54px', margin: 0 }} alt="Go home" />
         </Brand>
         { windowWidth <= MOBILE_THRESHHOLD  ? <MobileMenu items={ menuItems } /> : <Menu items={ menuItems } /> }
       </Header>
@@ -165,11 +165,11 @@ export const DefaultLayout = ({ children }) => {
         </Paragraph>
 
         <SocialLinks>
-          <Link to="https://twitter.com/renci" aria-label="Follow us on twitter"><Icon icon="twitter" size={ 32 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://facebook.com/renci.org" aria-label="Follow us on Facebook"><Icon icon="facebook" size={ 32 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://www.linkedin.com/company/renaissance-computing-institute" aria-label="Follow us on LinkedIn"><Icon icon="linkedIn" size={ 32 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://github.com/renci/sc-virtual-booth" aria-label="View the source for this site"><Icon icon="github" size={ 32 } fill={ theme.color.primary.dark } /></Link>
-          <Link to="https://www.youtube.com/channel/UCSOkatGqnWS_o1rU1mYgxrA" aria-label="Follow us on YouTube"><Icon icon="youtube" size={ 32 } fill={ theme.color.primary.dark } /></Link>
+          <Link to="https://twitter.com/renci" aria-label="Follow us on twitter"><Icon icon="twitter" size={ 32 } fill={ theme.color.primary.dark } role="presentation" /></Link>
+          <Link to="https://facebook.com/renci.org" aria-label="Follow us on Facebook"><Icon icon="facebook" size={ 32 } fill={ theme.color.primary.dark } role="presentation" /></Link>
+          <Link to="https://www.linkedin.com/company/renaissance-computing-institute" aria-label="Follow us on LinkedIn"><Icon icon="linkedIn" size={ 32 } fill={ theme.color.primary.dark } role="presentation" /></Link>
+          <Link to="https://github.com/renci/sc-virtual-booth" aria-label="View the source for this site"><Icon icon="github" size={ 32 } fill={ theme.color.primary.dark } role="presentation" /></Link>
+          <Link to="https://www.youtube.com/channel/UCSOkatGqnWS_o1rU1mYgxrA" aria-label="Follow us on YouTube"><Icon icon="youtube" size={ 32 } fill={ theme.color.primary.dark } role="presentation" /></Link>
         </SocialLinks>
 
       </Footer>
