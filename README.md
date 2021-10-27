@@ -7,7 +7,7 @@ This is the source code for RENCI's Virtual Booth for the annual Supercomputing 
 # Development
 
 ## 0 Prerequisites
-  - [Node.js](https://nodejs.org/) version 10.13.0 (LTS) or higher
+  - [Node.js](https://nodejs.org/) version `>=14.15.0`
   - [npm](https://www.npmjs.com/)
 
 ## 1 install dependencies
