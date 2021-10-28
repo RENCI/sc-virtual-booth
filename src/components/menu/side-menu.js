@@ -29,20 +29,23 @@ const MenuItem = styled.a(({ theme, active }) => `
   margin: 0.25rem 0;
   border-radius: ${ theme.border.radius };
   text-decoration: none !important;
-  background-color: ${ theme.color.grey.light }${ active ? '66' : '22' };
-  transition: background-color 500ms !important;
+  background-color: ${ active ? '#eeeff0' :  '#e9f0f3' };
+  transform: perspective(500px) translate3d(0, 0, ${ active ? '10px' : 0 });
+  transition: all 500ms !important;
   &:hover {
-    background-color: ${ theme.color.grey.light }55;
+    transition: all 150ms !important;
+    background-color: ${ active ? '#eeeff0' :  '#e9f0f3' };
+    transform: perspective(500px) translate3d(0, 0, 10px);
     & svg {
       transform-origin: 100% 100%;
-      transform: scale(1.0);
+      transform: scale(${ active ? '1.25' : '0.75' });
     }
   }
   border: 1px solid ${ active ? `${ theme.color.primary.dark }33` : 'transparent' };
   & svg {
     transform-origin: 100% 100%;
     transform: scale(${ active ? '1.25' : '0.75' });
-    fill: ${ active ? theme.color.primary.main : theme.color.grey.light };
+    fill: ${ active ? theme.color.primary.main : theme.color.grey.main };
   }
   & > .iconContainer {
     padding: 0.5rem 0.25rem;
