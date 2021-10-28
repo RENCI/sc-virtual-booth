@@ -14,7 +14,7 @@ const projectsMenuItems = [
   { text: 'COVID-19 Efforts', id: 'covid-19', component: Covid19 },
 ]
 
-const OtherPage = () => {
+const DataSciencePage = () => {
   const [project, setProject] = useState('helx')
   const location = useLocation()
 
@@ -27,10 +27,13 @@ const OtherPage = () => {
 
   return (
     <Fragment>
-      <Seo title="Other RENCI Projects" />
+      <Seo
+        title="RENCI Data Science"
+        description="Every sector of society is undergoing a historic transformation driven by big data. RENCI is committed to transforming data into discoveries by partnering with leading universities, government, and the private sector to create tools and technologies that facilitate data access, sharing, analysis, management, and archiving."
+      />
       
       <Hero backgroundImage={ heroBackground }>
-        <Title><span className="highlight">Other RENCI Projects</span></Title>
+        <Title><span className="highlight">Data Science</span></Title>
       </Hero>
 
       <Container>
@@ -51,4 +54,4 @@ const OtherPage = () => {
   )
 }
 
-export default OtherPage
+export default DataSciencePage

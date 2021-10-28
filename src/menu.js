@@ -4,7 +4,7 @@ const menu = [
   { text: 'Network Research', path: '/nrig' },
   { text: 'iRODS', path: '/irods' },
   { text: 'Collaborations', path: '/collaborations' },
-  { text: 'Other', path: '/other' },
+  { text: 'Data Science', path: '/data-science' },
 ]
 
 export default menu
