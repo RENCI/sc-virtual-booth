@@ -77,8 +77,8 @@ const HomePage = () => {
               <span>
                 National initiatives
                 - such as
-                the <Link to="/consortia#sbdh">South Big Data Hub</Link> and
-                the <Link to="/consortia#ncds">National Consortium for Data Science</Link> (NCDS)
+                the <Link to="/collaborations#sbdh">South Big Data Hub</Link> and
+                the <Link to="/collaborations#ncds">National Consortium for Data Science</Link> (NCDS)
                 - that connect the data science community to each other and important resources.
               </span>,
             ]

@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Icon } from '../icon'
+import { useScrollPosition } from '../../hooks'
 
-const Nav = styled.nav`
+const Nav = styled.nav(({ theme, offset }) => `
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,11 +13,13 @@ const Nav = styled.nav`
   margin-top: 0;
   margin-bottom: 2rem;
   top: 6rem;
+  transform: translateY(${ offset });
+  transition: transform 250ms ease-out;
   @media (min-width: 992px) {
     margin-top: 3rem;
     margin-bottom: 0;
   }
-`
+`)
 
 const MenuItem = styled.a(({ theme, active }) => `
   display: flex;
@@ -58,13 +61,15 @@ const MenuItem = styled.a(({ theme, active }) => `
 `)
 
 export const SideMenu = ({ items, activeID }) => {
+  const scrollPosition = useScrollPosition()
+
   return (
-    <Nav>
+    <Nav offset={ scrollPosition > 415 ? '2rem' : '0' }>
       {
         items.map(item => (
           <MenuItem key={ item.text } href={ item.path } active={ item.id === activeID }>
             <div className="iconContainer">
-              <Icon icon="renciDash" size={ 12 }  />
+              <Icon icon="renciDash" size={ 12 } role="presentation" />
             </div>
             <div className="textContainer">
               { item.text }

@@ -30,7 +30,7 @@ export const Link = ({ to, children, ...props }) => {
         <ExternalLink to={ to } { ...props }>{ children }</ExternalLink>{' '}
         {
           typeof children === 'string' && (
-            <Icon icon="externalLink" size={ 12 } />
+            <Icon icon="externalLink" size={ 12 } role="presentation" />
           )
         }
       </ExternalLinkWrapper>
