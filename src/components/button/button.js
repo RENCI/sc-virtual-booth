@@ -8,9 +8,9 @@ const RIPPLE_DURATION = 500 // in milliseconds
 export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   background-color: ${ inverted ? theme.color.white : theme.color.primary.main };
   background-image: linear-gradient(
-    120deg,
-    ${ inverted ? theme.color.white : theme.color.primary.main },
-    ${ inverted ? theme.color.extended.mist : theme.color.extended.ocean }
+    150deg,
+    ${ inverted ? theme.color.white : theme.color.primary.main } 10%,
+    ${ inverted ? theme.color.extended.mist : theme.color.primary.dark } 90%
   );
   color: ${ inverted ? theme.color.primary.dark : theme.color.white };
   padding: ${ small ? theme.spacing.xs : theme.spacing.sm } ${ small ? theme.spacing.sm : theme.spacing.md };
