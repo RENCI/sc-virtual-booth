@@ -85,10 +85,9 @@ export const Fabric = () => {
         <Link to="https://www.whatisfabric.net/get-involved/funding-opportunities">Funding Opportunities</Link>,
       ]} />
 
-      <br/><br/>
+      <br />
       <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact FABRIC</Button>
-
-      <br/><br/>
+      <br />
 
     </Section>
   )
