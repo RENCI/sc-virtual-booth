@@ -29,25 +29,43 @@ const MenuItem = styled.a(({ theme, active }) => `
   margin: 0.25rem 0;
   border-radius: ${ theme.border.radius };
   text-decoration: none !important;
-  background-color: ${ active ? theme.color.primary.dark :  '#e9f0f3' };
+  background-color: #e9f0f3;
   color: ${ active ? '#e9f0f3' : theme.color.primary.dark } !important;
   transform: perspective(500px) translate3d(0, 0, ${ active ? '10px' : 0 });
   transition: all 500ms !important;
   font-weight: normal;
   font-size: 90%;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: calc(100% + 2rem);
+    transform: translate(${ active ? '-100%' : '0%' });
+    transform-origin: 0 50%;
+    transition: transform 500ms, background-color 500ms;
+    background-color: ${ active ? theme.color.primary.dark : `${ theme.color.primary.dark }11` };
+    clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+  }
   &:hover {
     transition: all 150ms !important;
-    background-color: ${ active ? theme.color.primary.dark : `${ theme.color.primary.dark }33` };
     color: ${ active ? '#e9f0f3' : theme.color.primary.dark } !important;
     transform: perspective(500px) translate3d(0, 0, 10px);
     & svg {
       transform-origin: 100% 100%;
       transform: scale(${ active ? '1.25' : '1' });
     }
+    &::before {
+      transform: translate(${ active ? '-100%' : '-43px' });
+      transition: transform 250ms 100ms, background-color 1000ms;
+    }
   }
   border: 1px solid ${ active ? `${ theme.color.primary.dark }33` : 'transparent' };
   & svg {
-    transition: all 250ms 150ms !important;
+    transition: all 250ms 250ms !important;
     transform-origin: 100% 100%;
     transform: scale(${ active ? '1.25' : '0.75' });
     fill: ${ active ? theme.color.primary.main : theme.color.grey.main };
