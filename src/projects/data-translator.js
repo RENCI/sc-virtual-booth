@@ -6,6 +6,7 @@ import { Section } from '../components/layout'
 import { List } from '../components/list'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
+import { Rule } from '../components/rule'
 
 export const DataTranslator = () => {
   const { translatorGraphic } = useStaticQuery(translatorGraphicQuery)
@@ -67,7 +68,7 @@ export const DataTranslator = () => {
 
       <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact Data Translator</Button>
 
-      <br/><br/>
+      <Rule />
 
       <Paragraph>
         This work is supported by the <Link to="https://ncats.nih.gov/">National Center for Advancing Translational Sciences</Link> of
