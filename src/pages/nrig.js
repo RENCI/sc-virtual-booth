@@ -32,7 +32,10 @@ const NrigPage = () => {
 
   return (
     <Fragment>
-      <Seo title="NRIG" />
+      <Seo
+        title="NRIG"
+        description="RENCI creates cyberinfrastructure solutions that enhance scientific research. With expertise in networking, architectures, distributed systems, and applications, our work enables secure and efficient collaboration and data management for cutting-edge computer science and data-intensive domain research. "
+      />
       
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">NRIG</span></Title>

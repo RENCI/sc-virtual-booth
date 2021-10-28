@@ -21,7 +21,10 @@ const EdsPage = () => {
 
   return (
     <Fragment>
-      <Seo title="Earth Data Science" />
+      <Seo
+        title="Earth Data Science"
+        description="RENCI catalyzes data-driven discoveries in Earth science. Our nationally-recognized subject matter experts lead and contribute to projects that advance fundamental science and inform decision making in areas such as natural disasters, water, oceans, climate, and weather."
+      />
 
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Earth Data Science</span></Title>
