@@ -1,5 +1,5 @@
 const menu = [
-  { text: 'Health Science', path: '/health-science' },
+  { text: 'Clinical Informatics', path: '/clinical-informatics' },
   { text: 'Earth Data Science', path: '/eds' },
   { text: 'Network Research', path: '/nrig' },
   { text: 'iRODS', path: '/irods' },
