@@ -54,10 +54,6 @@ const MenuItem = styled.a(({ theme, active }) => `
     transition: all 150ms !important;
     color: ${ active ? '#e9f0f3' : theme.color.primary.dark } !important;
     transform: perspective(500px) translate3d(0, 0, 10px);
-    & svg {
-      transform-origin: 100% 100%;
-      transform: scale(${ active ? '1.25' : '1' });
-    }
     &::before {
       transform: translate(${ active ? '-100%' : '-43px' });
       transition: transform 250ms 100ms, background-color 1000ms;
