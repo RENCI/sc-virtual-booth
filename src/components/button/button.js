@@ -47,10 +47,16 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
     clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
     z-index: -1;
   }
-    z-index: 2;
-  &:hover, &:focus {
+  &:hover {
     &::before {
-      background-color: ${ theme.color.primary.darker }66;
+      background-color: ${ theme.color.primary.darker }99;
+      transform: translate(-100%, 0);
+      transition: transform 250ms 100ms, background-color 500ms;
+    }
+  }
+  &:focus {
+    &::before {
+      background-color: ${ theme.color.primary.darker }cc;
       transform: translate(-100%, 0);
       transition: transform 250ms 100ms, background-color 1000ms;
     }
@@ -78,7 +84,7 @@ const Ripple = styled.span`
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: #ffffff99;
+  background: #022a3699;
   pointer-events: none;
   animation: ${ RIPPLE_DURATION }ms ease 1 forwards ${ rippleEffect };
 `
