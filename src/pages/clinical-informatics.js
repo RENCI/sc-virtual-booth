@@ -15,7 +15,7 @@ const projectsMenuItems = [
   { text: 'Translational Science', id: 'txscience', component: TranslationalScience },
 ]
 
-const HealthSciencePage = () => {
+const ClinicalInformaticsPage = () => {
   const [project, setProject] = useState('bdc')
   const location = useLocation()
 
@@ -28,7 +28,10 @@ const HealthSciencePage = () => {
 
   return (
     <Fragment>
-      <Seo title="Health Science" />
+      <Seo
+        title="Clinical Informatics"
+        description="RENCI leverages systems and technologies to fight disease and improve health. Our expert teams lead cross-cutting efforts to advance fundamental research and support meaningful improvements in clinical practice."
+      />
       
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Health Science</span></Title>
@@ -56,4 +59,4 @@ const HealthSciencePage = () => {
   )
 }
 
-export default HealthSciencePage
+export default ClinicalInformaticsPage

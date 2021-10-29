@@ -6,12 +6,7 @@ import { navigate } from '@reach/router'
 const RIPPLE_DURATION = 500 // in milliseconds
 
 export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
-  background-color: ${ inverted ? theme.color.white : theme.color.primary.main };
-  background-image: linear-gradient(
-    120deg,
-    ${ inverted ? theme.color.white : theme.color.primary.main },
-    ${ inverted ? theme.color.extended.mist : theme.color.extended.ocean }
-  );
+  background-color: ${ inverted ? theme.color.white : theme.color.primary.dark }99;
   color: ${ inverted ? theme.color.primary.dark : theme.color.white };
   padding: ${ small ? theme.spacing.xs : theme.spacing.sm } ${ small ? theme.spacing.sm : theme.spacing.md };
   border-radius: ${ theme.border.radius };
@@ -20,7 +15,6 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   transition: filter 250ms;
   text-transform: uppercase;
   position: relative;
-  overflow: hidden;
   outline: 0;
   &:disabled {
     background-color: ${ theme.color.grey.main };
@@ -37,6 +31,35 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
     margin: ${ theme.spacing.large } auto;
     padding: ${ theme.spacing.medium } ${ theme.spacing.large };
     font-size: 110%;
+  }
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 100%;
+    width: calc(100% + 1rem);
+    transform: translate(-43px, 0);
+    transform-origin: 0 50%;
+    transition: transform 250ms, background-color 500ms;
+    background-color: ${ theme.color.primary.darker }33;
+    clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+  }
+  &:hover {
+    &::before {
+      background-color: ${ theme.color.primary.darker }99;
+      transform: translate(-100%, 0);
+      transition: transform 250ms 100ms, background-color 500ms;
+    }
+  }
+  &:focus {
+    &::before {
+      background-color: ${ theme.color.primary.darker }cc;
+      transform: translate(-100%, 0);
+      transition: transform 250ms 100ms, background-color 1000ms;
+    }
   }
 `)
 
@@ -61,7 +84,7 @@ const Ripple = styled.span`
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: #ffffff99;
+  background: #022a3699;
   pointer-events: none;
   animation: ${ RIPPLE_DURATION }ms ease 1 forwards ${ rippleEffect };
 `

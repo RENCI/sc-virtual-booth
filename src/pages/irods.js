@@ -79,7 +79,10 @@ const IrodsPage = () => {
 
   return (
     <Fragment>
-      <Seo title="iRODS" />
+      <Seo
+        title="iRODS" 
+        description="The Integrated Rule-Oriented Data System (iRODS) is open-source data management software that enables research and commercial organizations, government agencies, and mission critical environments worldwide to test, document, control, and protect their data."
+      />
 
       <Heading hidden>iRODS</Heading>
 
