@@ -50,7 +50,7 @@ const MenuItem = styled.a(({ theme, active }) => `
     clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
     z-index: -1;
   }
-  &:hover {
+  &:hover, &:focus {
     transition: all 150ms !important;
     color: ${ active ? '#e9f0f3' : theme.color.primary.dark } !important;
     transform: perspective(500px) translate3d(0, 0, 10px);
