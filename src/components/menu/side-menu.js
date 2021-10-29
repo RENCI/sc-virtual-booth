@@ -10,14 +10,14 @@ const Nav = styled.nav(({ theme, offset }) => `
   justify-content: center;
   align-items: stretch;
   position: sticky;
-  margin-top: 0;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   top: 6rem;
-  transform: translateY(${ offset });
   transition: transform 250ms ease-out;
   @media (min-width: 992px) {
     margin-top: 3rem;
     margin-bottom: 0;
+    transform: translateY(${ offset });
   }
 `)
 
