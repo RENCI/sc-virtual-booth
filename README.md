@@ -26,11 +26,11 @@ Development takes place on the `develop` branch, merging changes into yearly pro
 
 ```
                 [2020]                         [2021]
-----------o-------o------------------------------o-------->
-        /       /                             /
-------o------o------o------o------o---------o-------o----->
-             \                 /                 [develop]
-               o------o------o [feature]
+----------o------o----------------------------o-------->
+         /      /                            /
+--------o------o-----o-----o-----o---------o-------o-----> [develop]
+                \               /
+                 o------o------o [feature]
 ```
 
 # Production
