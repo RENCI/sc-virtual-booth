@@ -35,4 +35,4 @@ Development takes place on the `develop` branch, merging changes into yearly pro
 
 # Production
 
-Netlify will automatically deploy upon changes to the `main` branch.
+Netlify will automatically deploy upon changes to the `2020`, `2021`, etc. branches.
