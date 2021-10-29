@@ -27,6 +27,7 @@ const MenuItem = styled.a(({ theme, active }) => `
   align-items: stretch;
   gap: 0.5rem;
   margin: 0.25rem 0;
+  border: 1px solid ${ theme.color.primary.dark }66;
   border-radius: ${ theme.border.radius };
   text-decoration: none !important;
   background-color: #e9f0f3;
@@ -46,7 +47,7 @@ const MenuItem = styled.a(({ theme, active }) => `
     transform: translate(${ active ? '-100%' : '0%' });
     transform-origin: 0 50%;
     transition: transform 250ms, background-color 500ms;
-    background-color: ${ active ? theme.color.primary.dark : `${ theme.color.primary.dark }11` };
+    background-color: ${ active ? `${ theme.color.primary.dark }cc` : `${ theme.color.primary.dark }11` };
     clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
     z-index: -1;
   }
@@ -59,7 +60,6 @@ const MenuItem = styled.a(({ theme, active }) => `
       transition: transform 250ms 100ms, background-color 1000ms;
     }
   }
-  border: 1px solid ${ active ? `${ theme.color.primary.dark }33` : 'transparent' };
   & svg {
     transition: all 250ms 250ms !important;
     transform-origin: 100% 100%;
