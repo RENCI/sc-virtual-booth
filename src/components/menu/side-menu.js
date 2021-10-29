@@ -42,7 +42,7 @@ const MenuItem = styled.a(({ theme, active }) => `
     left: 100%;
     top: 0;
     height: 100%;
-    width: calc(100% + 2rem);
+    width: calc(100% + 1rem);
     transform: translate(${ active ? '-100%' : '0%' });
     transform-origin: 0 50%;
     transition: transform 250ms, background-color 500ms;
