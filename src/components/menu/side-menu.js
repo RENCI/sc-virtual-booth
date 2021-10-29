@@ -45,7 +45,7 @@ const MenuItem = styled.a(({ theme, active }) => `
     width: calc(100% + 2rem);
     transform: translate(${ active ? '-100%' : '0%' });
     transform-origin: 0 50%;
-    transition: transform 500ms, background-color 500ms;
+    transition: transform 250ms, background-color 500ms;
     background-color: ${ active ? theme.color.primary.dark : `${ theme.color.primary.dark }11` };
     clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
     z-index: -1;
