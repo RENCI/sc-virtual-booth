@@ -44,7 +44,7 @@ const MenuItem = styled.a(({ theme, active }) => `
     top: 0;
     height: 100%;
     width: calc(100% + 1rem);
-    transform: translate(${ active ? '-100%' : '0%' });
+    transform: translate(${ active ? '-100%' : '-20px' });
     transform-origin: 0 50%;
     transition: transform 250ms, background-color 500ms;
     background-color: ${ active ? `${ theme.color.primary.dark }cc` : `${ theme.color.primary.dark }11` };
@@ -56,8 +56,8 @@ const MenuItem = styled.a(({ theme, active }) => `
     color: ${ active ? '#e9f0f3' : theme.color.primary.dark } !important;
     transform: perspective(500px) translate3d(0, 0, 10px);
     &::before {
-      transform: translate(${ active ? '-100%' : '-43px' });
-      transition: transform 250ms 100ms, background-color 1000ms;
+      transform: translate(${ active ? '-100%' : '-30px' });
+      transition: transform 250ms, background-color 1000ms;
     }
   }
   & svg {

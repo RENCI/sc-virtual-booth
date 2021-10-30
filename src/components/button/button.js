@@ -40,7 +40,7 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
     top: 0;
     height: 100%;
     width: calc(100% + 1rem);
-    transform: translate(-43px, 0);
+    transform: translate(-20px, 0);
     transform-origin: 0 50%;
     transition: transform 250ms, background-color 500ms;
     background-color: ${ theme.color.primary.darker }33;
@@ -49,8 +49,8 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   }
   &:hover {
     &::before {
-      background-color: ${ theme.color.primary.darker }99;
-      transform: translate(-100%, 0);
+      background-color: ${ theme.color.primary.darker }66;
+      transform: translate(-30px, 0);
       transition: transform 250ms 100ms, background-color 500ms;
     }
   }
@@ -63,45 +63,10 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   }
 `)
 
-const rippleEffect = keyframes`
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(10);
-    opacity: 0;
-  }
-`
-
-const Ripple = styled.span`
-  position: absolute;
-  left: -1;
-  top: -1;
-  transform: translate(-50%, -50%);
-  content: "";
-  display: block;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  background: #022a3699;
-  pointer-events: none;
-  animation: ${ RIPPLE_DURATION }ms ease 1 forwards ${ rippleEffect };
-`
-
 export const Button = ({ cta, link, to, children, ...props }) => {
   const [coords, setCoords] = useState({ x: -1, y: -1 })
-  const [isRippling, setIsRippling] = useState(false)
 
   const handleClick = event => {
-    const { left, top, width, height } = event.target.getBoundingClientRect()
-    const { clientX, clientY } = event
-    if (clientX === 0 && clientY === 0) {
-      setCoords({ x: width / 2 - 15, y: height / 2  - 15}) // unsure why `-15` offset is needed here
-    } else {
-      setCoords({ x: clientX - left - 15, y: clientY - top - 15 }) // unsure why `-15` offset is needed here
-    }
-
     // here, we check if the linked path is internal or external to this site,
     // and we'll define this openLink function accordingly
     let openLink
@@ -116,29 +81,15 @@ export const Button = ({ cta, link, to, children, ...props }) => {
         // if the link is internal, use Reach Router to navigate
         openLink = () => navigate(to)
       }
-      // delay navigation to see a bit of the rippling effect on the button
+      // delay navigation to see a bit of the slide effect on the button
       setTimeout(openLink, 250)
     }
     // remove that timeout
     return clearTimeout(openLink)
   }
 
-  useEffect(() => {
-    if (coords.x !== -1 && coords.y !== -1) {
-      setIsRippling(true)
-      setTimeout(() => setIsRippling(false), RIPPLE_DURATION)
-    } else {
-      setIsRippling(false)
-    }
-  }, [coords])
-
-  useEffect(() => {
-      if (!isRippling) setCoords({ x: -1, y: -1 })
-    }, [isRippling])
-
   return (
     <Wrapper onClick={ handleClick } className={ cta ? 'cta' : null } { ...props }>
-      { isRippling ? <Ripple style={{ left: coords.x, top: coords.y }} /> : null }
       { children }
     </Wrapper>
   )
