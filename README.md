@@ -25,12 +25,12 @@ This is a [React](https://reactjs.org/) application built with [Gatsby](https://
 Development takes place on the `develop` branch, merging changes into yearly production branches &mdash; `2020`, `2021`, etc. Feature branches should be brached off of and merged into `develop` for testing before merging into a yearly production branch. The ASCII art below attempts to illustrate this.
 
 ```
-                [2020]                         [2021]
-----------o------o----------------------------o-------->
-         /      /                            /
---------o------o-----o-----o-----o---------o-------o-----> [develop]
-                \               /
-                 o------o------o [feature]
+                [2020]                      [2021]
+-----------o-------o-------------------------------o-------->
+          /       /                               /
+---------o-------o-------o---------------o-------o-------o--> [develop]
+                          \             /
+                           o-----o-----o [feature]
 ```
 
 # Production
