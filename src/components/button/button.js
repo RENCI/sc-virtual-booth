@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { navigate } from '@reach/router'
 
 export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
-  background-color: ${ inverted ? theme.color.white : theme.color.primary.dark }99;
+  background-color: ${ inverted ? theme.color.white : theme.color.primary.dark };
   color: ${ inverted ? theme.color.primary.dark : theme.color.white };
   padding: ${ small ? theme.spacing.xs : theme.spacing.sm } ${ small ? theme.spacing.sm : theme.spacing.md };
   border-radius: ${ theme.border.radius };
@@ -14,6 +14,10 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   text-transform: uppercase;
   position: relative;
   outline: 0;
+  z-index: -2;
+  & .children {
+    z-index: 0;
+  }
   &:disabled {
     background-color: ${ theme.color.grey.main };
     cursor: default;
@@ -35,21 +39,21 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
     content: "";
     position: absolute;
     left: 100%;
-    top: 0;
-    height: 100%;
-    width: calc(100% + 1rem);
-    transform: translate(-20px, 0);
+    top: -5px;
+    height: calc(100% + 10px);
+    width: calc(100% + 20px);
+    transform: translate(-20px);
     transform-origin: 0 50%;
     transition: transform 250ms, background-color 500ms;
-    background-color: ${ theme.color.primary.darker }33;
+    background-color: ${ theme.color.primary.darker }cc;
     clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
     z-index: -1;
   }
-  &:hover {
+  &:hover, &:focus {
     &::before {
       background-color: ${ theme.color.primary.darker }66;
-      transform: translate(-30px, 0);
-      transition: transform 250ms 100ms, background-color 500ms;
+      transform: translate(-30px);
+      transition: transform 250ms, background-color 1000ms;
     }
   }
   &:focus {
@@ -86,7 +90,9 @@ export const Button = ({ cta, link, to, children, ...props }) => {
 
   return (
     <Wrapper onClick={ handleClick } className={ cta ? 'cta' : null } { ...props }>
-      { children }
+      <div className="children">
+        { children }
+      </div>
     </Wrapper>
   )
 }
