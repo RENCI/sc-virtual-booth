@@ -35,4 +35,15 @@ Development takes place on the `develop` branch, merging changes into yearly pro
 
 # Production
 
-Netlify will automatically deploy upon changes to the `main` branch.
+Netlify will automatically deploy upon changes to the `YYYY` (e.g., `2020`) branches at `YYYY--renci-supercomputing.netlify.app` (e.g., `2020--renci-supercomputing.netlify.app`). For each year, then, a redirect needs to be added to the file `netlify.toml`, as shown below. See Netlify's [File-based configuration](https://docs.netlify.com/configure-builds/file-based-configuration/) for more details on this file.
+
+```
+# netlify.toml
+
+[[redirects]]
+  from = "/2020"
+  to = "https://2020--renci-supercomputing.netlify.app/"
+  status = 301
+  force = false
+
+```
