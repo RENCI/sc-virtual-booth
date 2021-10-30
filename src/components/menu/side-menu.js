@@ -27,13 +27,12 @@ const MenuItem = styled.a(({ theme, active }) => `
   align-items: stretch;
   gap: 0.5rem;
   margin: 0.25rem 0;
-  // border: 1px solid ${ active ? `${ theme.color.primary.dark }11` : `${ theme.color.primary.dark }66` };
   border: 1px solid ${ theme.color.primary.dark }${ active ? 'ff' : '66' };
   border-radius: ${ theme.border.radius };
   text-decoration: none !important;
-  background-color: #e9f0f3;
+  background-color: #fff;
   color: ${ active ? '#e9f0f3' : theme.color.primary.dark } !important;
-  transform: perspective(500px) translate3d(0, 0, ${ active ? '10px' : 0 });
+  transform: perspective(0) translate3d(0, 0, 0);
   transition: all 500ms !important;
   font-weight: normal;
   font-size: 90%;
@@ -42,10 +41,10 @@ const MenuItem = styled.a(({ theme, active }) => `
     content: "";
     position: absolute;
     left: 100%;
-    top: 0;
-    height: 100%;
-    width: calc(100% + 1rem);
-    transform: translate(${ active ? '-100%' : '-20px' });
+    top: -5px;
+    height: calc(100% + 10px);
+    width: calc(100% + 20px);
+    transform: translate(${ active ? '-99%' : '-20px' });
     transform-origin: 0 50%;
     transition: transform 250ms, background-color 500ms;
     background-color: ${ active ? `${ theme.color.primary.dark }cc` : `${ theme.color.primary.dark }11` };
@@ -55,9 +54,9 @@ const MenuItem = styled.a(({ theme, active }) => `
   &:hover, &:focus {
     transition: all 150ms !important;
     color: ${ active ? '#e9f0f3' : theme.color.primary.dark } !important;
-    transform: perspective(500px) translate3d(0, 0, 10px);
+    transform: perspective(0) translate3d(0, 0, 0);
     &::before {
-      transform: translate(${ active ? '-100%' : '-30px' });
+      transform: translate(${ active ? '-99%' : '-30px' });
       transition: transform 250ms, background-color 1000ms;
     }
   }
