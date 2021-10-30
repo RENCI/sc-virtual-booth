@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { navigate } from '@reach/router'
-
-const RIPPLE_DURATION = 500 // in milliseconds
 
 export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   background-color: ${ inverted ? theme.color.white : theme.color.primary.dark }99;
@@ -64,8 +62,6 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
 `)
 
 export const Button = ({ cta, link, to, children, ...props }) => {
-  const [coords, setCoords] = useState({ x: -1, y: -1 })
-
   const handleClick = event => {
     // here, we check if the linked path is internal or external to this site,
     // and we'll define this openLink function accordingly
