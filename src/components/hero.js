@@ -65,6 +65,18 @@ const Contents = styled.div(({ theme }) => css`
   &:hover .highlight {
     background-color: ${ theme.color.primary.darkest }dd;
   }
+  & h1 {
+    margin: 2rem 0 0 0;
+  }
+  & p {
+    font-size: 90%;
+  }
+  @media (min-width: 600px) {
+    margin: 2rem 0 1rem 0;
+    & p {
+      font-size: 90%;
+    }
+  }
 `)
 
 const Overlay = styled.div`
