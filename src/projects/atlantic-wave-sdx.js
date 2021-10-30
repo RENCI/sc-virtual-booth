@@ -1,6 +1,7 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
+import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { useLogos } from '../hooks'
 import { List } from '../components/list'
@@ -56,10 +57,8 @@ export const AtlanticWaveSdx = () => {
         The recording will be available following the live demo.
       </Paragraph>
 
-      <div style={{ display: 'flex', justifyContent: 'space-around', gap: '1rem' }}>
-        <Button link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0">Watch a recorded Demo</Button>
-        <IconButton link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo">Watch a Live Demo and Q&A</IconButton>
-      </div>
+      <IconButton cta link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0" icon="video" iconFill="#eee" iconSize={ 24 }>Recorded Demo</IconButton>
+      <IconButton cta link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo" iconFill="#eee" >Live Demo and Q&A</IconButton>
 
       <br/><br/>
 

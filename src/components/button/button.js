@@ -16,7 +16,12 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   outline: 0;
   z-index: -2;
   & .children {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: ${ theme.spacing.medium };
     z-index: 0;
+    pointer-events: none;
   }
   &:disabled {
     background-color: ${ theme.color.grey.main };
