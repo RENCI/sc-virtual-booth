@@ -27,7 +27,8 @@ const MenuItem = styled.a(({ theme, active }) => `
   align-items: stretch;
   gap: 0.5rem;
   margin: 0.25rem 0;
-  border: 1px solid ${ theme.color.primary.dark }66;
+  // border: 1px solid ${ active ? `${ theme.color.primary.dark }11` : `${ theme.color.primary.dark }66` };
+  border: 1px solid ${ theme.color.primary.dark }${ active ? 'ff' : '66' };
   border-radius: ${ theme.border.radius };
   text-decoration: none !important;
   background-color: #e9f0f3;
