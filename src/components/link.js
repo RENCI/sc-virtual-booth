@@ -7,16 +7,17 @@ const ExternalLinkWrapper = styled.span`
   & > svg {
     opacity: 0.33;
   }
-  &:hover svg {
-    opacity: 1.0;
-  }
 `
 
 export const ExternalLink = styled.a.attrs(props => ({
   href: props.to,
   target: '_blank',
   rel: 'noopener noreferrer',
-}))``
+}))`
+  &:hover + svg, &:focus + svg {
+    opacity: 1.0;
+  }
+`
 
 export const Link = ({ to, children, ...props }) => {
   const mailtoPattern = new RegExp(/^mailto:/)
