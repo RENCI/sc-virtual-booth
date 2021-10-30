@@ -12,7 +12,7 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   border-radius: ${ theme.border.radius };
   border: ${ inverted ? `1px solid ${ theme.color.primary.dark }` : '0' };
   cursor: pointer;
-  transition: filter 250ms;
+  transition: filter 250ms, transform 250ms;
   text-transform: uppercase;
   position: relative;
   outline: 0;
@@ -22,6 +22,7 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   }
   &:not(:disabled):hover {
     filter: brightness(1.1);
+    transform: perspective(500px) translate3d(0, 0, 3px);
   }
   &:not(:disabled):active, &:not(:disabled):focus {
     filter: drop-shadow(0 0 4px ${ theme.color.primary.dark }66);
