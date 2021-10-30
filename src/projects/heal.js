@@ -43,7 +43,7 @@ export const Heal = () => {
       <List bullets="disc" items={[
         <Link to="https://heal.nih.gov/">NIH HEAL Website</Link>,
         <Link to="https://www.healdatafair.org/">NIH Data Stewards Website</Link>,
-        <Link to="https://www.dropbox.com/s/2rsytothpzqe67v/2021_HEALStewards_One-Pager.pdf?dl=1">HEAL Stewards Handout</Link>,
+        <Link to="https://www.dropbox.com/s/2rsytothpzqe67v/2021_HEALStewards_One-Pager.pdf?dl=1">HEAL Data Stewards Handout</Link>,
       ]} />
 
       <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact HEAL</Button>
