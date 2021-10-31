@@ -21,7 +21,7 @@ const MenuItem = styled(Link)(({ theme }) => `
   transition: background-color 500ms, color 500ms;
   &:hover, &:focus {
     transition: background-color 250ms, color 250ms;
-    background-color: #eee;
+    background-color: #e6e6e6;
   }
   &.active {
     background-color: #ddd;
