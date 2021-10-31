@@ -7,7 +7,6 @@ import { Heading, Paragraph } from '../components/typography'
 import { IconButton } from '../components/button'
 import { List } from '../components/list'
 import { Link } from '../components/link'
-import { Icon } from '../components/icon'
 import sc21Logo from '../images/sc21-logo.png'
 
 const HomePage = () => {
