@@ -4,11 +4,11 @@ import { Seo } from '../components/seo'
 import { Hero } from '../components/hero'
 import { Container } from '../components/layout'
 import { Heading, Paragraph } from '../components/typography'
-import { Button } from '../components/button'
+import { IconButton } from '../components/button'
 import { List } from '../components/list'
 import { Link } from '../components/link'
+import { Icon } from '../components/icon'
 import sc21Logo from '../images/sc21-logo.png'
-import { Container as Grid, Row, Col } from 'react-grid-system'
 
 const HomePage = () => {
   const theme = useTheme()
@@ -87,11 +87,15 @@ const HomePage = () => {
 
         <br /><br />
 
-        <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Request a Meeting</Button>
+        <IconButton cta link to="https://forms.gle/dQL3erSb2QnDVcQAA" icon="groups" iconFill="#eee" iconSize={ 24 }>
+          Request a Meeting
+        </IconButton>
 
         <br />
 
-        <Button cta link to="https://us3.list-manage.com/subscribe?u=c8914f488de27003a4fd3f676&id=419ad26f9d">Sign up for RENCI project updates</Button>
+        <IconButton cta link to="https://us3.list-manage.com/subscribe?u=c8914f488de27003a4fd3f676&id=419ad26f9d" icon="email" iconFill="#eee" iconSize={ 24 }>
+          Sign up for RENCI project updates
+        </IconButton>
 
         <br />
 
