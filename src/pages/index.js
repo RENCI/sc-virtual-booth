@@ -87,18 +87,13 @@ const HomePage = () => {
 
         <br /><br />
 
-        <Grid>
-          <Row>
-            <Col xs={ 12 } lg={ 6 }>
-              <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Request a Meeting</Button>
-            </Col>
-            <Col xs={ 12 } lg={ 6 }>
-              <Button cta link to="https://us3.list-manage.com/subscribe?u=c8914f488de27003a4fd3f676&id=419ad26f9d">Sign up for RENCI project updates</Button>
-            </Col>
-          </Row>
-        </Grid>
+        <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Request a Meeting</Button>
 
-        <br /><br />
+        <br />
+
+        <Button cta link to="https://us3.list-manage.com/subscribe?u=c8914f488de27003a4fd3f676&id=419ad26f9d">Sign up for RENCI project updates</Button>
+
+        <br />
 
       </Container>
     </Fragment>
