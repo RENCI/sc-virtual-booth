@@ -89,7 +89,7 @@ const Overlay = styled.div`
   background-size: 1000px;
   background-repeat: no-repeat;
   background-position: 150% 50%;
-  filter: brightness(1.25);
+  filter: brightness(2.0);
   transform: rotate(180deg);
 `
 
