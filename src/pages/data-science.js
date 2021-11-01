@@ -39,10 +39,10 @@ const DataSciencePage = () => {
       <Container>
         <Grid fluid>
           <Row>
-            <Col xs={ 12 } md={ 3 } style={{ position: 'relative' }}>
+            <Col xs={ 12 } md={ 4 } style={{ position: 'relative' }}>
               <SideMenu items={ projectsMenuItems.map(item => ({ ...item, path: `#${ item.id }` })) } activeID={ project } />
             </Col>
-            <Col xs={ 12 } md={ 9 }>
+            <Col xs={ 12 } md={ 8 }>
               { projectsMenuItems.map(item => project === item.id && <item.component key={ `section-${ item.id }` } /> ) }
             </Col>
           </Row>
