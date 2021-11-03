@@ -9,7 +9,7 @@ This is the source code for RENCI's Virtual Booth for the annual Supercomputing 
 ## 0 Prerequisites
 - [Node.js](https://nodejs.org/) version `>=14.15.0`
 - [npm](https://www.npmjs.com/)
-- [Gatsby-CLI](https://www.npmjs.com/package/gatsby-cli) (`npm i -g gatsby-cli`)
+- [Gatsby-CLI](https://www.npmjs.com/package/gatsby-cli) (install globally with `npm i -g gatsby-cli`)
 
 ## 1 clone this repo
 
