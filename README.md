@@ -7,14 +7,20 @@ This is the source code for RENCI's Virtual Booth for the annual Supercomputing 
 # Development
 
 ## 0 Prerequisites
-  - [Node.js](https://nodejs.org/) version `>=14.15.0`
-  - [npm](https://www.npmjs.com/)
+- [Node.js](https://nodejs.org/) version `>=14.15.0`
+- [npm](https://www.npmjs.com/)
 
-## 1 install dependencies
-  - `npm i`
+## 1 clone this repo
 
-## 2 spin up dev server
-  - `npm start` spins up a development server on port 8000.
+`git clone git@github.com:RENCI/sc-virtual-booth.git`
+
+## 2 install dependencies
+
+`npm i`
+
+## 3 spin up dev server
+
+`npm start` spins up a development server on port 8000.
 
 ## Brief Structural Overview
 
