@@ -9,6 +9,7 @@ This is the source code for RENCI's Virtual Booth for the annual Supercomputing 
 ## 0 Prerequisites
 - [Node.js](https://nodejs.org/) version `>=14.15.0`
 - [npm](https://www.npmjs.com/)
+- [Gatsby-CLI](https://www.npmjs.com/package/gatsby-cli) (install globally with `npm i -g gatsby-cli`)
 
 ## 1 clone this repo
 
@@ -30,7 +31,7 @@ Each project has generally the same structure. Each begins with either a logo or
 
 ## Workflow
 
-Development takes place on the `develop` branch, merging changes into yearly production branches &mdash; `2020`, `2021`, etc. Feature branches should be brached off of and merged into `develop` for testing before merging into a yearly production branch. The ASCII art below attempts to illustrate this.
+Development takes place on the `develop` branch, merging changes into yearly production branches &mdash; `2020`, `2021`, etc. Feature branches should be branched off of and merged into `develop` for testing before merging into a yearly production branch. The ASCII art below attempts to illustrate this.
 
 ```
                 [2020]                      [2021]

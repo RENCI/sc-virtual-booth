@@ -74,6 +74,11 @@ export const Fabric = () => {
 
       <VideoPlayer url="https://youtu.be/wvgoGMojZGM" controls={ true } />
 
+      <List bullets="disc" items={[
+        <Link to="https://example.com/">FABRIC Testbed Presentation</Link>,
+        <Link to="https://example.com/">FABRIC Testbed Brochure</Link>
+      ]} />
+
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
