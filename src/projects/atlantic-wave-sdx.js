@@ -18,12 +18,12 @@ const scheduleFields = [
 ]
 
 const schedule = [
-  { date: 'Nov 17',           timeEnd: '10:30am EST',      timeStart: "11:15 am EST",     onDuty: 'Yufeng Julio',         Host: 'Vassi' },
-  { date: 'Nov 17',           timeEnd: '3:00pm EST',       timeStart: "3:45 pm EST",      onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
-  { date: 'Nov 18',           timeEnd: '10:30am EST',      timeStart: "11:15 am EST",     onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
-  { date: 'Nov 18',           timeEnd: '3:30pm EST',       timeStart: "4:15 pm EST",      onDuty: 'Yufeng Julio',         Host: 'Vassi' },
-  { date: 'Nov 19',           timeEnd: '11:00am EST',      timeStart: "11:45 am EST",     onDuty: 'Yufeng Julio',         Host: 'Vassi' },
-  { date: 'Nov 19',           timeEnd: '4:00pm EST',       timeStart: "4:45 pm EST",      onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
+  { date: 'Nov 16',           timeEnd: '10:30am EST',      timeStart: "11:15 am EST",     onDuty: 'Yufeng Julio',         Host: 'Vassi' },
+  { date: 'Nov 16',           timeEnd: '2:30pm EST',       timeStart: "3:15 pm EST",      onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
+  { date: 'Nov 17',           timeEnd: '10:30am EST',      timeStart: "11:15 am EST",     onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
+  { date: 'Nov 17',           timeEnd: '2:30pm EST',       timeStart: "3:15 pm EST",      onDuty: 'Yufeng Julio',         Host: 'Vassi' },
+  { date: 'Nov 18',           timeEnd: '10:15am EST',      timeStart: "11:00 am EST",     onDuty: 'Yufeng Julio',         Host: 'Vassi' },
+  { date: 'Nov 18',           timeEnd: '2:30pm EST',       timeStart: "3:15 pm EST",      onDuty: 'Yufeng Julio Heidi',   Host: 'Vassi' },
 ]
 
 export const AtlanticWaveSdx = () => {
@@ -45,15 +45,20 @@ export const AtlanticWaveSdx = () => {
         , <Link to="https://www.isi.edu/">USC-ISI</Link>
         , and <Link to="https://www.gatech.edu/">Georgia Tech</Link> developed the AtlanticWave-SDX:
         a distributed Software-Defined Exchange supporting research and experimental deployments on international scales.
-        This demonstration will present the AtlanticWave-SDX and its features.
-        We then create a network topology across four geographically dispersed exchange points,
-        showing how the Pegasus application benefits from the AtlanticWave-SDX.
+        Challenges in the Wide-Area Networks (WAN) are being addressed by the application of network virtualization and 
+        network programmability solutions using Software-Defined Networking (SDN) and Network Functions 
+        Virtualization (NFV) technologies.  
+        The AtlanticWave-SDX project focuses on new capabilities, enabling Open Exchange Points (OXPs) 
+        to react to unplanned network events by adding intelligent closed-loop control of network services powered by in-band 
+        network telemetry.
       </Paragraph>
 
       <Subheading>Demo/Office Hours</Subheading>
 
       <Paragraph>
-        Join a live demo on [TBD] at [TBD] by clicking the button below.
+      The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
+      Telemetry (INT) in a long-haul production network. 
+      Join a live demo by clicking the button below during the designated times.
         The recording will be available following the live demo.
       </Paragraph>
 
