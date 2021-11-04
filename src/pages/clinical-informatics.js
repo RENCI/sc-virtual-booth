@@ -34,7 +34,7 @@ const ClinicalInformaticsPage = () => {
       />
       
       <Hero backgroundImage={ heroBackground }>
-        <Title><span className="highlight">Health Science</span></Title>
+        <Title><span className="highlight">Clinical Informatics</span></Title>
         <p className="highlight">
           RENCI leverages systems and technologies to fight disease and improve health.
           Our expert teams lead cross-cutting efforts to advance fundamental research and support meaningful improvements in clinical practice.
