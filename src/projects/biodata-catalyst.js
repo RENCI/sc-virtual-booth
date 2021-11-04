@@ -40,6 +40,7 @@ export const BioDataCatalyst = () => {
       <List bullets="disc"
         items={[
           <Link to="https://biodatacatalyst.nhlbi.nih.gov/">NHLBI BioData Catalyst Website</Link>,
+          <Link to="https://biodatacatalyst.nhlbi.nih.gov/">NHLBI BioData Catalyst Handout</Link>,
         ]}
       />
 

@@ -22,7 +22,7 @@ export const ChameleonCloud = () => {
       <Paragraph>
         Chameleon is an <Link to="https://www.nsf.gov/">NSF</Link>-funded testbed system for Computer Science experimentation.
         It is designed to be deeply reconfigurable, with a wide variety of capabilities
-        for researching systems, networking, distributed and cluster computing and security.
+        for researching systems, networking, distributed and cluster computing, and security.
       </Paragraph>
 
       <Subheading>Links</Subheading>
