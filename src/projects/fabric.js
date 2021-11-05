@@ -67,7 +67,7 @@ export const Fabric = () => {
 
       <List bullets="disc" items={[
         <Link to="https://example.com/">FABRIC Testbed Presentation</Link>,
-        <Link to="https://example.com/">FABRIC Testbed Brochure</Link>
+        <Link to="https://www.dropbox.com/s/bhb506m20jrbsog/202110_fabric%20one%20pagers%20V10.pdf?dl=1">FABRIC Testbed Brochure</Link>
       ]} />
 
       <Subheading>Links</Subheading>
