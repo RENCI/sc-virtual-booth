@@ -29,7 +29,7 @@ export const Poseidon = () => {
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.example.com/">Poseidon Presentation</Link>,
+        <Link to="https://www.dropbox.com/scl/fi/fcdx3ol7v8h95fswp06ts/PoSeiDon-SC21-RENCIBooth.pptx?dl=1">Poseidon Presentation</Link>,
         <Link to="https://sites.google.com/view/poseidon-workflows/">Poseidon Website</Link>,
       ]} />
 
