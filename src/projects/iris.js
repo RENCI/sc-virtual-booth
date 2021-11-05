@@ -21,7 +21,7 @@ export const Iris = () => {
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.example.com/">IRIS Presentation</Link>,
+        <Link to="https://www.dropbox.com/scl/fi/rvnp1fjkg7a0fxh4cucry/IRIS-SC2021-RENCIBooth.pptx?dl=1">IRIS Presentation</Link>,
         <Link to="http://nrig.renci.org/project/iris-integrity-introspection-for-scientific-workflows/">IRIS Website</Link>,
       ]} />
 
