@@ -65,8 +65,8 @@ const HomePage = () => {
               </span>,
               <span>
                 Cutting-edge health science research, including the
-                {' '}<Link to="/health-science#bdc">NHLBI BioData Catalyst</Link> project,
-                {' '}<Link to="/health-science#data-translator">NCATS Biomedical Data Translator</Link>,
+                {' '}<Link to="/clinical-informatics#bdc">NHLBI BioData Catalyst</Link> project,
+                {' '}<Link to="/clinical-informatics#data-translator">NCATS Biomedical Data Translator</Link>,
                 and multiple translational science projects.
               </span>,
               <span>

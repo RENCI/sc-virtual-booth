@@ -12,6 +12,12 @@ export const CiCompass = () => {
       <Heading>CI Compass</Heading>
 
       <Paragraph>
+        CI Compass provides expertise and active support to cyberinfrastructure practitioners at NSF Major Facilities in order 
+        to accelerate the data lifecycle and ensure the integrity and effectiveness of the cyberinfrastructure upon which research 
+        and discovery depend.
+      </Paragraph>
+
+      <Paragraph>
         The vision for CI Compass is to be the leader in supporting and enhancing the national CI ecosystem that includes people,
         practical knowledge, and processes to facilitate knowledge sharing and discovery across the National Science Foundation's
         (NSF) <Link to="https://ci-compass.org/about/nsf-major-facilities/">Major Facilities</Link> (MFs).
@@ -38,7 +44,7 @@ export const CiCompass = () => {
 
       <List bullets="disc" items={[
         <Link to="https://ci-compass.org/">CI Compass Website</Link>,
-        <Link to="https://ci-compass.org/">CI Compass Presentation</Link>,
+        <Link to="https://www.dropbox.com/scl/fi/yfsh8a2n65rry3xsv345s/CI-Compass-RENCI-booth-SC21.pptx?dl=1">CI Compass Presentation</Link>,
       ]} />
 
       <br/><br/>
