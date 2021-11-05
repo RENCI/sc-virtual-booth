@@ -40,14 +40,6 @@ export const FlyNet = () => {
         will promote participation of under-served/under-represented students in project activities.
       </Paragraph>
 
-      <Subheading>Videos</Subheading>
-
-      <VideoPlayer url="https://www.dropbox.com/s/rojzs06hoz259du/renci_booth_elyons.mp4?raw=1" controls={ true } />
-
-      <br/><br/>
-      
-      <VideoPlayer url="https://youtu.be/MNN80OHMQUQ" />
-
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
