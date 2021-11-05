@@ -23,16 +23,6 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
     z-index: 0;
     pointer-events: none;
   }
-  &:disabled {
-    background-color: ${ theme.color.grey.main };
-    cursor: default;
-  }
-  &:not(:disabled):hover {
-    filter: brightness(1.1);
-  }
-  &:not(:disabled):active, &:not(:disabled):focus {
-    filter: drop-shadow(0 0 4px ${ theme.color.primary.dark }66);
-  }
   &.cta {
     display: block;
     margin: ${ theme.spacing.large } auto;
@@ -67,6 +57,19 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
       transform: translate(-100%, 0);
       transition: transform 250ms 100ms, background-color 1000ms;
     }
+  }
+  &:disabled {
+    background-color: ${ theme.color.grey.main };
+    cursor: default;
+      &::before {
+        background-color: #86898c;
+      }
+  }
+  &:not(:disabled):hover {
+    filter: brightness(1.1);
+  }
+  &:not(:disabled):active, &:not(:disabled):focus {
+    filter: drop-shadow(0 0 4px ${ theme.color.primary.dark }66);
   }
 `)
 
