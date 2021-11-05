@@ -61,9 +61,9 @@ export const Wrapper = styled.button(({ theme, cta, small, inverted }) => `
   &:disabled {
     background-color: ${ theme.color.grey.main };
     cursor: default;
-      &::before {
-        background-color: #86898c;
-      }
+    &::before {
+      background-color: #86898c;
+    }
   }
   &:not(:disabled):hover {
     filter: brightness(1.1);
