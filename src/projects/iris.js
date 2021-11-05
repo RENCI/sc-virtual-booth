@@ -18,8 +18,6 @@ export const Iris = () => {
         and machine learning (ML) algorithms to perform the needed analysis.
       </Paragraph>
 
-      <Subheading>Videos</Subheading>
-
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
