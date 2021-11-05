@@ -61,14 +61,12 @@ export const AtlanticWaveSdx = () => {
         The link to the recording will be available on this page following the live demo.
       </Paragraph>
 
-      <IconButton cta link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0" icon="video" iconFill="#eee" iconSize={ 24 }>Recorded Demo</IconButton>
-      <IconButton cta link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo" iconFill="#eee" >Live Demo and Q&A</IconButton>
+      <IconButton cta title="Live Demo and Q&A" link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo" iconFill="#eee" >Live Demo and Q&A</IconButton>
+      <IconButton disabled cta title="Link to Follow Live Presentation" link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0" icon="video" iconFill="#eee" iconSize={ 24 }>Link to follow Live Presentation</IconButton>
 
       <br/><br/>
 
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
-
-      <br/><br/>
 
       <Subheading>Links</Subheading>
 
