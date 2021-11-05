@@ -7,6 +7,7 @@ import { List } from '../components/list'
 import { Button, IconButton } from '../components/button'
 import { Table } from '../components/table'
 import { Link } from '../components/link'
+import atlanticWavePromo from '../images/atlantic-wave-sdx-demo-promo.png'
 
 const scheduleFields = [
   { key: 'date',       name: 'Date',            hidden: false, },
@@ -69,6 +70,8 @@ export const AtlanticWaveSdx = () => {
       <br/><br/>
 
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
+
+      <img src={ atlanticWavePromo } alt="Atlantic Wave-SDX Live Demo Promo" />
 
       <Subheading>Links</Subheading>
 
