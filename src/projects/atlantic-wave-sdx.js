@@ -1,13 +1,13 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
-import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { useLogos } from '../hooks'
 import { List } from '../components/list'
 import { Button, IconButton } from '../components/button'
 import { Table } from '../components/table'
 import { Link } from '../components/link'
+import atlanticWavePromo from '../images/atlantic-wave-sdx-demo-promo.png'
 
 const scheduleFields = [
   { key: 'date',       name: 'Date',            hidden: false, },
@@ -59,17 +59,21 @@ export const AtlanticWaveSdx = () => {
       The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
       Telemetry (INT) in a long-haul production network. 
       Join a live demo by clicking the button below during the designated times.
-        The recording will be available following the live demo.
       </Paragraph>
 
-      <IconButton cta link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0" icon="video" iconFill="#eee" iconSize={ 24 }>Recorded Demo</IconButton>
-      <IconButton cta link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo" iconFill="#eee" >Live Demo and Q&A</IconButton>
-
+      <IconButton cta title="Live Demo and Q&A" link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo" iconFill="#eee" >Live Demo and Q&A</IconButton>
+      {/* <IconButton cta title="Recorded Demo" link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0" icon="video" iconFill="#eee" iconSize={ 24 }>Recorded Demo</IconButton> */}
+      
+      <Paragraph>
+      A recording will be available for download here following the live demo.
+      </Paragraph>
       <br/><br/>
 
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
 
-      <br/><br/>
+      <Link to="https://drive.google.com/file/d/1KA5vjcDzKjmNRPCb_Qk399nY34L4el3F/view?usp=sharing">
+        <img src={ atlanticWavePromo } alt="Atlantic Wave-SDX Live Demo Promo" />
+      </Link>
 
       <Subheading>Links</Subheading>
 

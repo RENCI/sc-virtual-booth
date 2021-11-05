@@ -5,8 +5,6 @@ import { Heading, Subheading, Paragraph } from '../components/typography'
 import { List } from '../components/list'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
-import { ResponsiveIframe } from '../components/responsive-iframe'
-import { VideoPlayer } from '../components/video-player'
 import { useLogos } from '../hooks'
 
 export const Fabric = () => {
@@ -65,26 +63,16 @@ export const Fabric = () => {
 
       <Subheading>Resources</Subheading>
 
-      <ResponsiveIframe
-        title="FABRIC Overview Presentation"
-        src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000"
-      />
-
-      <br />
-
-      <VideoPlayer url="https://youtu.be/wvgoGMojZGM" controls={ true } />
-
       <List bullets="disc" items={[
         <Link to="https://example.com/">FABRIC Testbed Presentation</Link>,
-        <Link to="https://example.com/">FABRIC Testbed Brochure</Link>
+        <Link to="https://www.dropbox.com/s/bhb506m20jrbsog/202110_fabric%20one%20pagers%20V10.pdf?dl=1">FABRIC Testbed Brochure</Link>
       ]} />
 
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.example.com/">FABRIC Testbed Presentation</Link>,
         <Link to="https://whatisfabric.net/">FABRIC Testbed Website</Link>,
-        <Link to="https://twitter.com/FABRICtestbed">FABRICtestbed on Twitter</Link>,
+        <Link to="https://twitter.com/FABRICtestbed">@FABRICtestbed on Twitter</Link>,
         <Link to="https://learn.fabric-testbed.net/">FABRIC Knowledge Base</Link>,
         <Link to="https://www.whatisfabric.net/get-involved/beta-testers-request">Beta Testers Request Form</Link>,
         <Link to="https://www.whatisfabric.net/get-involved/funding-opportunities">Funding Opportunities</Link>,

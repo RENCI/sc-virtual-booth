@@ -45,7 +45,7 @@ export const SouthBigDataHub = () => {
       <List bullets="disc" items={[
         <Link to="http://southbigdatahub.org/">South Big Data Hub Website</Link>,
         <Link to="https://www.dropbox.com/s/k9wxsybhns0myys/2021%20SBDH%20Impact%20Report.pdf?dl=1">South Big Data Hub 2021 Impact Report</Link>,
-        <Link to="http://www.example.com/">South Big Data Hub Handout</Link>,
+        <Link to="https://www.dropbox.com/s/lv2hd70rfvu0gat/2021_SBDH_One-Pager.pdf?dl=1">South Big Data Hub Handout</Link>,
       ]} />
 
       <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact SBDH</Button>
