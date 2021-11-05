@@ -43,7 +43,7 @@ export const FlyNet = () => {
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="http://www.example.com/">FlyNet Presentation</Link>,
+        <Link to="https://www.dropbox.com/scl/fi/qvwc8511ig8jzcj2c2btc/Flynet-SC21-RENCIBooth.pptx?dl=1">FlyNet Presentation</Link>,
         <Link to="http://www.flynet-ci.org/">FlyNet Website</Link>,
       ]} />
 
