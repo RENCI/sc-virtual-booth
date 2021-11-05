@@ -47,6 +47,13 @@ export const FlyNet = () => {
         <Link to="http://www.flynet-ci.org/">FlyNet Website</Link>,
       ]} />
 
+      <Subheading>Videos</Subheading>
+
+      <VideoPlayer url="https://www.dropbox.com/s/rojzs06hoz259du/renci_booth_elyons.mp4?raw=1" controls={ true } />
+
+      <br/><br/>
+      
+      <VideoPlayer url="https://youtu.be/MNN80OHMQUQ" />
       <br/><br/>
 
       <Button cta link to="https://forms.gle/dQL3erSb2QnDVcQAA">Contact FlyNet</Button>
