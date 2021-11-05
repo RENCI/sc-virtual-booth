@@ -1,7 +1,6 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
-import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Heading, Subheading, Paragraph } from '../components/typography'
 import { useLogos } from '../hooks'
 import { List } from '../components/list'
