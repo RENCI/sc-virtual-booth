@@ -5,8 +5,6 @@ import { Heading, Subheading, Paragraph } from '../components/typography'
 import { List } from '../components/list'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
-import { ResponsiveIframe } from '../components/responsive-iframe'
-import { VideoPlayer } from '../components/video-player'
 import { useLogos } from '../hooks'
 
 export const Fabric = () => {
@@ -75,7 +73,7 @@ export const Fabric = () => {
       <List bullets="disc" items={[
         <Link to="https://www.example.com/">FABRIC Testbed Presentation</Link>,
         <Link to="https://whatisfabric.net/">FABRIC Testbed Website</Link>,
-        <Link to="https://twitter.com/FABRICtestbed">FABRIC Testbed on Twitter</Link>,
+        <Link to="https://twitter.com/FABRICtestbed">@FABRICtestbed on Twitter</Link>,
         <Link to="https://learn.fabric-testbed.net/">FABRIC Knowledge Base</Link>,
         <Link to="https://www.whatisfabric.net/get-involved/beta-testers-request">Beta Testers Request Form</Link>,
         <Link to="https://www.whatisfabric.net/get-involved/funding-opportunities">Funding Opportunities</Link>,
