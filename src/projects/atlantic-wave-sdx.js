@@ -71,7 +71,9 @@ export const AtlanticWaveSdx = () => {
 
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
 
-      <img src={ atlanticWavePromo } alt="Atlantic Wave-SDX Live Demo Promo" />
+      <Link to="https://drive.google.com/file/d/1KA5vjcDzKjmNRPCb_Qk399nY34L4el3F/view?usp=sharing">
+        <img src={ atlanticWavePromo } alt="Atlantic Wave-SDX Live Demo Promo" />
+      </Link>
 
       <Subheading>Links</Subheading>
 
