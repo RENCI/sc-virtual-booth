@@ -65,15 +65,6 @@ export const Fabric = () => {
 
       <Subheading>Resources</Subheading>
 
-      <ResponsiveIframe
-        title="FABRIC Overview Presentation"
-        src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000"
-      />
-
-      <br />
-
-      <VideoPlayer url="https://youtu.be/wvgoGMojZGM" controls={ true } />
-
       <List bullets="disc" items={[
         <Link to="https://example.com/">FABRIC Testbed Presentation</Link>,
         <Link to="https://example.com/">FABRIC Testbed Brochure</Link>
