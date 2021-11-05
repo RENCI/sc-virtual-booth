@@ -58,7 +58,7 @@ export const AtlanticWaveSdx = () => {
       The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
       Telemetry (INT) in a long-haul production network. 
       Join a live demo by clicking the button below during the designated times.
-        The recording will be available following the live demo.
+        The link to the recording will be available on this page following the live demo.
       </Paragraph>
 
       <IconButton cta link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0" icon="video" iconFill="#eee" iconSize={ 24 }>Recorded Demo</IconButton>
