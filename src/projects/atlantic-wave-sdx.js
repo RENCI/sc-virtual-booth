@@ -58,12 +58,14 @@ export const AtlanticWaveSdx = () => {
       The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
       Telemetry (INT) in a long-haul production network. 
       Join a live demo by clicking the button below during the designated times.
-        The link to the recording will be available on this page following the live demo.
       </Paragraph>
 
       <IconButton cta title="Live Demo and Q&A" link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo" iconFill="#eee" >Live Demo and Q&A</IconButton>
-      <IconButton disabled cta title="Link to Follow Live Presentation" link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0" icon="video" iconFill="#eee" iconSize={ 24 }>Link to follow Live Presentation</IconButton>
-
+      {/* <IconButton cta title="Recorded Demo" link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0" icon="video" iconFill="#eee" iconSize={ 24 }>Recorded Demo</IconButton> */}
+      
+      <Paragraph>
+      A recording will be available for download here following the live demo.
+      </Paragraph>
       <br/><br/>
 
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
