@@ -84,7 +84,7 @@ export const AtlanticWaveSdx = () => {
       </Link>
 
       <Link to="https://drive.google.com/file/d/1UhgoGfSOsACiM3lTdZXxRQ2_yhOCzYR4/view?usp=sharing">
-        <img src={ amLightLogo } alt="AmLight Logo" />
+        <img src={ amLightLogo } alt="AmLight Logo" width={350}/>
       </Link>
 
       <Subheading>Links</Subheading>
