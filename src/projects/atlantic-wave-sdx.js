@@ -82,7 +82,7 @@ export const AtlanticWaveSdx = () => {
         <img src={ atlanticWavePromo } alt="Atlantic Wave-SDX Live Demo Promo" />
       </Link>
 
-      <Link to="https://drive.google.com/file/d/1UhgoGfSOsACiM3lTdZXxRQ2_yhOCzYR4/view?usp=sharing">
+      <Link to="https://drive.google.com/file/d/1UhgoGfSOsACiM3lTdZXxRQ2_yhOCzYR4/view?usp=sharing" className="center">
         <img src={ amLightLogo } alt="AmLight Logo" width={350}/>
       </Link>
 

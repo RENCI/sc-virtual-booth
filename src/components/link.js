@@ -6,6 +6,10 @@ import { Icon } from './icon'
 const ExternalLinkWrapper = styled.span`
   & > svg {
     opacity: 0.33;
+  };
+  & .center {
+    display: flex;
+    justify-content: center;
   }
 `
 
