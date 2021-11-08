@@ -1,7 +1,7 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
-import { Heading, Subheading, Paragraph } from '../components/typography'
+import { Heading, Subheading, Paragraph, Subsubheading } from '../components/typography'
 import { useLogos } from '../hooks'
 import { List } from '../components/list'
 import { Button, IconButton } from '../components/button'
@@ -55,10 +55,16 @@ export const AtlanticWaveSdx = () => {
 
       <Subheading>Demo/Office Hours</Subheading>
 
+      <Paragraph>Title: In-Band Network Telemetry @ AmLight</Paragraph>
+
       <Paragraph>
-      The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
+      Description: The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
       Telemetry (INT) in a long-haul production network. 
       Join a live demo by clicking the button below during the designated times.
+      The INT solution was built leveraging off-the-shelf P4 white box switches with the Barefoot Tofino chip, 
+      NoviFlow NoviWare Network Operating System, and a telemetry data gathering solution developed by FIU called 
+      INT Collector. The INT switches deployed at AmLight have 32x100G ports, support P4 and flexible forwarding 
+      pipelines, and were expanded to support INT for TCP and UDP flows.
       </Paragraph>
 
       <IconButton cta title="Live Demo and Q&A" link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo" iconFill="#eee" >Live Demo and Q&A</IconButton>
@@ -67,6 +73,7 @@ export const AtlanticWaveSdx = () => {
       <Paragraph>
       A recording will be available for download here following the live demo.
       </Paragraph>
+
       <br/><br/>
 
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
