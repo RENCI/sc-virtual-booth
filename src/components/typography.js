@@ -38,6 +38,9 @@ export const Paragraph = styled.p(({ align, width, maxWidth }) => `
   width: ${ width };
   max-width: ${ maxWidth };
   margin: 1rem auto 2rem auto;
+  & .bold {
+    font-weight: bold;
+  }
 `)
 
 Paragraph.propTypes = {

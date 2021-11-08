@@ -1,7 +1,7 @@
 import React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { Section } from '../components/layout'
-import { Heading, Subheading, Paragraph, Subsubheading } from '../components/typography'
+import { Heading, Subheading, Paragraph } from '../components/typography'
 import { useLogos } from '../hooks'
 import { List } from '../components/list'
 import { Button, IconButton } from '../components/button'
@@ -56,10 +56,9 @@ export const AtlanticWaveSdx = () => {
 
       <Subheading>Demo/Office Hours</Subheading>
 
-      <Paragraph>Title: In-Band Network Telemetry @ AmLight</Paragraph>
-
-      <Paragraph>
-      Description: The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
+      <Paragraph><span className="bold">Title:</span> In-Band Network Telemetry @ AmLight
+      <br></br>
+      <span className="bold">Description:</span> The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
       Telemetry (INT) in a long-haul production network. 
       Join a live demo by clicking the button below during the designated times.
       The INT solution was built leveraging off-the-shelf P4 white box switches with the Barefoot Tofino chip, 
