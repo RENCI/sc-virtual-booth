@@ -44,7 +44,7 @@ export const CiCompass = () => {
 
       <List bullets="disc" items={[
         <Link to="https://ci-compass.org/">CI Compass Website</Link>,
-        <Link to="https://www.dropbox.com/scl/fi/yfsh8a2n65rry3xsv345s/CI-Compass-RENCI-booth-SC21.pptx?dl=1">CI Compass Presentation</Link>,
+        <Link to="https://www.dropbox.com/s/qwfcqtv9qchokmp/CI%20Compass-RENCI-booth-SC21.pdf?dl=1">CI Compass Presentation</Link>,
       ]} />
 
       <br/><br/>
