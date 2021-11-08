@@ -1,8 +1,26 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Wrapper = styled.table(({ theme }) => `
+  font-size: 85%;
+  color: ${ theme.color.primary.darker };
+  background-color: ${ theme.color.extended.mist }33;
+  & th, & td {
+    border: 1px solid ${ theme.color.primary.dark }33;
+    padding: ${ theme.spacing.medium };
+    text-align: center;
+  }
+  &&& th {
+    background-color: ${ theme.color.extended.mist }ff;
+  }
+  &&& tr:nth-child(2n - 1) {
+    background-color: ${ theme.color.extended.mist }77;
+  }
+`)
 
 export const Table = ({ columns, data }) => {
   return (
-    <table style={{ fontSize: '80%' }}>
+    <Wrapper>
       <thead>
         <tr>
           {
@@ -21,6 +39,6 @@ export const Table = ({ columns, data }) => {
           ))
         }
       </tbody>
-    </table>
+    </Wrapper>
   )
 }

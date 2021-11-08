@@ -51,7 +51,7 @@ const Contents = styled.div(({ theme }) => css`
   animation: ${ slideIn } 750ms ease-out forwards;
   & .highlight {
     transition: background-color 250ms;
-    background-color: ${ theme.color.primary.darkest }bb;
+    background-color: ${ theme.color.primary.darker }bb;
     padding: ${ theme.spacing.small } ${ theme.spacing.medium };
     line-height: 1.5;
     box-decoration-break: clone;
@@ -63,7 +63,7 @@ const Contents = styled.div(({ theme }) => css`
     }
   }
   &:hover .highlight {
-    background-color: ${ theme.color.primary.darkest }dd;
+    background-color: ${ theme.color.primary.darker }dd;
   }
   & h1 {
     margin: 2rem 0 0 0;
@@ -74,7 +74,7 @@ const Contents = styled.div(({ theme }) => css`
   @media (min-width: 600px) {
     margin: 2rem 0 1rem 0;
     & p {
-      font-size: 90%;
+      font-size: 110%;
     }
   }
 `)
