@@ -90,7 +90,7 @@ export const AtlanticWaveSdx = () => {
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.example.com/">Atlantic Wave SDX Presentation</Link>,
+        <Link to="https://www.dropbox.com/s/kzsu5klk3v94kqa/In-Band%20Network%20Telemetry%20%40%20AmLight-RENCI-booth-SC21.pdf?dl=1">In-Band Network Telemetry @ AmLight Presentation</Link>,
       ]} />
 
       <br/><br/>
