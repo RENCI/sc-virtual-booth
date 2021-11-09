@@ -6,7 +6,7 @@ import { Icon } from './icon'
 const ExternalLinkWrapper = styled.span`
   & > svg {
     opacity: 0.33;
-  }
+  };
 `
 
 export const ExternalLink = styled.a.attrs(props => ({
