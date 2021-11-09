@@ -8,7 +8,7 @@ import { Button, IconButton } from '../components/button'
 import { Table } from '../components/table'
 import { Link } from '../components/link'
 import atlanticWavePromo from '../images/atlantic-wave-sdx-demo-promo.png'
-import amLightLogo from '../images/atlantic-wave-sdx-amlight-logo.jpg'
+import amLightLogo from '../images/amlight-exp-logo.png'
 
 const scheduleFields = [
   { key: 'date',       name: 'Date',            hidden: false, },
