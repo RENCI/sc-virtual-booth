@@ -7,10 +7,6 @@ const ExternalLinkWrapper = styled.span`
   & > svg {
     opacity: 0.33;
   };
-  & .center {
-    display: flex;
-    justify-content: center;
-  }
 `
 
 export const ExternalLink = styled.a.attrs(props => ({

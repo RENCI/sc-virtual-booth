@@ -56,9 +56,9 @@ export const AtlanticWaveSdx = () => {
 
       <Subheading>Demo/Office Hours</Subheading>
 
-      <Paragraph><span className="bold">Title:</span> In-Band Network Telemetry @ AmLight
+      <Paragraph><strong>Title:</strong> In-Band Network Telemetry @ AmLight
       <br></br>
-      <span className="bold">Description:</span> The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
+      <strong>Description:</strong> The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
       Telemetry (INT) in a long-haul production network. 
       Join a live demo by clicking the button below during the designated times.
       The INT solution was built leveraging off-the-shelf P4 white box switches with the Barefoot Tofino chip, 
@@ -82,9 +82,11 @@ export const AtlanticWaveSdx = () => {
         <img src={ atlanticWavePromo } alt="Atlantic Wave-SDX Live Demo Promo" />
       </Link>
 
-      <Link to="https://drive.google.com/file/d/1UhgoGfSOsACiM3lTdZXxRQ2_yhOCzYR4/view?usp=sharing" className="center">
-        <img src={ amLightLogo } alt="AmLight Logo" width={350}/>
-      </Link>
+      <Paragraph align="center">
+        <Link to="https://drive.google.com/file/d/1UhgoGfSOsACiM3lTdZXxRQ2_yhOCzYR4/view?usp=sharing">
+          <img src={ amLightLogo } alt="AmLight Logo" width={350}/>
+        </Link>
+      </Paragraph>
 
       <Subheading>Links</Subheading>
 
