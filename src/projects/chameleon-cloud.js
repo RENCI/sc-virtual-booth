@@ -29,7 +29,6 @@ export const ChameleonCloud = () => {
 
       <List bullets="disc" items={[
         <Link to="https://www.chameleoncloud.org/">Chameleon Cloud Website</Link>,
-        <Link to="https://www.dropbox.com/sh/qn6fc01fvebg2ib/AABrX83YZrAnkFTzDW-C4QTLa?dl=0&preview=ChameleonSC2020.pptx">Chameleon Cloud Presentation</Link>,
       ]} />
 
       <br/><br/>

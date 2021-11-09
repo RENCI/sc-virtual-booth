@@ -35,9 +35,10 @@ const CollaborationsPage = () => {
       <Hero backgroundImage={ heroBackground }>
         <Title><span className="highlight">Collaborations</span></Title>
         <p className="highlight">
-          Via consortia development and participation, RENCI brings together leaders in academia, industry, and government
-          to address the data challenges and opportunities of the 21st century, such as democratizing data,
-          creating sustainable and equitable data science career paths, and bridging the gap between data scientists in the public and private sectors.
+        RENCI brings together leaders in academia, industry, and government to address the data challenges and 
+        opportunities of the 21st century, such as making data FAIR (findable, accessible, interoperable, and 
+        reusable), creating sustainable and equitable data science resources and communities, and bridging the 
+        gap between data scientists in the public and private sectors.
         </p>
       </Hero>
 

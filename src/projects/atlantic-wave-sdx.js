@@ -8,6 +8,7 @@ import { Button, IconButton } from '../components/button'
 import { Table } from '../components/table'
 import { Link } from '../components/link'
 import atlanticWavePromo from '../images/atlantic-wave-sdx-demo-promo.png'
+import amLightLogo from '../images/atlantic-wave-sdx-amlight-logo.jpg'
 
 const scheduleFields = [
   { key: 'date',       name: 'Date',            hidden: false, },
@@ -55,10 +56,15 @@ export const AtlanticWaveSdx = () => {
 
       <Subheading>Demo/Office Hours</Subheading>
 
-      <Paragraph>
-      The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
+      <Paragraph><strong>Title:</strong> In-Band Network Telemetry @ AmLight
+      <br></br>
+      <strong>Description:</strong> The goal of this demo is to showcase the benefits and challenges of deploying In-band Network 
       Telemetry (INT) in a long-haul production network. 
       Join a live demo by clicking the button below during the designated times.
+      The INT solution was built leveraging off-the-shelf P4 white box switches with the Barefoot Tofino chip, 
+      NoviFlow NoviWare Network Operating System, and a telemetry data gathering solution developed by FIU called 
+      INT Collector. The INT switches deployed at AmLight have 32x100G ports, support P4 and flexible forwarding 
+      pipelines, and were expanded to support INT for TCP and UDP flows.
       </Paragraph>
 
       <IconButton cta title="Live Demo and Q&A" link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo" iconFill="#eee" >Live Demo and Q&A</IconButton>
@@ -67,6 +73,7 @@ export const AtlanticWaveSdx = () => {
       <Paragraph>
       A recording will be available for download here following the live demo.
       </Paragraph>
+
       <br/><br/>
 
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
@@ -75,10 +82,16 @@ export const AtlanticWaveSdx = () => {
         <img src={ atlanticWavePromo } alt="Atlantic Wave-SDX Live Demo Promo" />
       </Link>
 
+      <Paragraph align="center">
+        <Link to="https://drive.google.com/file/d/1UhgoGfSOsACiM3lTdZXxRQ2_yhOCzYR4/view?usp=sharing">
+          <img src={ amLightLogo } alt="AmLight Logo" width={350}/>
+        </Link>
+      </Paragraph>
+
       <Subheading>Links</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://www.example.com/">Atlantic Wave SDX Presentation</Link>,
+        <Link to="https://www.dropbox.com/s/kzsu5klk3v94kqa/In-Band%20Network%20Telemetry%20%40%20AmLight-RENCI-booth-SC21.pdf?dl=1">In-Band Network Telemetry @ AmLight Presentation</Link>,
       ]} />
 
       <br/><br/>
