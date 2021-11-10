@@ -70,7 +70,7 @@ export const Fabric = () => {
       <Subheading>Resources</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://example.com/">FABRIC Testbed Presentation</Link>,
+        <Link to="https://www.dropbox.com/s/l7gnj2mnpghcirc/FABRIC-SC21-Booth-Presentation.pdf?dl=1">FABRIC Testbed Presentation</Link>,
         <Link to="https://www.dropbox.com/s/bhb506m20jrbsog/202110_fabric%20one%20pagers%20V10.pdf?dl=1">FABRIC Testbed Brochure</Link>
       ]} />
 
