@@ -55,7 +55,7 @@ const HomePage = () => {
             [
               <span>
                 The <Link to="/nrig">Networking and Research Infrastructure Group</Link> (NRIG) and
-                its $20 million NSF grant, FABRIC, along with other major projects such as
+                its $20 million NSF grant, <Link to="/nrig/#fabric">FABRIC</Link>, along with other major projects such as
                 {' '}<Link to="/nrig#ci-compass">CI Compass</Link>,
                 {' '}<Link to="/nrig#poseidon">Poseidon</Link>, and
                 {' '}<Link to="/nrig#atlantic-wave-sdx">Atlantic Wave-SDX</Link>.
