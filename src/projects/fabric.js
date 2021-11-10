@@ -6,6 +6,7 @@ import { List } from '../components/list'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
 import { useLogos } from '../hooks'
+import { ResponsiveIframe } from '../components/responsive-iframe'
 
 export const Fabric = () => {
   const { fabric } = useLogos()
@@ -61,10 +62,15 @@ export const Fabric = () => {
         Internet2.
       </Paragraph>
 
+      <ResponsiveIframe
+        title="FABRIC Overview Presentation"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vSyMPpnYNr4THaiSjzLukn0DS-u5NkUF5uUK5UFa2reFl0IWM2hgrGFxcH5y6W8uegj-dEpSSa297gJ/embed?start=true&loop=true&delayms=15000"
+      />
+
       <Subheading>Resources</Subheading>
 
       <List bullets="disc" items={[
-        <Link to="https://example.com/">FABRIC Testbed Presentation</Link>,
+        <Link to="https://www.dropbox.com/s/l7gnj2mnpghcirc/FABRIC-SC21-Booth-Presentation.pdf?dl=1">FABRIC Testbed Presentation</Link>,
         <Link to="https://www.dropbox.com/s/bhb506m20jrbsog/202110_fabric%20one%20pagers%20V10.pdf?dl=1">FABRIC Testbed Brochure</Link>
       ]} />
 

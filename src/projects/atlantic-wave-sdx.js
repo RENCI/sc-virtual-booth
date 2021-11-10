@@ -8,7 +8,7 @@ import { Button, IconButton } from '../components/button'
 import { Table } from '../components/table'
 import { Link } from '../components/link'
 import atlanticWavePromo from '../images/atlantic-wave-sdx-demo-promo.png'
-import amLightLogo from '../images/atlantic-wave-sdx-amlight-logo.jpg'
+import amLightLogo from '../images/amlight-exp-logo.png'
 
 const scheduleFields = [
   { key: 'date',       name: 'Date',            hidden: false, },
@@ -78,12 +78,12 @@ export const AtlanticWaveSdx = () => {
 
       { schedule && <Table columns={ scheduleFields.filter(field => !field.hidden ) } data={ schedule } /> }
 
-      <Link to="https://drive.google.com/file/d/1KA5vjcDzKjmNRPCb_Qk399nY34L4el3F/view?usp=sharing">
+      <Link to={ atlanticWavePromo }>
         <img src={ atlanticWavePromo } alt="Atlantic Wave-SDX Live Demo Promo" />
       </Link>
 
       <Paragraph align="center">
-        <Link to="https://drive.google.com/file/d/1UhgoGfSOsACiM3lTdZXxRQ2_yhOCzYR4/view?usp=sharing">
+        <Link to={ amLightLogo }>
           <img src={ amLightLogo } alt="AmLight Logo" width={350}/>
         </Link>
       </Paragraph>
