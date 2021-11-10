@@ -62,12 +62,12 @@ export const Fabric = () => {
         Internet2.
       </Paragraph>
 
-      <Subheading>Resources</Subheading>
-
       <ResponsiveIframe
         title="FABRIC Overview Presentation"
-        src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vSyMPpnYNr4THaiSjzLukn0DS-u5NkUF5uUK5UFa2reFl0IWM2hgrGFxcH5y6W8uegj-dEpSSa297gJ/embed?start=true&loop=true&delayms=15000"
       />
+
+      <Subheading>Resources</Subheading>
 
       <List bullets="disc" items={[
         <Link to="https://example.com/">FABRIC Testbed Presentation</Link>,
