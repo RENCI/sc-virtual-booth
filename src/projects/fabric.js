@@ -6,6 +6,7 @@ import { List } from '../components/list'
 import { Button } from '../components/button'
 import { Link } from '../components/link'
 import { useLogos } from '../hooks'
+import { ResponsiveIframe } from '../components/responsive-iframe'
 
 export const Fabric = () => {
   const { fabric } = useLogos()
@@ -62,6 +63,11 @@ export const Fabric = () => {
       </Paragraph>
 
       <Subheading>Resources</Subheading>
+
+      <ResponsiveIframe
+        title="FABRIC Overview Presentation"
+        src="https://docs.google.com/presentation/d/e/2PACX-1vQnax4UWrDESwhPDlmDwkqbgbOgPMYDpdc56HpAcpPII3OawNHdwQSOvQ0Y7QwooOqraDXrnAYd40YB/embed?start=false&loop=true&delayms=15000"
+      />
 
       <List bullets="disc" items={[
         <Link to="https://example.com/">FABRIC Testbed Presentation</Link>,
