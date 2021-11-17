@@ -66,7 +66,7 @@ export const MobileMenu = ({ items }) => {
   
   return (
     <Fragment>
-      <Toggler onClick={ handleToggleMenu } active={ open } />
+      <Toggler onClick={ handleToggleMenu } active={ open } aria-label="mobile menu button"/>
       <Drawer translation={ open ? '0' : '-100%' }>
         <Nav>
           { items.map(item => <MenuItem key={ item.text } to={ item.path } onClick={ handleCloseMenu } activeClassName="active">{ item.text }</MenuItem>) }
