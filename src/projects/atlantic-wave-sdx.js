@@ -68,11 +68,11 @@ export const AtlanticWaveSdx = () => {
       </Paragraph>
 
       <IconButton cta title="Live Demo and Q&A" link to="https://fiu.zoom.us/j/9643506307" icon="zoomLogo" iconFill="#eee" >Live Demo and Q&A</IconButton>
-      {/* <IconButton cta title="Recorded Demo" link to="https://www.dropbox.com/s/ogj6s9fiaf7mms1/AtlanticWave-SDX-SC20.mp4?dl=0" icon="video" iconFill="#eee" iconSize={ 24 }>Recorded Demo</IconButton> */}
+      <IconButton cta title="Recorded Demo" link to="https://www.youtube.com/watch?v=JswVsiaKr90" icon="video" iconFill="#eee" iconSize={ 24 }>Recorded Demo</IconButton>
       
-      <Paragraph>
+      {/* <Paragraph>
       A recording will be available for download here following the live demo.
-      </Paragraph>
+      </Paragraph> */}
 
       <br/><br/>
 
